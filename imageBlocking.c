@@ -21,7 +21,7 @@ reference -
 #include <stdio.h>
 #include <stdlib.h>
 
-#define block 8
+//#define block 8
 
 #pragma pack(push, 1)
 
@@ -59,14 +59,22 @@ typedef struct InfoHeaders
 
 int main(int argc, char const *argv[])
 {
+	if(argc != 3)
+	{
+		printf("\n\nThe format is ./imageBlock [file name] [block size]\n\n");
+		return -1;
+	}
+
 	int i,j,k,l,ERROR;
 	unsigned char *bitMapImage;
 	unsigned char *red,*green,*blue;
+	int block;
 	FILE *fp,*blockFile;
 	Header header;
 	InfoHeader infoHeader;
 
-	if((fp = fopen("images/Lenna.bmp","rb")) == NULL)
+	block = atoi(argv[2]);
+	if((fp = fopen(argv[1],"rb")) == NULL)
 	{
 		printf("Error Reading File\n");
 		fclose(fp);
@@ -128,26 +136,24 @@ int main(int argc, char const *argv[])
 
 	blockFile = fopen("blockFile","w");
 
-	for (i = 0; i < infoHeader.height; i+=8)
+	for (i = 0; i < infoHeader.height; i+=block)
 	{
-		for (j = 0; j < infoHeader.width; j+=64)
+		for (j = 0; j < infoHeader.width; j+= block) // check if its block * block
 		{
 			
 			for (k = 0, l = 0; k < block  ; ++k, ++l)
 				fprintf(blockFile,"%d ",red[k + i * block + j * block * block]);
 
 			fprintf(blockFile,"\n");
-			//printf("fptr: %d\n",block * j + i);
-
-			
+			//printf("fptr: %d\n",block * j + i);			
 		}
-		fprintf(blockFile,"\n");
+		//fprintf(blockFile,"\n");
 
 	}
 
-	for (i = 0; i < infoHeader.height; i+=8)
+	for (i = 0; i < infoHeader.height; i+=block)
 	{
-		for (j = 0; j < infoHeader.width; j+=64)
+		for (j = 0; j < infoHeader.width; j+= block) // check if its block * block
 		{
 			
 			for (k = 0, l = 0; k < block  ; ++k, ++l)
@@ -158,14 +164,14 @@ int main(int argc, char const *argv[])
 
 			
 		}
-		fprintf(blockFile,"\n");
+		//fprintf(blockFile,"\n");
 
 	}
 
 
-	for (i = 0; i < infoHeader.height; i+=8)
+	for (i = 0; i < infoHeader.height; i+=block)
 	{
-		for (j = 0; j < infoHeader.width; j+=64)
+		for (j = 0; j < infoHeader.width; j+= block) // check if its block * block
 		{
 			
 			for (k = 0, l = 0; k < block  ; ++k, ++l)
@@ -175,7 +181,7 @@ int main(int argc, char const *argv[])
 			//printf("fptr: %d\n",block * j + i);
 			
 		}
-		fprintf(blockFile,"\n");
+		//fprintf(blockFile,"\n");
 
 	}
 
@@ -187,3 +193,5 @@ int main(int argc, char const *argv[])
 	free(bitMapImage);
 	return 0;
 }
+
+// ./imageBlocking images/Lenna.bmp 8
