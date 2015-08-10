@@ -136,13 +136,17 @@ int main(int argc, char const *argv[])
 
 	blockFile = fopen("blockFile","w");
 
-	for (i = 0; i < infoHeader.height; i+=block)
+	fprintf(blockFile,"%d %d %d\n",block,infoHeader.height,infoHeader.width);
+
+	//for (i = 0; i < infoHeader.height; i+=block)
+	for (i = 0; i < infoHeader.height/block; i++)
 	{
-		for (j = 0; j < infoHeader.width; j+= block) // check if its block * block
+		//for (j = 0; j < infoHeader.width; j+= block)
+		for (j = 0; j < infoHeader.width; j++) // check if its block * block
 		{
 			
 			for (k = 0, l = 0; k < block  ; ++k, ++l)
-				fprintf(blockFile,"%d ",red[k + i * block + j * block * block]);
+				fprintf(blockFile,"%d ",red[k + infoHeader.width * j  + i * block]);
 
 			fprintf(blockFile,"\n");
 			//printf("fptr: %d\n",block * j + i);			
@@ -150,40 +154,42 @@ int main(int argc, char const *argv[])
 		//fprintf(blockFile,"\n");
 
 	}
-
-	for (i = 0; i < infoHeader.height; i+=block)
-	{
-		for (j = 0; j < infoHeader.width; j+= block) // check if its block * block
-		{
+	//for (i = 0; i < infoHeader.height; i+=block)
+	// for (i = 0; i < infoHeader.height/block; i++)
+	// {
+	// 	//for (j = 0; j < infoHeader.width; j+= block)
+	// 	for (j = 0; j < infoHeader.width; j++) // check if its block * block
+	// 	{
 			
-			for (k = 0, l = 0; k < block  ; ++k, ++l)
-				fprintf(blockFile,"%d ",green[k + i * block + j * block * block]);
+	// 		for (k = 0, l = 0; k < block  ; ++k, ++l)
+	// 			fprintf(blockFile,"%d ",blue[k + infoHeader.width * j  + i * block]);
 
-			fprintf(blockFile,"\n");
-			//printf("fptr: %d\n",block * j + i);
+	// 		fprintf(blockFile,"\n");
+	// 		//printf("fptr: %d\n",block * j + i);			
+	// 	}
+	// 	//fprintf(blockFile,"\n");
 
+	// }
+
+	// //for (i = 0; i < infoHeader.height; i+=block)
+	// for (i = 0; i < infoHeader.height/block; i++)
+	// {
+	// 	//for (j = 0; j < infoHeader.width; j+= block)
+	// 	for (j = 0; j < infoHeader.width; j++) // check if its block * block
+	// 	{
 			
-		}
-		//fprintf(blockFile,"\n");
+	// 		for (k = 0, l = 0; k < block  ; ++k, ++l)
+	// 			fprintf(blockFile,"%d ",green[k + infoHeader.width * j  + i * block]);
 
-	}
+	// 		fprintf(blockFile,"\n");
+	// 		//printf("fptr: %d\n",block * j + i);			
+	// 	}
+	// 	//fprintf(blockFile,"\n");
 
+	// }
 
-	for (i = 0; i < infoHeader.height; i+=block)
-	{
-		for (j = 0; j < infoHeader.width; j+= block) // check if its block * block
-		{
-			
-			for (k = 0, l = 0; k < block  ; ++k, ++l)
-				fprintf(blockFile,"%d ",blue[k + i * block + j * block * block]);
-
-			fprintf(blockFile,"\n");
-			//printf("fptr: %d\n",block * j + i);
-			
-		}
-		//fprintf(blockFile,"\n");
-
-	}
+	// fwrite(&header,sizeof(header),1,blockFile);
+	// fwrite(&infoHeader,sizeof(infoHeader),1,blockFile);
 
 	fclose(blockFile);
 
