@@ -53,14 +53,16 @@ typedef struct InfoHeaders
 	unsigned int importantColours;   /* Important colours         */
 } InfoHeader;
 
-#pragma pack(pop)
+#pragma pack(pop) // get back the orignial byte packing 
+
+// read - http://stackoverflow.com/questions/3318410/pragma-pack-effect
 
 int main(int argc, char const *argv[])
 {
-	int i,j,ERROR;
+	int i,j,k,l,ERROR;
 	unsigned char *bitMapImage;
 	unsigned char *red,*green,*blue;
-	FILE *fp;
+	FILE *fp,*blockFile;
 	Header header;
 	InfoHeader infoHeader;
 
@@ -101,7 +103,7 @@ int main(int argc, char const *argv[])
 	bitMapImage = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char));
 
 	fseek(fp,header.offset,SEEK_SET);
-	if((ERROR = fread(bitMapImage,infoHeader.imagesize,1,fp))  != 1)
+	if((ERROR = fread(bitMapImage,infoHeader.imagesize,1,fp))  != 1) // Read the bit map as one data set
 	{
 		printf("Error Reading Image BitMap\n");
 		printf("ERROR:%d\n",ERROR);
@@ -109,7 +111,7 @@ int main(int argc, char const *argv[])
 		fclose(fp);
 		return -1;
 	}
-
+	fclose(fp);
 	red = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
 	green = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
 	blue = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
@@ -119,11 +121,69 @@ int main(int argc, char const *argv[])
 		red[j] = bitMapImage[i];
 		green[j] = bitMapImage[i + 1];
 		blue[j] = bitMapImage[i + 2];
-		printf("%d %d %d count : %d\n",red[j],green[j],blue[j],i);
+		//printf("%d %d %d count : %d\n",red[j],green[j],blue[j],i);
+
+		// check if RGB alignment is correct
+	}
+
+	blockFile = fopen("blockFile","w");
+
+	for (i = 0; i < infoHeader.height; i+=8)
+	{
+		for (j = 0; j < infoHeader.width; j+=64)
+		{
+			
+			for (k = 0, l = 0; k < block  ; ++k, ++l)
+				fprintf(blockFile,"%d ",red[k + i * block + j * block * block]);
+
+			fprintf(blockFile,"\n");
+			//printf("fptr: %d\n",block * j + i);
+
+			
+		}
+		fprintf(blockFile,"\n");
+
+	}
+
+	for (i = 0; i < infoHeader.height; i+=8)
+	{
+		for (j = 0; j < infoHeader.width; j+=64)
+		{
+			
+			for (k = 0, l = 0; k < block  ; ++k, ++l)
+				fprintf(blockFile,"%d ",green[k + i * block + j * block * block]);
+
+			fprintf(blockFile,"\n");
+			//printf("fptr: %d\n",block * j + i);
+
+			
+		}
+		fprintf(blockFile,"\n");
+
 	}
 
 
-// write the blocking here !!
+	for (i = 0; i < infoHeader.height; i+=8)
+	{
+		for (j = 0; j < infoHeader.width; j+=64)
+		{
+			
+			for (k = 0, l = 0; k < block  ; ++k, ++l)
+				fprintf(blockFile,"%d ",blue[k + i * block + j * block * block]);
 
+			fprintf(blockFile,"\n");
+			//printf("fptr: %d\n",block * j + i);
+			
+		}
+		fprintf(blockFile,"\n");
+
+	}
+
+	fclose(blockFile);
+
+	free(red);
+	free(green);
+	free(blue);
+	free(bitMapImage);
 	return 0;
 }

@@ -1,0 +1,20 @@
+**Header**
+ type: 0x4d42 
+ fileSize: 786570 
+ reserved1: 0 
+ offset: 138 
+
+
+**InfoHeader**
+ size: 124 
+ width: 512 
+ height: 512 
+ planes: 1 
+ bits: 24 
+ compression: 0 
+ imagesize: 786432 
+ xResolution: 0 
+ yResolution: 0 
+ coloursUsed: 0 
+ importantColours: 0 
+
