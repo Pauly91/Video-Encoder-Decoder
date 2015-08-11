@@ -14,14 +14,13 @@ reference -
 */
 
 
-	
+/********************************************************************************************/ 	
 
 
 
 #include <stdio.h>
 #include <stdlib.h>
 
-//#define block 8
 
 #pragma pack(push, 1)
 
@@ -67,15 +66,13 @@ int main(int argc, char const *argv[])
 
 	int i,j,k,l,ERROR;
 	unsigned char *bitMapImage;
-	unsigned char *red,*green,*blue,*blockArray;
+	unsigned char *red,*green,*blue;
 	int block;
 	FILE *fp,*blockFile;
 	Header header;
 	InfoHeader infoHeader;
 
 	block = atoi(argv[2]);
-
-	blockArray = (unsigned char*) malloc(block * block * sizeof(char));
 	if((fp = fopen(argv[1],"rb")) == NULL)
 	{
 		printf("Error Reading File\n");
@@ -96,8 +93,8 @@ int main(int argc, char const *argv[])
 		fclose(fp);
 		return -1;
 	}
-	printf("**Header**\n");
-	printf(" type: 0x%x \n fileSize: %d \n reserved1: %d \n offset: %d \n",header.type,header.fileSize,header.reserved,header.offset);
+	// printf("**Header**\n");
+	// printf(" type: 0x%x \n fileSize: %d \n reserved1: %d \n offset: %d \n",header.type,header.fileSize,header.reserved,header.offset);
 
 	if(fread(&infoHeader,sizeof(infoHeader),1,fp) != 1)
 	{
@@ -105,15 +102,15 @@ int main(int argc, char const *argv[])
 		fclose(fp);
 		return -1;
 	}
-	printf("\n\n**InfoHeader**\n");
-	printf(" size: %d \n width: %d \n height: %d \n planes: %d \n bits: %d \n",infoHeader.size,infoHeader.width,infoHeader.height,infoHeader.planes,infoHeader.bits); 
-	printf(" compression: %d \n imagesize: %d \n xResolution: %d \n yResolution: %d \n",infoHeader.compression,infoHeader.imagesize,infoHeader.xResolution,infoHeader.yResolution);
-	printf(" coloursUsed: %d \n importantColours: %d \n\n",infoHeader.coloursUsed,infoHeader.importantColours);
+	// printf("\n\n**InfoHeader**\n");
+	// printf(" size: %d \n width: %d \n height: %d \n planes: %d \n bits: %d \n",infoHeader.size,infoHeader.width,infoHeader.height,infoHeader.planes,infoHeader.bits); 
+	// printf(" compression: %d \n imagesize: %d \n xResolution: %d \n yResolution: %d \n",infoHeader.compression,infoHeader.imagesize,infoHeader.xResolution,infoHeader.yResolution);
+	// printf(" coloursUsed: %d \n importantColours: %d \n\n",infoHeader.coloursUsed,infoHeader.importantColours);
 
 	bitMapImage = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char));
 
 	fseek(fp,header.offset,SEEK_SET);
-	if((ERROR = fread(bitMapImage,infoHeader.imagesize,1,fp))  != 1) // Read the bit map as one data set
+	if((ERROR = fread(bitMapImage,infoHeader.imagesize,1,fp))  != 1) 
 	{
 		printf("Error Reading Image BitMap\n");
 		printf("ERROR:%d\n",ERROR);
@@ -122,6 +119,7 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 	fclose(fp);
+	
 	red = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
 	green = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
 	blue = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
@@ -131,89 +129,62 @@ int main(int argc, char const *argv[])
 		red[j] = bitMapImage[i];
 		green[j] = bitMapImage[i + 1];
 		blue[j] = bitMapImage[i + 2];
-		//printf("%d %d %d count : %d\n",red[j],green[j],blue[j],i);
 
-		// check if RGB alignment is correct
 	}
 
 	blockFile = fopen("blockFile","w");
 
-	//fprintf(blockFile,"%d %d %d\n",block,infoHeader.height,infoHeader.width);
+	fprintf(blockFile,"%d %d %d\n",block,infoHeader.height,infoHeader.width);
+
+
+	for (i = 0; i < infoHeader.height/block; i++)
+	{
+
+		for (j = 0; j < infoHeader.width; j++) 
+		{
+			
+			for (k = 0, l = 0; k < block  ; ++k, ++l)
+				fprintf(blockFile,"%d ",red[k + infoHeader.width * j  + i * block]);
+
+			fprintf(blockFile,"\n");
+			
+		}
+
+
+	}
+	for (i = 0; i < infoHeader.height/block; i++)
+	{
+
+		for (j = 0; j < infoHeader.width; j++) 
+		{
+			
+			for (k = 0, l = 0; k < block  ; ++k, ++l)
+				fprintf(blockFile,"%d ",green[k + infoHeader.width * j  + i * block]);
+
+			fprintf(blockFile,"\n");
+	
+		}
+
+
+	}
+
+	for (i = 0; i < infoHeader.height/block; i++)
+	{
+		for (j = 0; j < infoHeader.width; j++) 
+		{
+			
+			for (k = 0, l = 0; k < block  ; ++k, ++l)
+				fprintf(blockFile,"%d ",blue[k + infoHeader.width * j  + i * block]);
+
+			fprintf(blockFile,"\n");
+			
+		}
+
+
+	}
+
 	fwrite(&header,sizeof(header),1,blockFile);
 	fwrite(&infoHeader,sizeof(infoHeader),1,blockFile);
-	//for (i = 0; i < infoHeader.height; i+=block)
-	for (i = 0; i < infoHeader.height/block; i++)
-	{
-		//for (j = 0; j < infoHeader.width; j+= block)
-		for (j = 0,l=0; j < infoHeader.width; j++) // check if its block * block
-		{
-			
-			for (k = 0; k < block  ; ++k)
-			{	
-				blockArray[l] = red[k + infoHeader.width * j  + i * block];
-				l++;
-				if(l > block * block )
-				{
-					fwrite(&blockArray,sizeof(blockArray),1,blockFile);
-					l=0;
-				}
-				//fprintf(blockFile,"%d ",red[k + infoHeader.width * j  + i * block]);
-			}	
-			//fprintf(blockFile,"\n");
-			//printf("fptr: %d\n",block * j + i);			
-		}
-		//fprintf(blockFile,"\n");
-
-	}
-	for (i = 0; i < infoHeader.height/block; i++)
-	{
-		//for (j = 0; j < infoHeader.width; j+= block)
-		for (j = 0,l=0; j < infoHeader.width; j++) // check if its block * block
-		{
-			
-			for (k = 0; k < block  ; ++k)
-			{	
-				blockArray[l] = green[k + infoHeader.width * j  + i * block];
-				l++;
-				if(l > block * block )
-				{
-					fwrite(&blockArray,sizeof(blockArray),1,blockFile);
-					l=0;
-				}
-				//fprintf(blockFile,"%d ",red[k + infoHeader.width * j  + i * block]);
-			}	
-			//fprintf(blockFile,"\n");
-			//printf("fptr: %d\n",block * j + i);			
-		}
-		//fprintf(blockFile,"\n");
-
-	}
-	//for (i = 0; i < infoHeader.height; i+=block)
-	for (i = 0; i < infoHeader.height/block; i++)
-	{
-		//for (j = 0; j < infoHeader.width; j+= block)
-		for (j = 0,l=0; j < infoHeader.width; j++) // check if its block * block
-		{
-			
-			for (k = 0; k < block  ; ++k)
-			{	
-				blockArray[l] = blue[k + infoHeader.width * j  + i * block];
-				l++;
-				if(l > block * block )
-				{
-					fwrite(&blockArray,sizeof(blockArray),1,blockFile);
-					l=0;
-				}
-				//fprintf(blockFile,"%d ",red[k + infoHeader.width * j  + i * block]);
-			}	
-			//fprintf(blockFile,"\n");
-			//printf("fptr: %d\n",block * j + i);			
-		}
-		//fprintf(blockFile,"\n");
-
-	}
-
-
 
 	fclose(blockFile);
 
@@ -224,4 +195,4 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
-// ./imageBlocking images/Lenna.bmp 8			
+// `./imageBlocking images/Lenna.bmp 8			

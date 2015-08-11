@@ -8,25 +8,8 @@ Code for -
 	Assembles them back to BMP
 	Using the following header data
 
-**Header**
- type: 0x4d42 
- fileSize: 786570 
- reserved1: 0 
- offset: 138 
 
 
-**InfoHeader**
- size: 124 
- width: 512 
- height: 512 
- planes: 1 
- bits: 24 
- compression: 0 
- imagesize: 786432 
- xResolution: 0 
- yResolution: 0 
- coloursUsed: 0 
- importantColours: 0 
 
 
 reference -
@@ -42,6 +25,7 @@ reference -
 #include <stdlib.h>
 #include <limits.h>	 
 
+#define numColor 3
 //#define block 8
 
 #pragma pack(push, 1)
@@ -77,32 +61,16 @@ typedef struct InfoHeaders
 #pragma pack(pop) // get back the orignial byte packing 
 
 
-// void initHeaders(Header *header,InfoHeader *infoHeader)
-// {
-// 	header->type = 0x4d42 ;
-// 	header->fileSize = 786570 ;
-// 	header->reserved = 0;
-// 	header->offset = 138;
 
-// 	infoHeader->size = 124;
-// 	infoHeader->width = 512;
-// 	infoHeader->height = 512;
-// 	infoHeader->
-// 	infoHeader->
-// 	infoHeader->
-// 	infoHeader->
-// 	infoHeader->
-// 	infoHeader->
-// }
 
 
 int main(int argc, char const *argv[])
 {
-	// if(argc != 2)
-	// {
-	// 	printf("\n\nThe format is ./imageAssemble [file name]\n\n");
-	// 	return -1;
-	// }
+	if(argc != 2)
+	{
+		printf("\n\nThe format is ./assemble [file name]\n\n");
+		return -1;
+	}
 
 	int i,j,k,l,ERROR;
 	unsigned char *bitMapImage;
@@ -110,11 +78,6 @@ int main(int argc, char const *argv[])
 	FILE *fp,*image;
 	Header header;
 	InfoHeader infoHeader;
-
-	//initHeaders(&header,&infoHeader);
-
-
-
 	
 	if((fp = fopen("blockFile","r")) == NULL)
 	{
@@ -123,60 +86,46 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 
-	fscanf(fp,"%d %d %d ",&block,&height,&width);
-	printf("%d %d %d\n",block,height,width);
+	if(fscanf(fp,"%d %d %d ",&block,&height,&width))
+		bitMapImage = (unsigned char *) calloc(height * width * 3 , sizeof(char));
 
-	bitMapImage = (unsigned char *) malloc(height * width * 3 * sizeof(char));
-	//printf("%d\n",height * width * 3 * sizeof(char));
 	for (i = 0,l = 0; i < height/block; i++)
 	{
-		for (j = 0; j < width ; j++) // check if its block * block
+		for (j = 0; j < width ; j++) 
 		{
 			
 			for (k = 0,l = 0; k < block  ; ++k, l += 2)
 			{	
-				fscanf(fp,"%d ",&value);
-				bitMapImage[k + width * j * 3 + i * 3 * block + l] = (unsigned char) value;
-				printf("%d : %d \n",k + width * j   + i * block + l,bitMapImage[k + width * j  + i * block + l ]);
-				//bitMapImage[k + width * j  + i * block + l] = (unsigned char)value;
-				//printf("%d\n",k + width * j  + i * block + l);
-			//	printf("%d ",bitMapImage[k + width * j  + i * block + l ]);
+				if(fscanf(fp,"%d ",&value))
+					bitMapImage[k + width * j * 3 + i * 3 * block + l] = (unsigned char) value;
 			}	
-			//printf("\n");	
 		}
 	}
-	//printf("green\n");	
-	//blue[k + width * j  + i * block]
+
 	for (i = 0,l = 0; i < height/block; i++)
 	{
-		for (j = 0; j < width ; j++) // check if its block * block
+		for (j = 0; j < width ; j++) 
 		{
 			
 			for (k = 0,l = 0; k < block  ; ++k, l += 2)
 			{	
-				fscanf(fp,"%d ",&value);
-				bitMapImage[k + width * j * 3  + i * 3 * block + l + 1] = (unsigned char)value;
-				printf("%d : %d \n",k + width * j  + i * block + l + 1 ,bitMapImage[k + width * j  + i * block + l + 1]);
-			//	printf("%d ",bitMapImage[k + width * j  + i * block + l + 1]);
+				if(fscanf(fp,"%d ",&value))
+					bitMapImage[k + width * j * 3  + i * 3 * block + l + 1] = (unsigned char)value;
 			}	
-			//printf("\n");	
 		}
 
 	}
-	//printf("blue\n");	
+
 	for (i = 0,l = 0; i < height/block; i++)
 	{
-		for (j = 0; j < width ; j++) // check if its block * block
+		for (j = 0; j < width ; j++) 
 		{
 			
 			for (k = 0,l = 0; k < block  ; ++k, l += 2)
 			{	
-				fscanf(fp,"%d ",&value);
-				bitMapImage[k + width * j * 3  + i * 3  * block + l + 2] = (unsigned char)value;
-				printf("%d\n",k + width * j  + i * block);
-			//printf("%d : %d \n",k + width * j  + i * block + l + 2,bitMapImage[k + width * j  + i * block + l + 2]);
+				if(fscanf(fp,"%d ",&value))
+					bitMapImage[k + width * j * 3  + i * 3  * block + l + 2] = (unsigned char)value;
 			}	
-			//printf("\n");	
 		}
 
 	}
@@ -247,13 +196,7 @@ int main(int argc, char const *argv[])
 		fclose(image);
 		return -1;
 	}
-	for (i = 0; i < infoHeader.imagesize; ++i)
-	{
-		printf("%d ",bitMapImage[i]);
-		if(i%32 == 0)
-			printf("\n");
-	}
-
+	free(bitMapImage);
 	fclose(image);
 	fclose(fp);
 	return 0;
