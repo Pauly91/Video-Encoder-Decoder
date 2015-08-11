@@ -133,10 +133,11 @@ int main(int argc, char const *argv[])
 		for (j = 0; j < width ; j++) // check if its block * block
 		{
 			
-			for (k = 0,l = 0; k < block  ; ++k, l += 3)
+			for (k = 0,l = 0; k < block  ; ++k, l += 2)
 			{	
 				fscanf(fp,"%d ",&value);
-				bitMapImage[k + width * j  + i * block + l] = (unsigned char) value;
+				bitMapImage[k + width * j * 3 + i * 3 * block + l] = (unsigned char) value;
+				printf("%d : %d \n",k + width * j   + i * block + l,bitMapImage[k + width * j  + i * block + l ]);
 				//bitMapImage[k + width * j  + i * block + l] = (unsigned char)value;
 				//printf("%d\n",k + width * j  + i * block + l);
 			//	printf("%d ",bitMapImage[k + width * j  + i * block + l ]);
@@ -151,10 +152,11 @@ int main(int argc, char const *argv[])
 		for (j = 0; j < width ; j++) // check if its block * block
 		{
 			
-			for (k = 0,l = 0; k < block  ; ++k, l += 3)
+			for (k = 0,l = 0; k < block  ; ++k, l += 2)
 			{	
 				fscanf(fp,"%d ",&value);
-				bitMapImage[k + width * j  + i * block + l + 1] = (unsigned char)value;
+				bitMapImage[k + width * j * 3  + i * 3 * block + l + 1] = (unsigned char)value;
+				printf("%d : %d \n",k + width * j  + i * block + l + 1 ,bitMapImage[k + width * j  + i * block + l + 1]);
 			//	printf("%d ",bitMapImage[k + width * j  + i * block + l + 1]);
 			}	
 			//printf("\n");	
@@ -167,12 +169,12 @@ int main(int argc, char const *argv[])
 		for (j = 0; j < width ; j++) // check if its block * block
 		{
 			
-			for (k = 0,l = 0; k < block  ; ++k, l += 3)
+			for (k = 0,l = 0; k < block  ; ++k, l += 2)
 			{	
 				fscanf(fp,"%d ",&value);
-				bitMapImage[k + width * j  + i * block + l + 2] = (unsigned char)value;
-				//printf("%d\n",k + width * j  + i * block);
-			//	printf("%d ",bitMapImage[k + width * j  + i * block + l + 2]);
+				bitMapImage[k + width * j * 3  + i * 3  * block + l + 2] = (unsigned char)value;
+				printf("%d\n",k + width * j  + i * block);
+			//printf("%d : %d \n",k + width * j  + i * block + l + 2,bitMapImage[k + width * j  + i * block + l + 2]);
 			}	
 			//printf("\n");	
 		}
