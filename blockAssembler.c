@@ -106,17 +106,16 @@ int main(int argc, char const *argv[])
 	int i,j,k,l,ERROR;
 	unsigned char *bitMapImage;
 	unsigned char *red,*green,*blue,ignore;
-	int block,height,width;
-	FILE *fp;
+	int block,height,width,value;
+	FILE *fp,*image;
 	Header header;
 	InfoHeader infoHeader;
 
 	//initHeaders(&header,&infoHeader);
 
-	red = (unsigned char *) calloc(height * width , sizeof(char));
-	green = (unsigned char *) calloc(height * width , sizeof(char));
-	blue = (unsigned char *) calloc(height * width , sizeof(char));
 
+
+	
 	if((fp = fopen("blockFile","r")) == NULL)
 	{
 		printf("Error Reading File\n");
@@ -124,70 +123,61 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 
-	fscanf(fp,"%d %d %d",&block,&height,&width);
+	fscanf(fp,"%d %d %d ",&block,&height,&width);
 	printf("%d %d %d\n",block,height,width);
 
-	red = (unsigned char *) calloc(height * width , sizeof(char));
-	green = (unsigned char *) calloc(height * width , sizeof(char));
-	blue = (unsigned char *) calloc(height * width , sizeof(char));
-
-	for (i = 0; i < height/block; i++)
+	bitMapImage = (unsigned char *) malloc(height * width * 3 * sizeof(char));
+	//printf("%d\n",height * width * 3 * sizeof(char));
+	for (i = 0,l = 0; i < height/block; i++)
 	{
 		for (j = 0; j < width ; j++) // check if its block * block
 		{
 			
-			for (k = 0, l = 0; k < block  ; ++k, ++l)
+			for (k = 0; k < block  ; ++k, l += 2)
 			{	
-				fscanf(fp,"%d ",&red[k + width * j  + i * block]);
-				//printf("%d\n",k + width * j  + i * block);
-				printf("%d ",red[k + width * j  + i * block ]);
-			}
-			printf("\n");
-			//printf("fptr: %d\n",block * j + i);			
+				fscanf(fp,"%d ",&value);
+				bitMapImage[k + width * j  + i * block + l] = (unsigned char)value;
+				//bitMapImage[k + width * j  + i * block + l] = (unsigned char)value;
+				//printf("%d\n",k + width * j  + i * block + l);
+				printf("%d ",bitMapImage[k + width * j  + i * block + l ]);
+			}	
+			printf("\n");	
 		}
-		//printf("\n");
+	}
+	//printf("green\n");	
+	//blue[k + width * j  + i * block]
+	for (i = 0,l = 0; i < height/block; i++)
+	{
+		for (j = 0; j < width ; j++) // check if its block * block
+		{
+			
+			for (k = 0; k < block  ; ++k, l += 2)
+			{	
+				fscanf(fp,"%d ",&value);
+				bitMapImage[k + width * j  + i * block + l + 1] = (unsigned char)value;
+				printf("%d ",bitMapImage[k + width * j  + i * block + l + 1]);
+			}	
+			printf("\n");	
+		}
 
 	}
-
-	fclose(fp);
-	// for (i = 0; i < height; i+=block)
-	// {
-	// 	for (j = 0; j < width; j+= block) // check if its block * block
-	// 	{
+	//printf("blue\n");	
+	for (i = 0,l = 0; i < height/block; i++)
+	{
+		for (j = 0; j < width ; j++) // check if its block * block
+		{
 			
-	// 		for (k = 0, l = 0; k < block  ; ++k, ++l)
-	// 		{	
-	// 			fscanf(fp,"%c ",&green[k + i * block + j * block * block]);
-	// 			printf("%d ",green[k + i * block + j * block * block]);
-	// 		}
-	// 		printf("\n");
-	// 		//printf("fptr: %d\n",block * j + i);			
-	// 	}
-	// 	//fprintf(blockFile,"\n");
+			for (k = 0; k < block  ; ++k, l += 2)
+			{	
+				fscanf(fp,"%d ",&value);
+				bitMapImage[k + width * j  + i * block + l + 2] = (unsigned char)value;
+				//printf("%d\n",k + width * j  + i * block);
+				printf("%d ",bitMapImage[k + width * j  + i * block + l + 2]);
+			}	
+			printf("\n");	
+		}
 
-	// }
-
-
-	// for (i = 0; i < height; i+=block)
-	// {
-	// 	for (j = 0; j < width; j+= block) // check if its block * block
-	// 	{
-			
-	// 		for (k = 0, l = 0; k < block  ; ++k, ++l)
-	// 		{	
-	// 			fscanf(fp,"%c ",&blue[k + i * block + j * block * block]);
-	// 			printf("%d ",blue[k + i * block + j * block * block]);
-	// 		}
-	// 		printf("\n");
-	// 		//printf("fptr: %d\n",block * j + i);			
-	// 	}
-	// 	//fprintf(blockFile,"\n");
-
-	// }
-
-
-
-/*
+	}
 	if(fread(&header,sizeof(header),1,fp) != 1)
 	{
 		printf("Error Reading Header\n");
@@ -195,111 +185,68 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 
-	if (header.type != 19778)
+	if (header.type != 0x4d42)
 	{
 		printf("Not a BMP file\n");
 		fclose(fp);
 		return -1;
 	}
-	printf("**Header**\n");
-	printf(" type: 0x%x \n fileSize: %d \n reserved1: %d \n offset: %d \n",header.type,header.fileSize,header.reserved,header.offset);
+	// printf("**Header**\n");
+	// printf(" type: 0x%x \n fileSize: %d \n reserved1: %d \n offset: %d \n",header.type,header.fileSize,header.reserved,header.offset);
 
 	if(fread(&infoHeader,sizeof(infoHeader),1,fp) != 1)
 	{
-		printf("Error Reading Header\n");
+		printf("Error Reading InfoHeader\n");
 		fclose(fp);
 		return -1;
 	}
-	printf("\n\n**InfoHeader**\n");
-	printf(" size: %d \n width: %d \n height: %d \n planes: %d \n bits: %d \n",infoHeader.size,infoHeader.width,infoHeader.height,infoHeader.planes,infoHeader.bits); 
-	printf(" compression: %d \n imagesize: %d \n xResolution: %d \n yResolution: %d \n",infoHeader.compression,infoHeader.imagesize,infoHeader.xResolution,infoHeader.yResolution);
-	printf(" coloursUsed: %d \n importantColours: %d \n\n",infoHeader.coloursUsed,infoHeader.importantColours);
+	// printf("\n\n**InfoHeader**\n");
+	// printf(" size: %d \n width: %d \n height: %d \n planes: %d \n bits: %d \n",infoHeader.size,infoHeader.width,infoHeader.height,infoHeader.planes,infoHeader.bits); 
+	// printf(" compression: %d \n imagesize: %d \n xResolution: %d \n yResolution: %d \n",infoHeader.compression,infoHeader.imagesize,infoHeader.xResolution,infoHeader.yResolution);
+	// printf(" coloursUsed: %d \n importantColours: %d \n\n",infoHeader.coloursUsed,infoHeader.importantColours);
 
-	bitMapImage = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char));
 
-	fseek(fp,header.offset,SEEK_SET);
-	if((ERROR = fread(bitMapImage,infoHeader.imagesize,1,fp))  != 1) // Read the bit map as one data set
+	if((image = fopen("image.bmp","wb")) == NULL)
 	{
-		printf("Error Reading Image BitMap\n");
+		printf("Error Reading File\n");
+		fclose(fp);
+		free(bitMapImage);
+		fclose(image);
+		return -1;
+	}
+
+	if(fwrite(&header,sizeof(header),1,image) != 1)
+	{
+		printf("Error Writing Header\n");
+		fclose(fp);
+		free(bitMapImage);
+		fclose(image);
+		return -1;
+	}
+
+	if(fwrite(&infoHeader,sizeof(infoHeader),1,image) != 1)
+	{
+		printf("Error Writing InfoHeader\n");
+		fclose(fp);
+		free(bitMapImage);
+		fclose(image);
+		return -1;
+	}
+
+	//fseek(image,header.offset,SEEK_SET);
+	if((ERROR = fwrite(bitMapImage,infoHeader.imagesize,1,image))  != 1) // Read the bit map as one data set
+	{
+		printf("Error Writing Image BitMap\n");
 		printf("ERROR:%d\n",ERROR);
 		free(bitMapImage);
-		fclose(fp);
+		fclose(image);
 		return -1;
 	}
+	fclose(image);
 	fclose(fp);
-	red = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
-	green = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
-	blue = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
-
-	for (i = 0,j = 0; i < infoHeader.imagesize; i += 3, ++j )
-	{
-		red[j] = bitMapImage[i];
-		green[j] = bitMapImage[i + 1];
-		blue[j] = bitMapImage[i + 2];
-		//printf("%d %d %d count : %d\n",red[j],green[j],blue[j],i);
-
-		// check if RGB alignment is correct
-	}
-
-	blockFile = fopen("blockFile","w");
-
-	for (i = 0; i < infoHeader.height; i+=block)
-	{
-		for (j = 0; j < infoHeader.width; j+= block) // check if its block * block
-		{
-			
-			for (k = 0, l = 0; k < block  ; ++k, ++l)
-				fprintf(blockFile,"%d ",red[k + i * block + j * block * block]);
-
-			fprintf(blockFile,"\n");
-			//printf("fptr: %d\n",block * j + i);			
-		}
-		//fprintf(blockFile,"\n");
-
-	}
-
-	for (i = 0; i < infoHeader.height; i+=block)
-	{
-		for (j = 0; j < infoHeader.width; j+= block) // check if its block * block
-		{
-			
-			for (k = 0, l = 0; k < block  ; ++k, ++l)
-				fprintf(blockFile,"%d ",green[k + i * block + j * block * block]);
-
-			fprintf(blockFile,"\n");
-			//printf("fptr: %d\n",block * j + i);
-
-			
-		}
-		//fprintf(blockFile,"\n");
-
-	}
-
-
-	for (i = 0; i < infoHeader.height; i+=block)
-	{
-		for (j = 0; j < infoHeader.width; j+= block) // check if its block * block
-		{
-			
-			for (k = 0, l = 0; k < block  ; ++k, ++l)
-				fprintf(blockFile,"%d ",blue[k + i * block + j * block * block]);
-
-			fprintf(blockFile,"\n");
-			//printf("fptr: %d\n",block * j + i);
-			
-		}
-		//fprintf(blockFile,"\n");
-
-	}
-
-	fclose(blockFile);
-
-	free(red);
-	free(green);
-	free(blue);
-	free(bitMapImage);
-	*/
 	return 0;
 }
 
-// ./imageBlocking images/Lenna.bmp 8
+// another approach save the file as a bmp with width 8 and height 32768 * 3
+
+// width = blockFile height = width / block * height / width * 32768

@@ -67,13 +67,15 @@ int main(int argc, char const *argv[])
 
 	int i,j,k,l,ERROR;
 	unsigned char *bitMapImage;
-	unsigned char *red,*green,*blue;
+	unsigned char *red,*green,*blue,*blockArray;
 	int block;
 	FILE *fp,*blockFile;
 	Header header;
 	InfoHeader infoHeader;
 
 	block = atoi(argv[2]);
+
+	blockArray = (unsigned char*) malloc(block * block * sizeof(char));
 	if((fp = fopen(argv[1],"rb")) == NULL)
 	{
 		printf("Error Reading File\n");
@@ -136,60 +138,82 @@ int main(int argc, char const *argv[])
 
 	blockFile = fopen("blockFile","w");
 
-	fprintf(blockFile,"%d %d %d\n",block,infoHeader.height,infoHeader.width);
-
+	//fprintf(blockFile,"%d %d %d\n",block,infoHeader.height,infoHeader.width);
+	fwrite(&header,sizeof(header),1,blockFile);
+	fwrite(&infoHeader,sizeof(infoHeader),1,blockFile);
 	//for (i = 0; i < infoHeader.height; i+=block)
 	for (i = 0; i < infoHeader.height/block; i++)
 	{
 		//for (j = 0; j < infoHeader.width; j+= block)
-		for (j = 0; j < infoHeader.width; j++) // check if its block * block
+		for (j = 0,l=0; j < infoHeader.width; j++) // check if its block * block
 		{
 			
-			for (k = 0, l = 0; k < block  ; ++k, ++l)
-				fprintf(blockFile,"%d ",red[k + infoHeader.width * j  + i * block]);
+			for (k = 0; k < block  ; ++k)
+			{	
+				blockArray[l] = red[k + infoHeader.width * j  + i * block];
+				l++;
+				if(l > block * block )
+				{
+					fwrite(&blockArray,sizeof(blockArray),1,blockFile);
+					l=0;
+				}
+				//fprintf(blockFile,"%d ",red[k + infoHeader.width * j  + i * block]);
+			}	
+			//fprintf(blockFile,"\n");
+			//printf("fptr: %d\n",block * j + i);			
+		}
+		//fprintf(blockFile,"\n");
 
-			fprintf(blockFile,"\n");
+	}
+	for (i = 0; i < infoHeader.height/block; i++)
+	{
+		//for (j = 0; j < infoHeader.width; j+= block)
+		for (j = 0,l=0; j < infoHeader.width; j++) // check if its block * block
+		{
+			
+			for (k = 0; k < block  ; ++k)
+			{	
+				blockArray[l] = green[k + infoHeader.width * j  + i * block];
+				l++;
+				if(l > block * block )
+				{
+					fwrite(&blockArray,sizeof(blockArray),1,blockFile);
+					l=0;
+				}
+				//fprintf(blockFile,"%d ",red[k + infoHeader.width * j  + i * block]);
+			}	
+			//fprintf(blockFile,"\n");
 			//printf("fptr: %d\n",block * j + i);			
 		}
 		//fprintf(blockFile,"\n");
 
 	}
 	//for (i = 0; i < infoHeader.height; i+=block)
-	// for (i = 0; i < infoHeader.height/block; i++)
-	// {
-	// 	//for (j = 0; j < infoHeader.width; j+= block)
-	// 	for (j = 0; j < infoHeader.width; j++) // check if its block * block
-	// 	{
+	for (i = 0; i < infoHeader.height/block; i++)
+	{
+		//for (j = 0; j < infoHeader.width; j+= block)
+		for (j = 0,l=0; j < infoHeader.width; j++) // check if its block * block
+		{
 			
-	// 		for (k = 0, l = 0; k < block  ; ++k, ++l)
-	// 			fprintf(blockFile,"%d ",blue[k + infoHeader.width * j  + i * block]);
+			for (k = 0; k < block  ; ++k)
+			{	
+				blockArray[l] = blue[k + infoHeader.width * j  + i * block];
+				l++;
+				if(l > block * block )
+				{
+					fwrite(&blockArray,sizeof(blockArray),1,blockFile);
+					l=0;
+				}
+				//fprintf(blockFile,"%d ",red[k + infoHeader.width * j  + i * block]);
+			}	
+			//fprintf(blockFile,"\n");
+			//printf("fptr: %d\n",block * j + i);			
+		}
+		//fprintf(blockFile,"\n");
 
-	// 		fprintf(blockFile,"\n");
-	// 		//printf("fptr: %d\n",block * j + i);			
-	// 	}
-	// 	//fprintf(blockFile,"\n");
+	}
 
-	// }
 
-	// //for (i = 0; i < infoHeader.height; i+=block)
-	// for (i = 0; i < infoHeader.height/block; i++)
-	// {
-	// 	//for (j = 0; j < infoHeader.width; j+= block)
-	// 	for (j = 0; j < infoHeader.width; j++) // check if its block * block
-	// 	{
-			
-	// 		for (k = 0, l = 0; k < block  ; ++k, ++l)
-	// 			fprintf(blockFile,"%d ",green[k + infoHeader.width * j  + i * block]);
-
-	// 		fprintf(blockFile,"\n");
-	// 		//printf("fptr: %d\n",block * j + i);			
-	// 	}
-	// 	//fprintf(blockFile,"\n");
-
-	// }
-
-	// fwrite(&header,sizeof(header),1,blockFile);
-	// fwrite(&infoHeader,sizeof(infoHeader),1,blockFile);
 
 	fclose(blockFile);
 
@@ -200,4 +224,4 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
-// ./imageBlocking images/Lenna.bmp 8
+// ./imageBlocking images/Lenna.bmp 8			
