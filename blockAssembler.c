@@ -238,7 +238,7 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 
-	//fseek(image,header.offset,SEEK_SET);
+	fseek(image,header.offset,SEEK_SET);
 	if((ERROR = fwrite(bitMapImage,infoHeader.imagesize,1,image))  != 1) // Read the bit map as one data set
 	{
 		printf("Error Writing Image BitMap\n");
