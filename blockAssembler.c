@@ -40,6 +40,7 @@ reference -
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>	 
 
 //#define block 8
 
@@ -105,7 +106,6 @@ int main(int argc, char const *argv[])
 
 	int i,j,k,l,ERROR;
 	unsigned char *bitMapImage;
-	unsigned char *red,*green,*blue,ignore;
 	int block,height,width,value;
 	FILE *fp,*image;
 	Header header;
@@ -133,15 +133,15 @@ int main(int argc, char const *argv[])
 		for (j = 0; j < width ; j++) // check if its block * block
 		{
 			
-			for (k = 0; k < block  ; ++k, l += 2)
+			for (k = 0,l = 0; k < block  ; ++k, l += 3)
 			{	
 				fscanf(fp,"%d ",&value);
-				bitMapImage[k + width * j  + i * block + l] = (unsigned char)value;
+				bitMapImage[k + width * j  + i * block + l] = (unsigned char) value;
 				//bitMapImage[k + width * j  + i * block + l] = (unsigned char)value;
 				//printf("%d\n",k + width * j  + i * block + l);
-				printf("%d ",bitMapImage[k + width * j  + i * block + l ]);
+			//	printf("%d ",bitMapImage[k + width * j  + i * block + l ]);
 			}	
-			printf("\n");	
+			//printf("\n");	
 		}
 	}
 	//printf("green\n");	
@@ -151,13 +151,13 @@ int main(int argc, char const *argv[])
 		for (j = 0; j < width ; j++) // check if its block * block
 		{
 			
-			for (k = 0; k < block  ; ++k, l += 2)
+			for (k = 0,l = 0; k < block  ; ++k, l += 3)
 			{	
 				fscanf(fp,"%d ",&value);
 				bitMapImage[k + width * j  + i * block + l + 1] = (unsigned char)value;
-				printf("%d ",bitMapImage[k + width * j  + i * block + l + 1]);
+			//	printf("%d ",bitMapImage[k + width * j  + i * block + l + 1]);
 			}	
-			printf("\n");	
+			//printf("\n");	
 		}
 
 	}
@@ -167,20 +167,21 @@ int main(int argc, char const *argv[])
 		for (j = 0; j < width ; j++) // check if its block * block
 		{
 			
-			for (k = 0; k < block  ; ++k, l += 2)
+			for (k = 0,l = 0; k < block  ; ++k, l += 3)
 			{	
 				fscanf(fp,"%d ",&value);
 				bitMapImage[k + width * j  + i * block + l + 2] = (unsigned char)value;
 				//printf("%d\n",k + width * j  + i * block);
-				printf("%d ",bitMapImage[k + width * j  + i * block + l + 2]);
+			//	printf("%d ",bitMapImage[k + width * j  + i * block + l + 2]);
 			}	
-			printf("\n");	
+			//printf("\n");	
 		}
 
 	}
-	if(fread(&header,sizeof(header),1,fp) != 1)
+	if((ERROR = fread(&header,sizeof(header),1,fp)) != 1)
 	{
 		printf("Error Reading Header\n");
+		printf("ERROR: %d \n",ERROR);
 		fclose(fp);
 		return -1;
 	}
@@ -194,9 +195,10 @@ int main(int argc, char const *argv[])
 	// printf("**Header**\n");
 	// printf(" type: 0x%x \n fileSize: %d \n reserved1: %d \n offset: %d \n",header.type,header.fileSize,header.reserved,header.offset);
 
-	if(fread(&infoHeader,sizeof(infoHeader),1,fp) != 1)
+	if((ERROR = fread(&infoHeader,sizeof(infoHeader),1,fp)) != 1)
 	{
 		printf("Error Reading InfoHeader\n");
+		printf("ERROR: %d \n",ERROR);
 		fclose(fp);
 		return -1;
 	}
@@ -215,9 +217,10 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 
-	if(fwrite(&header,sizeof(header),1,image) != 1)
+	if((ERROR = fwrite(&header,sizeof(header),1,image)) != 1)
 	{
 		printf("Error Writing Header\n");
+		printf("ERROR: %d \n",ERROR);
 		fclose(fp);
 		free(bitMapImage);
 		fclose(image);
@@ -242,6 +245,13 @@ int main(int argc, char const *argv[])
 		fclose(image);
 		return -1;
 	}
+	for (i = 0; i < infoHeader.imagesize; ++i)
+	{
+		printf("%d ",bitMapImage[i]);
+		if(i%32 == 0)
+			printf("\n");
+	}
+
 	fclose(image);
 	fclose(fp);
 	return 0;

@@ -120,6 +120,13 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 	fclose(fp);
+	for (i = 0; i < infoHeader.imagesize; ++i)
+	{
+		printf("%d ",bitMapImage[i]);
+		if(i%32 == 0)
+			printf("\n");
+	}
+	
 	red = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
 	green = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
 	blue = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
@@ -198,4 +205,4 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
-// ./imageBlocking images/Lenna.bmp 8			
+// `./imageBlocking images/Lenna.bmp 8			
