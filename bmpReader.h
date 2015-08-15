@@ -56,7 +56,7 @@ typedef struct BMPDatas
 
 
 
-BMPData* readBMPfile(char *filename);
+BMPData* readBMPfile(const char *filename);
 int writeBMPfile(BMPData data,char *filename);
 
 

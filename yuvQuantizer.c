@@ -116,9 +116,9 @@ void quantiser(unsigned char ** Y,unsigned char ** U,unsigned char ** V,int heig
 	{
 		for (j = 0; j < width; ++j)
 		{
-			Y[i][j] &= 0xF0;
-			U[i][j] &= 0xF0;
-			V[i][j] &= 0xF0;		
+			Y[i][j] &= 0xFF;
+			U[i][j] &= 0xFE;
+			V[i][j] &= 0xFE;		
 		}
 	}	
 }
