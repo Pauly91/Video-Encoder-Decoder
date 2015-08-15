@@ -116,8 +116,9 @@ void quantiser(unsigned char ** Y,unsigned char ** U,unsigned char ** V,int heig
 	{
 		for (j = 0; j < width; ++j)
 		{
-			U[i][j] = 0;
-			V[i][j] = 0;			
+			Y[i][j] &= 0xF0;
+			U[i][j] &= 0xF0;
+			V[i][j] &= 0xF0;		
 		}
 	}	
 }
@@ -159,7 +160,6 @@ void colourMatrix2VectorConverter(unsigned char ** red,unsigned char ** green,un
 			bitMapImage[i] = blue[j][k]; 
 			bitMapImage[i + 1] = green[j][k]; 
 			bitMapImage[i + 2] = red[j][k]; 
-			//printf("j:%d k:%d\n",j,k);
 			k++;
 			if(k == width)
 			{

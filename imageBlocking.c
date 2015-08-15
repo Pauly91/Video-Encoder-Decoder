@@ -72,6 +72,7 @@ int main(int argc, char const *argv[])
 	Header header;
 	InfoHeader infoHeader;
 
+
 	block = atoi(argv[2]);
 	if((fp = fopen(argv[1],"rb")) == NULL)
 	{
@@ -119,6 +120,8 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 	fclose(fp);
+
+	
 	
 	red = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
 	green = (unsigned char *) malloc(infoHeader.imagesize * sizeof(char) / 3);
