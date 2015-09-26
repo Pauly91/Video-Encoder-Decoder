@@ -13,6 +13,7 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 	BMPData *image1 = NULL,*image2 = NULL;
+	FILE *fp = NULL;
 	int i = 0;
 	float meanSquareError = 0;
 	float PSNR = 0;
@@ -33,11 +34,18 @@ int main(int argc, char const *argv[])
 		return 0;
 	}
 
-	meanSquareError = meanSquareError/(image1->infoHeader.height * image1->infoHeader.width)/(image1->infoHeader.height * image1->infoHeader.width);; ;
+	meanSquareError = meanSquareError/(image1->infoHeader.height * image1->infoHeader.width);///(image1->infoHeader.height * image1->infoHeader.width);; ;
 
 
 
 	PSNR = 10 * log10((MAX * MAX)/meanSquareError);
+	if((fp = fopen("data1","w")) == NULL)
+	{
+		printf("Error Opening File\n");
+		return -1;
+	}
 	printf("PSNR : %f\n",PSNR);
+	fprintf(fp, "%f\n",PSNR);
+	fclose(fp);
 	return 0;
 }

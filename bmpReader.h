@@ -57,11 +57,14 @@ typedef struct BMPDatas
 
 
 BMPData* readBMPfile(const char *filename);
-int writeBMPfile(BMPData data,char *filename);
+int writeBMPfile(BMPData *data,const char *filename);
 
 
 void colourVector2MatrixConverter(unsigned char ** red,unsigned char ** green,unsigned char ** blue,unsigned char * bitMapImage,int height, int width);
 void colourMatrix2VectorConverter(unsigned char ** red,unsigned char ** green,unsigned char ** blue,unsigned char * bitMapImage,int height, int width);
+
+void rgb2yuv(unsigned char ** red,unsigned char ** green,unsigned char ** blue,unsigned char ** Y,unsigned char ** U,unsigned char ** V,int height, int width);
+void yuv2rgb(unsigned char ** red,unsigned char ** green,unsigned char ** blue,unsigned char ** Y,unsigned char ** U,unsigned char ** V,int height, int width);
 
 
 
