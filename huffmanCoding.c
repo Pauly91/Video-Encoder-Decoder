@@ -29,20 +29,33 @@ struct nodes *createNode()
 	return node;
 }
 
+void printPreOrder(struct nodes *tree)
+{
+	if(tree)
+	{
+		printf("pixel: %d probabilty: %f \n",tree->pixel,tree->probabilty);
+		printPreOrder(tree->left);
+		printPreOrder(tree->right);
+	}
+}
+
 void binaryTreeConstruction(struct nodes *head,struct nodes *array, int count)
 {
-	struct nodes *holder,temp;
+	struct nodes *holder1,*holder2;
 	while(count - 1) // remaining two
 	{
-		holder = createNode()
-		*holder = array[count - 2];
-		array[count - 2].probabilty = array[count - 1].probabilty + holder->probabilty;
-		array[count - 2].left = holder;
-		array[count - 2].right = array[count - 1];
+		holder1 = createNode();
+		holder2 = createNode();
+		*holder1 = array[count - 2];
+		*holder2 = array[count - 1];
+		array[count - 2].probabilty = holder1->probabilty + holder2->probabilty;
+		array[count -2 ].pixel = 10000;
+		array[count - 2].left = holder1;
+		array[count - 2].right = holder2;
 		count--;
-		qsort(node,count,sizeof(struct nodes),compare_function);	
+		qsort(array,count,sizeof(struct nodes),compare_function);	
 	}
-		head->probabilty = array[count]->probabilty + array[count - 1]->probabilty;
+		head->probabilty = array[count].probabilty + array[count - 1].probabilty;
 		head->left = &array[0];
 		head->right = &array[1];
 }
@@ -77,7 +90,7 @@ int main(int argc, char const *argv[])
 		{
 			node[j].pixel = i;
 			node[j].probabilty = ((float)hashMap[i]/symbol);
-			node[j].left = nod[j].right = NULL:
+			node[j].left = node[j].right = NULL;
 			j++;
 		}
 	}
@@ -92,6 +105,7 @@ int main(int argc, char const *argv[])
 		printf("pixel: %d probabilty:%f \n",node[i].pixel,node[i].probabilty);
 	}	
 	binaryTreeConstruction(head,node,count);
+	printPreOrder(head);
 
 	return 0;
 }
