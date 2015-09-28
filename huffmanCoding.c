@@ -127,7 +127,7 @@ void binaryTreeConstruction(struct nodes *head,struct nodes *array, int count)
 		*holder1 = array[count - 2];
 		*holder2 = array[count - 1];
 		array[count - 2].probabilty = holder1->probabilty + holder2->probabilty;
-		array[count - 2].pixel = 10000;
+		array[count - 2].pixel = 10000;// dummy value
 		array[count - 2].left = holder1;
 		array[count - 2].right = holder2;
 		count--;
@@ -140,7 +140,7 @@ void binaryTreeConstruction(struct nodes *head,struct nodes *array, int count)
 		printf("\n\nCount:%d\n",count);
 	}
 		head->probabilty = array[0].probabilty + array[1].probabilty;
-		head->pixel = 1000;
+		head->pixel = 10000;// dummy value
 		head->left = &array[0];
 		head->right = &array[1];
 }

@@ -12,7 +12,7 @@ void zigzager(unsigned char ** DCTBlock, int x, int y,int blockSize, FILE *fp)
 	int i = 0, j = 0;
 	for (i = 0; i < blockSize; ++i)
 	{
-		for (j = 0; j < count; ++j)
+		for (j = 0; j < blockSize; ++j)
 		{
 			fprintf(fp, "%u",DCTBlock[x+i][y+j]);
 		}
