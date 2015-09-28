@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
 					{72,92,	95,	98,	112,100,103, 99}
 	};
 
-	unsigned char reblock[0][0];
+	unsigned char reblock[8][8] = {0};
 	int i = 0, j = 0, holder = 0;
 	int blocksize = 8;
 	FILE *fp = NULL;
@@ -122,21 +122,16 @@ int main(int argc, char const *argv[])
 
 	while( i != 8 && j != 8)
 	{
-
-		printf("i:%d j:%d\n",i,j);
 		if(j%2 == 0 && i == 0)
 		{
 			fscanf(fp,"%u",&reblock[i][j]);
-			printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 			j++;
 		}
 		else if(j%2 == 1 && i == 0)
 		{
-						printf("--> i:%d j:%d %u \n",i,j,reblock[i][j]);	
 			while(j != 0)
 			{
 				fscanf(fp,"%u",&reblock[i][j]);
-				printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 				j -= 1;
 				i += 1;
 			}
@@ -146,7 +141,6 @@ int main(int argc, char const *argv[])
 			while(i != 0)
 			{
 				fscanf(fp,"%u",&reblock[i][j]);
-				printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 				j += 1;
 				i -= 1;
 			}			
@@ -155,16 +149,13 @@ int main(int argc, char const *argv[])
 		{
 			if(i == blocksize - 1)
 			{
-				
 				fscanf(fp,"%u",&reblock[i][j]);
-				printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 				j++;
 			}
 
 			else
 			{
 				fscanf(fp,"%u",&reblock[i][j]);
-				printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 				i++;
 			}
 
@@ -175,7 +166,6 @@ int main(int argc, char const *argv[])
 			while(i != holder)
 			{
 				fscanf(fp,"%u",&reblock[i][j]);
-				printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 				j += 1;
 				i -= 1;				
 			}
@@ -183,13 +173,11 @@ int main(int argc, char const *argv[])
 		else if(i == blocksize - 1 && j%2 == 0)
 		{
 			fscanf(fp,"%u",&reblock[i][j]);
-			printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 			j++;
 		}		
 		else if(j == blocksize - 1 && i%2 == 1)
 		{
 			fscanf(fp,"%u",&reblock[i][j]);
-			printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 			i++;
 		}
 		else if(j == blocksize - 1 && i%2 == 0)
@@ -198,15 +186,14 @@ int main(int argc, char const *argv[])
 			while(j != holder)
 			{
 				fscanf(fp,"%u",&reblock[i][j]);
-				printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 				j -= 1;
 				i += 1;				
 			}
 		}
+
 		if((i == blocksize -1) && (j == blocksize - 1))
 		{
 			fscanf(fp,"%u",&reblock[i][j]);
-			printf("i:%d j:%d %u \n",i,j,reblock[i][j]);
 			i++;
 			j++;
 			break;
