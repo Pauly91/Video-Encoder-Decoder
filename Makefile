@@ -7,7 +7,8 @@ all:
 	gcc downSampler.c bmpReader.c -Wall -g -O2 -lm -o downSampler
 	gcc dct.c bmpReader.c -Wall -g -O2 -lm -o dct
 	gcc huffmanImageCoding.c -Wall -g -O2 -lm -o huff
-
+	gcc huffmanDecoder.c -Wall -g -O2 -lm -o decode
+	gcc assessment.c bmpReader.c -Wall -g -O2 -lm -o run
 clean:
 	rm imageBlocking
 	rm assemble
@@ -17,3 +18,5 @@ clean:
 	rm downSampler
 	rm dct
 	rm huff
+	rm decode
+	rm run
