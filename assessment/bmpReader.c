@@ -304,7 +304,7 @@ void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned c
 void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int dSampleU, int dSampleV)
 {
 
-	int i,j,k;
+	int i,j,k,l;
 	if(dSampleU != 4 && dSampleV  != 4)
 	{
 		if(dSampleU == 1)
@@ -333,23 +333,185 @@ void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned
 				dSampleU = 0;
 				dSampleV = 2;
 			}
+			else if(dSampleU == 2)
+			{
+				dSampleV = 2;
+			}
 			for (i = 0; i < image->infoHeader.height; i += dSampleU) // check loop
 			{
 				for (j = 0; j < image->infoHeader.width; j += dSampleU) // check loop
 				{
 					for (k = 0; k < dSampleU; ++k)
 					{
-					 	U[i][j+k] = U[i][j];
-					 	V[i][j+k] = V[i][j];
+					 	for (l = 0; l < dSampleV; ++l)
+					 	{
+						 	U[i + l][j + k] = U[i][j];
+						 	V[i + l][j + k] = V[i][j];
+					 	}
 					}
-					for (k = 0; k < dSampleU; ++k)
-					{
-					 	U[i+k][j] = U[i][j];
-					 	V[i+k][j] = V[i][j];
-					}
+
 				}
 			}		
 		}
 
 	}	
+}
+
+
+void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize)
+{
+
+	int i,j,u,v;
+	for (i = 0; i < image->infoHeader.height; i += blockSize)
+	{
+		for (j = 0; j < image->infoHeader.width; j += blockSize)
+		{
+			for (u = 0; u < blockSize; ++u)
+			{
+				for (v = 0; v < blockSize; ++v)
+				{
+					dct_Y[u + i][v + j] /= luminanceQuantizationMatrix[u][v];
+				}
+			}
+
+		}
+	}
+
+	for (i = 0; i < image->infoHeader.height; i += blockSize)
+	{
+		for (j = 0; j < image->infoHeader.width; j += blockSize)
+		{
+			for (u = 0; u < blockSize; ++u)
+			{
+				for (v = 0; v < blockSize; ++v)
+				{
+					dct_U[u + i][v + j] /= chrominanceQuantizationMatrix[u][v];
+				}
+			}
+
+		}
+	}
+
+	for (i = 0; i < image->infoHeader.height; i += blockSize)
+	{
+		for (j = 0; j < image->infoHeader.width; j += blockSize)
+		{
+			for (u = 0; u < blockSize; ++u)
+			{
+				for (v = 0; v < blockSize; ++v)
+				{
+					dct_V[u + i][v + j] /= chrominanceQuantizationMatrix[u][v];
+				}
+			}
+
+		}
+	}	
+
+
+}
+
+void zigzag(BMPData *image, int **dct,int blockSize, char *filename)
+{
+	int i,j,m,n;
+	int holder;
+	FILE *fp;
+	printf("%s\n",filename);
+	if((fp = fopen(filename,"w")) == NULL)
+	{
+		printf("%s not open\n",filename);
+		return ;
+	}
+
+	for (m = 0; m < image->infoHeader.height; m += blockSize)
+	{
+		for (n = 0; n < image->infoHeader.width; n += blockSize)
+		{
+			i = 0;
+			j = 0;
+			while( i != blockSize && j != blockSize)
+			{
+
+				if(j%2 == 0 && i == 0)
+				{
+					fprintf(fp,"%d ",dct[m + i][n + j]);
+					j++;
+				}
+				else if(j%2 == 1 && i == 0)
+				{
+					while(j != 0)
+					{
+						fprintf(fp,"%d ",dct[m + i][n + j]);
+						j -= 1;
+						i += 1;
+					}
+				}
+				else if(i%2 == 0 && j == 0)
+				{
+					while(i != 0)
+					{
+						fprintf(fp,"%d ",dct[m + i][n + j]);
+						j += 1;
+						i -= 1;
+					}			
+				}
+				else if(i%2 == 1 && j == 0)
+				{
+					if(i == blockSize - 1)
+					{
+						
+						fprintf(fp,"%d ",dct[m + i][n + j]);
+						j++;
+					}
+
+					else
+					{
+						fprintf(fp,"%d ",dct[m + i][n + j]);
+						i++;
+					}
+
+				}
+				else if(i == blockSize - 1 && j%2 == 1)
+				{
+					holder = j;
+					while(i != holder)
+					{
+						fprintf(fp,"%d ",dct[m + i][n + j]);
+						j += 1;
+						i -= 1;				
+					}
+				}
+				else if(i == blockSize - 1 && j%2 == 0)
+				{
+						fprintf(fp,"%d ",dct[m + i][n + j]);
+						j++;
+				}		
+				else if(j == blockSize - 1 && i%2 == 1)
+				{
+					fprintf(fp,"%d ",dct[m + i][n + j]);
+					i++;
+				}
+				else if(j == blockSize - 1 && i%2 == 0)
+				{
+					holder = i;
+					while(j != holder)
+					{
+						fprintf(fp,"%d ",dct[m + i][n + j]);
+						j -= 1;
+						i += 1;				
+					}
+				}
+				if(i == blockSize -1 && j == blockSize - 1)
+				{
+						fprintf(fp,"%d ",dct[m + i][n + j]);
+						i++;
+						j++;
+						break;
+				}
+
+			}
+			fprintf(fp,"\n");
+		}
+
+	}
+	fclose(fp);	
 }
