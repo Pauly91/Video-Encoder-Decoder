@@ -379,6 +379,8 @@ zigzag(image, dct_Y_int, blockSize,"zigzag_DCT_Y");
 zigzag(image, dct_U_int, blockSize,"zigzag_DCT_U");
 zigzag(image, dct_V_int, blockSize,"zigzag_DCT_V");
 
+	
+
 
 
 	return 0;

@@ -22,6 +22,11 @@ returns a structure
 #define numColor 3
 #define pi 3.145
 
+#define DCtableSize 12
+#define ACtableSize 102
+
+#define dataSize 64
+
 #pragma pack(push, 1)	
 
 
