@@ -318,7 +318,7 @@ int main(int argc, char const *argv[])
 	// 	printf("%d %d %d %s\n",huffmanACTable[i].run,huffmanACTable[i].size,huffmanACTable[i].numberOfBits,huffmanACTable[i].bitpattern);
 	// }	
 	
-	if(!(fp = fopen("zigzag_DCT_U","r")))
+	if(!(fp = fopen("sampleZigZagOneline","r")))
 	{
 		printf("zigzag_DCT_U \n");
 		return -1;
