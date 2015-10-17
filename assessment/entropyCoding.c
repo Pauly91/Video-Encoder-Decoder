@@ -128,9 +128,9 @@ void dpcm(char DC, struct HuffmanDCTable *huffmanDCTable, FILE *encodedData)
 	// printf("size:%d\n",size);
 	code = (int *) malloc(size*sizeof(int));
 	getBinary(DC,code,size);
-	// printf("\nNumber:%d Size:%d Binary:",DC,size);
-	// //binaryDisplay(code,size);
-	// printf("\n");
+	printf("\nNumber:%d Size:%d Binary:",DC,size);
+	binaryDisplay(code,size);
+	printf("\n");
 	for (j = 0; j < DCtableSize; ++j)
 	{
 		if(huffmanDCTable[j].size == size)
@@ -188,12 +188,17 @@ void rlc(char *dataVector,struct HuffmanACTable *huffmanACTable,FILE *encodedDat
 	//printf("\n");
 	for (i = 1; i < dataSize; ++i)
 	{
+		printf("-->dataVector[%d]: %d\n",i,dataVector[i]);
 		if(dataVector[i] == 0)
 		{
 			while(dataVector[i] == 0)
 			{
+				printf("dataVector[%d]: %d\n",i,dataVector[i]);
 				i++;
 				count++;
+				if(i > dataSize-1)
+					break;
+				
 			}
 			if(i > dataSize-1)
 			{
@@ -333,9 +338,9 @@ int main(int argc, char const *argv[])
 	{       
 
 		dataVector[i] = temp;
-		//printf("%d ",dataVector[i]);
+		printf("***> dataVector[%d]: %d\n",i,dataVector[i]);
 		i++;
-		if(i == dataSize - 1)
+		if(i == dataSize)
 		{
 			i = 0;
 			entropyCoding(dataVector,huffmanDCTable,huffmanACTable,encodedData);

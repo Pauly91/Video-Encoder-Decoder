@@ -1,0 +1,11129 @@
+dSampleU:2 dSampleV:1
+zigzag_DCT_Y
+DC: 62
+size:6
+Code:111110
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 5
+size:3
+Code:101
+DC: 13
+size:4
+Code:1101
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -7
+size:3
+Code:000
+DC: -4
+size:3
+Code:011
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 6
+size:3
+Code:110
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 6
+size:3
+Code:110
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -5
+size:3
+Code:010
+DC: 6
+size:3
+Code:110
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: -2
+size:2
+Code:01
+DC: -4
+size:3
+Code:011
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: 14
+size:4
+Code:1110
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: 17
+size:5
+Code:10001
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -5
+size:3
+Code:010
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: -4
+size:3
+Code:011
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 13
+size:4
+Code:1101
+DC: 5
+size:3
+Code:101
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: 4
+size:3
+Code:100
+DC: -2
+size:2
+Code:01
+DC: -6
+size:3
+Code:001
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -6
+size:3
+Code:001
+DC: -11
+size:4
+Code:0100
+DC: 3
+size:2
+Code:11
+DC: 13
+size:4
+Code:1101
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: -7
+size:3
+Code:000
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 13
+size:4
+Code:1101
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -7
+size:3
+Code:000
+DC: -4
+size:3
+Code:011
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: -6
+size:3
+Code:001
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: 4
+size:3
+Code:100
+DC: -10
+size:4
+Code:0101
+DC: -13
+size:4
+Code:0010
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 14
+size:4
+Code:1110
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: -2
+size:2
+Code:01
+DC: -6
+size:3
+Code:001
+DC: 2
+size:2
+Code:10
+DC: -8
+size:4
+Code:0111
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 13
+size:4
+Code:1101
+DC: 5
+size:3
+Code:101
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -5
+size:3
+Code:010
+DC: -7
+size:3
+Code:000
+DC: -1
+size:1
+Code:0
+DC: 9
+size:4
+Code:1001
+DC: -8
+size:4
+Code:0111
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: -7
+size:3
+Code:000
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: 9
+size:4
+Code:1001
+DC: 7
+size:3
+Code:111
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 4
+size:3
+Code:100
+DC: -2
+size:2
+Code:01
+DC: -5
+size:3
+Code:010
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 12
+size:4
+Code:1100
+DC: 7
+size:3
+Code:111
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -7
+size:3
+Code:000
+DC: -5
+size:3
+Code:010
+DC: 3
+size:2
+Code:11
+DC: 3
+size:2
+Code:11
+DC: -6
+size:3
+Code:001
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 4
+size:3
+Code:100
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 10
+size:4
+Code:1010
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 6
+size:3
+Code:110
+DC: -4
+size:3
+Code:011
+DC: -5
+size:3
+Code:010
+DC: 4
+size:3
+Code:100
+DC: -11
+size:4
+Code:0100
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 12
+size:4
+Code:1100
+DC: 5
+size:3
+Code:101
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: -7
+size:3
+Code:000
+DC: 0
+size:0
+DC: 7
+size:3
+Code:111
+DC: -8
+size:4
+Code:0111
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: -6
+size:3
+Code:001
+DC: 2
+size:2
+Code:10
+DC: -2
+size:2
+Code:01
+DC: 8
+size:4
+Code:1000
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 6
+size:3
+Code:110
+DC: -4
+size:3
+Code:011
+DC: -5
+size:3
+Code:010
+DC: 4
+size:3
+Code:100
+DC: -12
+size:4
+Code:0011
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 14
+size:4
+Code:1110
+DC: 4
+size:3
+Code:100
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -8
+size:4
+Code:0111
+DC: -3
+size:2
+Code:00
+DC: 7
+size:3
+Code:111
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -7
+size:3
+Code:000
+DC: -5
+size:3
+Code:010
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 6
+size:3
+Code:110
+DC: 4
+size:3
+Code:100
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 6
+size:3
+Code:110
+DC: -4
+size:3
+Code:011
+DC: -5
+size:3
+Code:010
+DC: 5
+size:3
+Code:101
+DC: -13
+size:4
+Code:0010
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 13
+size:4
+Code:1101
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -5
+size:3
+Code:010
+DC: -6
+size:3
+Code:001
+DC: 5
+size:3
+Code:101
+DC: -4
+size:3
+Code:011
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 8
+size:4
+Code:1000
+DC: -6
+size:3
+Code:001
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 9
+size:4
+Code:1001
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 6
+size:3
+Code:110
+DC: -4
+size:3
+Code:011
+DC: -4
+size:3
+Code:011
+DC: 5
+size:3
+Code:101
+DC: -12
+size:4
+Code:0011
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 12
+size:4
+Code:1100
+DC: 7
+size:3
+Code:111
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -8
+size:4
+Code:0111
+DC: 4
+size:3
+Code:100
+DC: -3
+size:2
+Code:00
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 10
+size:4
+Code:1010
+DC: -7
+size:3
+Code:000
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -7
+size:3
+Code:000
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 8
+size:4
+Code:1000
+DC: 4
+size:3
+Code:100
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 5
+size:3
+Code:101
+DC: -4
+size:3
+Code:011
+DC: -3
+size:2
+Code:00
+DC: 4
+size:3
+Code:100
+DC: -11
+size:4
+Code:0100
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 13
+size:4
+Code:1101
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -8
+size:4
+Code:0111
+DC: 4
+size:3
+Code:100
+DC: -3
+size:2
+Code:00
+DC: -5
+size:3
+Code:010
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 6
+size:3
+Code:110
+DC: 3
+size:2
+Code:11
+DC: -3
+size:2
+Code:00
+DC: -7
+size:3
+Code:000
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 10
+size:4
+Code:1010
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 4
+size:3
+Code:100
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 3
+size:2
+Code:11
+DC: -11
+size:4
+Code:0100
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: 9
+size:4
+Code:1001
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: 4
+size:3
+Code:100
+DC: -7
+size:3
+Code:000
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 5
+size:3
+Code:101
+DC: 5
+size:3
+Code:101
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 14
+size:4
+Code:1110
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -11
+size:4
+Code:0100
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 11
+size:4
+Code:1011
+DC: 5
+size:3
+Code:101
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: -7
+size:3
+Code:000
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 7
+size:3
+Code:111
+DC: 5
+size:3
+Code:101
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -8
+size:4
+Code:0111
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -4
+size:3
+Code:011
+DC: 3
+size:2
+Code:11
+DC: -11
+size:4
+Code:0100
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 10
+size:4
+Code:1010
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -8
+size:4
+Code:0111
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: 4
+size:3
+Code:100
+DC: 4
+size:3
+Code:100
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: 3
+size:2
+Code:11
+DC: -5
+size:3
+Code:010
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -6
+size:3
+Code:001
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 6
+size:3
+Code:110
+DC: 3
+size:2
+Code:11
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: -9
+size:4
+Code:0110
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -13
+size:4
+Code:0010
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 11
+size:4
+Code:1011
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: 7
+size:3
+Code:111
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: -6
+size:3
+Code:001
+DC: -6
+size:3
+Code:001
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 11
+size:4
+Code:1011
+DC: 3
+size:2
+Code:11
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 9
+size:4
+Code:1001
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: -9
+size:4
+Code:0110
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 10
+size:4
+Code:1010
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -6
+size:3
+Code:001
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 11
+size:4
+Code:1011
+DC: 2
+size:2
+Code:10
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -3
+size:2
+Code:00
+DC: 4
+size:3
+Code:100
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 2
+size:2
+Code:10
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 5
+size:3
+Code:101
+DC: -9
+size:4
+Code:0110
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -5
+size:3
+Code:010
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 15
+size:4
+Code:1111
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 3
+size:2
+Code:11
+DC: 4
+size:3
+Code:100
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: -8
+size:4
+Code:0111
+DC: 5
+size:3
+Code:101
+DC: 3
+size:2
+Code:11
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 7
+size:3
+Code:111
+DC: 6
+size:3
+Code:110
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: 4
+size:3
+Code:100
+DC: -9
+size:4
+Code:0110
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -6
+size:3
+Code:001
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 16
+size:5
+Code:10000
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: -5
+size:3
+Code:010
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 9
+size:4
+Code:1001
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -9
+size:4
+Code:0110
+DC: -5
+size:3
+Code:010
+DC: 14
+size:4
+Code:1110
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 10
+size:4
+Code:1010
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: -9
+size:4
+Code:0110
+DC: -4
+size:3
+Code:011
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -6
+size:3
+Code:001
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 16
+size:5
+Code:10000
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 7
+size:3
+Code:111
+DC: 7
+size:3
+Code:111
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 6
+size:3
+Code:110
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -6
+size:3
+Code:001
+DC: -8
+size:4
+Code:0111
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: -4
+size:3
+Code:011
+DC: -3
+size:2
+Code:00
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 6
+size:3
+Code:110
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: -10
+size:4
+Code:0101
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -7
+size:3
+Code:000
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 13
+size:4
+Code:1101
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: -6
+size:3
+Code:001
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 11
+size:4
+Code:1011
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -7
+size:3
+Code:000
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: 5
+size:3
+Code:101
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: -5
+size:3
+Code:010
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -4
+size:3
+Code:011
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: -9
+size:4
+Code:0110
+DC: -6
+size:3
+Code:001
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -8
+size:4
+Code:0111
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 9
+size:4
+Code:1001
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: -6
+size:3
+Code:001
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 9
+size:4
+Code:1001
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -5
+size:3
+Code:010
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 6
+size:3
+Code:110
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 3
+size:2
+Code:11
+DC: -6
+size:3
+Code:001
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 6
+size:3
+Code:110
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: -6
+size:3
+Code:001
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: -7
+size:3
+Code:000
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -10
+size:4
+Code:0101
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: -5
+size:3
+Code:010
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 9
+size:4
+Code:1001
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -8
+size:4
+Code:0111
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 8
+size:4
+Code:1000
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: -8
+size:4
+Code:0111
+DC: -4
+size:3
+Code:011
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 11
+size:4
+Code:1011
+DC: 0
+size:0
+DC: -5
+size:3
+Code:010
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -10
+size:4
+Code:0101
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -8
+size:4
+Code:0111
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: -2
+size:2
+Code:01
+DC: 4
+size:3
+Code:100
+DC: 6
+size:3
+Code:110
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 4
+size:3
+Code:100
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -11
+size:4
+Code:0100
+DC: 6
+size:3
+Code:110
+DC: 6
+size:3
+Code:110
+DC: 0
+size:0
+DC: -7
+size:3
+Code:000
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 7
+size:3
+Code:111
+DC: 5
+size:3
+Code:101
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -7
+size:3
+Code:000
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -8
+size:4
+Code:0111
+DC: -5
+size:3
+Code:010
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 10
+size:4
+Code:1010
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -9
+size:4
+Code:0110
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 6
+size:3
+Code:110
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -4
+size:3
+Code:011
+DC: 5
+size:3
+Code:101
+DC: 3
+size:2
+Code:11
+DC: -8
+size:4
+Code:0111
+DC: -3
+size:2
+Code:00
+DC: 7
+size:3
+Code:111
+DC: 4
+size:3
+Code:100
+DC: -7
+size:3
+Code:000
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 11
+size:4
+Code:1011
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: -10
+size:4
+Code:0101
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: -8
+size:4
+Code:0111
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 11
+size:4
+Code:1011
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: -10
+size:4
+Code:0101
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: 1
+size:1
+Code:1
+DC: -6
+size:3
+Code:001
+DC: 3
+size:2
+Code:11
+DC: 5
+size:3
+Code:101
+DC: -9
+size:4
+Code:0110
+DC: 0
+size:0
+DC: 10
+size:4
+Code:1010
+DC: -6
+size:3
+Code:001
+DC: -6
+size:3
+Code:001
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 9
+size:4
+Code:1001
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -6
+size:3
+Code:001
+DC: 5
+size:3
+Code:101
+DC: 2
+size:2
+Code:10
+DC: -10
+size:4
+Code:0101
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: -4
+size:3
+Code:011
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -8
+size:4
+Code:0111
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 9
+size:4
+Code:1001
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 9
+size:4
+Code:1001
+DC: 5
+size:3
+Code:101
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: 2
+size:2
+Code:10
+DC: 5
+size:3
+Code:101
+DC: -9
+size:4
+Code:0110
+DC: -2
+size:2
+Code:01
+DC: 4
+size:3
+Code:100
+DC: 2
+size:2
+Code:10
+DC: -8
+size:4
+Code:0111
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 5
+size:3
+Code:101
+DC: 0
+size:0
+DC: -7
+size:3
+Code:000
+DC: 7
+size:3
+Code:111
+DC: 0
+size:0
+DC: -7
+size:3
+Code:000
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -9
+size:4
+Code:0110
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 9
+size:4
+Code:1001
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -8
+size:4
+Code:0111
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 7
+size:3
+Code:111
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 6
+size:3
+Code:110
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: -2
+size:2
+Code:01
+DC: -6
+size:3
+Code:001
+DC: 3
+size:2
+Code:11
+DC: 2
+size:2
+Code:10
+DC: -2
+size:2
+Code:01
+DC: -9
+size:4
+Code:0110
+DC: -3
+size:2
+Code:00
+DC: 7
+size:3
+Code:111
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 4
+size:3
+Code:100
+DC: 6
+size:3
+Code:110
+DC: 1
+size:1
+Code:1
+DC: -8
+size:4
+Code:0111
+DC: 7
+size:3
+Code:111
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -6
+size:3
+Code:001
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -7
+size:3
+Code:000
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 5
+size:3
+Code:101
+DC: 7
+size:3
+Code:111
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -8
+size:4
+Code:0111
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 6
+size:3
+Code:110
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -8
+size:4
+Code:0111
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 10
+size:4
+Code:1010
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -3
+size:2
+Code:00
+DC: -7
+size:3
+Code:000
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 8
+size:4
+Code:1000
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 10
+size:4
+Code:1010
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -10
+size:4
+Code:0101
+DC: -3
+size:2
+Code:00
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: 4
+size:3
+Code:100
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -4
+size:3
+Code:011
+DC: -3
+size:2
+Code:00
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -3
+size:2
+Code:00
+DC: -7
+size:3
+Code:000
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 9
+size:4
+Code:1001
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: -6
+size:3
+Code:001
+DC: 2
+size:2
+Code:10
+DC: 9
+size:4
+Code:1001
+DC: 6
+size:3
+Code:110
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -9
+size:4
+Code:0110
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 5
+size:3
+Code:101
+DC: 0
+size:0
+DC: 4
+size:3
+Code:100
+DC: -6
+size:3
+Code:001
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 9
+size:4
+Code:1001
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: 4
+size:3
+Code:100
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: 5
+size:3
+Code:101
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -7
+size:3
+Code:000
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -7
+size:3
+Code:000
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 10
+size:4
+Code:1010
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -6
+size:3
+Code:001
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 7
+size:3
+Code:111
+DC: 6
+size:3
+Code:110
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -10
+size:4
+Code:0101
+DC: -5
+size:3
+Code:010
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: 6
+size:3
+Code:110
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -8
+size:4
+Code:0111
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 4
+size:3
+Code:100
+DC: 6
+size:3
+Code:110
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 11
+size:4
+Code:1011
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 3
+size:2
+Code:11
+DC: 9
+size:4
+Code:1001
+DC: -7
+size:3
+Code:000
+DC: 10
+size:4
+Code:1010
+DC: 3
+size:2
+Code:11
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -4
+size:3
+Code:011
+DC: -9
+size:4
+Code:0110
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 4
+size:3
+Code:100
+DC: -1
+size:1
+Code:0
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 10
+size:4
+Code:1010
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 4
+size:3
+Code:100
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: 9
+size:4
+Code:1001
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -7
+size:3
+Code:000
+DC: -6
+size:3
+Code:001
+DC: -2
+size:2
+Code:01
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 5
+size:3
+Code:101
+DC: 9
+size:4
+Code:1001
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 4
+size:3
+Code:100
+DC: 10
+size:4
+Code:1010
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 6
+size:3
+Code:110
+DC: 3
+size:2
+Code:11
+DC: 5
+size:3
+Code:101
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -10
+size:4
+Code:0101
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 12
+size:4
+Code:1100
+DC: -6
+size:3
+Code:001
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: 9
+size:4
+Code:1001
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 4
+size:3
+Code:100
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 7
+size:3
+Code:111
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -10
+size:4
+Code:0101
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 6
+size:3
+Code:110
+DC: 7
+size:3
+Code:111
+DC: -5
+size:3
+Code:010
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -7
+size:3
+Code:000
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 9
+size:4
+Code:1001
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -4
+size:3
+Code:011
+DC: 7
+size:3
+Code:111
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 6
+size:3
+Code:110
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: 2
+size:2
+Code:10
+DC: -7
+size:3
+Code:000
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 10
+size:4
+Code:1010
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: 4
+size:3
+Code:100
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -7
+size:3
+Code:000
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 10
+size:4
+Code:1010
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: -4
+size:3
+Code:011
+DC: 8
+size:4
+Code:1000
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 4
+size:3
+Code:100
+DC: 4
+size:3
+Code:100
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: -9
+size:4
+Code:0110
+DC: -6
+size:3
+Code:001
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 10
+size:4
+Code:1010
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: 2
+size:2
+Code:10
+DC: 5
+size:3
+Code:101
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -7
+size:3
+Code:000
+DC: -3
+size:2
+Code:00
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 10
+size:4
+Code:1010
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: 2
+size:2
+Code:10
+DC: 5
+size:3
+Code:101
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 6
+size:3
+Code:110
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: -10
+size:4
+Code:0101
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 7
+size:3
+Code:111
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -7
+size:3
+Code:000
+DC: -6
+size:3
+Code:001
+DC: 10
+size:4
+Code:1010
+DC: 5
+size:3
+Code:101
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: -4
+size:3
+Code:011
+DC: -5
+size:3
+Code:010
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 10
+size:4
+Code:1010
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: -7
+size:3
+Code:000
+DC: 5
+size:3
+Code:101
+DC: 4
+size:3
+Code:100
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: 6
+size:3
+Code:110
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -12
+size:4
+Code:0011
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 6
+size:3
+Code:110
+DC: 0
+size:0
+DC: -9
+size:4
+Code:0110
+DC: -5
+size:3
+Code:010
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 5
+size:3
+Code:101
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 9
+size:4
+Code:1001
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -11
+size:4
+Code:0100
+DC: -3
+size:2
+Code:00
+DC: 8
+size:4
+Code:1000
+DC: 2
+size:2
+Code:10
+DC: 4
+size:3
+Code:100
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 0
+size:0
+DC: 7
+size:3
+Code:111
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -8
+size:4
+Code:0111
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: 7
+size:3
+Code:111
+DC: 5
+size:3
+Code:101
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -7
+size:3
+Code:000
+DC: -4
+size:3
+Code:011
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -5
+size:3
+Code:010
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 10
+size:4
+Code:1010
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -9
+size:4
+Code:0110
+DC: -3
+size:2
+Code:00
+DC: 7
+size:3
+Code:111
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: 2
+size:2
+Code:10
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 4
+size:3
+Code:100
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 4
+size:3
+Code:100
+DC: -2
+size:2
+Code:01
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -7
+size:3
+Code:000
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: 5
+size:3
+Code:101
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -9
+size:4
+Code:0110
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -9
+size:4
+Code:0110
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 4
+size:3
+Code:100
+DC: 3
+size:2
+Code:11
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 11
+size:4
+Code:1011
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -8
+size:4
+Code:0111
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: 9
+size:4
+Code:1001
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -11
+size:4
+Code:0100
+DC: 3
+size:2
+Code:11
+DC: 2
+size:2
+Code:10
+DC: 5
+size:3
+Code:101
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 7
+size:3
+Code:111
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -9
+size:4
+Code:0110
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 9
+size:4
+Code:1001
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: -11
+size:4
+Code:0100
+DC: 3
+size:2
+Code:11
+DC: 3
+size:2
+Code:11
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -6
+size:3
+Code:001
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -11
+size:4
+Code:0100
+DC: 4
+size:3
+Code:100
+DC: 5
+size:3
+Code:101
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 11
+size:4
+Code:1011
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -9
+size:4
+Code:0110
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -7
+size:3
+Code:000
+DC: 4
+size:3
+Code:100
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -7
+size:3
+Code:000
+DC: 5
+size:3
+Code:101
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 9
+size:4
+Code:1001
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 4
+size:3
+Code:100
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: 7
+size:3
+Code:111
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: 5
+size:3
+Code:101
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -6
+size:3
+Code:001
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: 7
+size:3
+Code:111
+DC: 2
+size:2
+Code:10
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 6
+size:3
+Code:110
+DC: 4
+size:3
+Code:100
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -8
+size:4
+Code:0111
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 6
+size:3
+Code:110
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -7
+size:3
+Code:000
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 12
+size:4
+Code:1100
+DC: -3
+size:2
+Code:00
+DC: -6
+size:3
+Code:001
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 7
+size:3
+Code:111
+DC: 3
+size:2
+Code:11
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -8
+size:4
+Code:0111
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 6
+size:3
+Code:110
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: 8
+size:4
+Code:1000
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -6
+size:3
+Code:001
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 10
+size:4
+Code:1010
+DC: 3
+size:2
+Code:11
+DC: -3
+size:2
+Code:00
+DC: -7
+size:3
+Code:000
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 10
+size:4
+Code:1010
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 4
+size:3
+Code:100
+DC: 8
+size:4
+Code:1000
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: -3
+size:2
+Code:00
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: 2
+size:2
+Code:10
+DC: -6
+size:3
+Code:001
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 5
+size:3
+Code:101
+DC: 10
+size:4
+Code:1010
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -7
+size:3
+Code:000
+DC: -3
+size:2
+Code:00
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -5
+size:3
+Code:010
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 11
+size:4
+Code:1011
+DC: -2
+size:2
+Code:01
+DC: -8
+size:4
+Code:0111
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 12
+size:4
+Code:1100
+DC: 4
+size:3
+Code:100
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -8
+size:4
+Code:0111
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: -5
+size:3
+Code:010
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 9
+size:4
+Code:1001
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -4
+size:3
+Code:011
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 10
+size:4
+Code:1010
+DC: -7
+size:3
+Code:000
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 13
+size:4
+Code:1101
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -8
+size:4
+Code:0111
+DC: -3
+size:2
+Code:00
+DC: -5
+size:3
+Code:010
+DC: 8
+size:4
+Code:1000
+DC: 2
+size:2
+Code:10
+DC: -5
+size:3
+Code:010
+DC: -6
+size:3
+Code:001
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 4
+size:3
+Code:100
+DC: 8
+size:4
+Code:1000
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -5
+size:3
+Code:010
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: 6
+size:3
+Code:110
+DC: -7
+size:3
+Code:000
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 7
+size:3
+Code:111
+DC: 9
+size:4
+Code:1001
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -10
+size:4
+Code:0101
+DC: -6
+size:3
+Code:001
+DC: 4
+size:3
+Code:100
+DC: 7
+size:3
+Code:111
+DC: -6
+size:3
+Code:001
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 9
+size:4
+Code:1001
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -6
+size:3
+Code:001
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 11
+size:4
+Code:1011
+DC: 5
+size:3
+Code:101
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: -14
+size:4
+Code:0001
+DC: 1
+size:1
+Code:1
+DC: 6
+size:3
+Code:110
+DC: -2
+size:2
+Code:01
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 10
+size:4
+Code:1010
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: 15
+size:4
+Code:1111
+DC: 5
+size:3
+Code:101
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -17
+size:5
+Code:01110
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 19
+size:5
+Code:10011
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -16
+size:5
+Code:01111
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 7
+size:3
+Code:111
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: 3
+size:2
+Code:11
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -3
+size:2
+Code:00
+DC: 1
+size:1
+Code:1
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -17
+size:5
+Code:01110
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 4
+size:3
+Code:100
+DC: 6
+size:3
+Code:110
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 8
+size:4
+Code:1000
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -17
+size:5
+Code:01110
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 3
+size:2
+Code:11
+DC: 7
+size:3
+Code:111
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 7
+size:3
+Code:111
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 5
+size:3
+Code:101
+DC: 7
+size:3
+Code:111
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -16
+size:5
+Code:01111
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 3
+size:2
+Code:11
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -5
+size:3
+Code:010
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 7
+size:3
+Code:111
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 5
+size:3
+Code:101
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -15
+size:4
+Code:0000
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 4
+size:3
+Code:100
+DC: 5
+size:3
+Code:101
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 2
+size:2
+Code:10
+DC: -2
+size:2
+Code:01
+DC: -4
+size:3
+Code:011
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -3
+size:2
+Code:00
+DC: 0
+size:0
+DC: 10
+size:4
+Code:1010
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 6
+size:3
+Code:110
+DC: 8
+size:4
+Code:1000
+DC: -1
+size:1
+Code:0
+DC: -17
+size:5
+Code:01110
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 5
+size:3
+Code:101
+DC: 7
+size:3
+Code:111
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -3
+size:2
+Code:00
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: -4
+size:3
+Code:011
+DC: 0
+size:0
+DC: 6
+size:3
+Code:110
+DC: 4
+size:3
+Code:100
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 7
+size:3
+Code:111
+DC: -14
+size:4
+Code:0001
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 5
+size:3
+Code:101
+DC: 6
+size:3
+Code:110
+DC: -1
+size:1
+Code:0
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -2
+size:2
+Code:01
+DC: -1
+size:1
+Code:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 1
+size:1
+Code:1
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: 1
+size:1
+Code:1
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 0
+size:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: 2
+size:2
+Code:10
+DC: -3
+size:2
+Code:00
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: 10
+size:4
+Code:1010
+DC: -2
+size:2
+Code:01
+DC: -2
+size:2
+Code:01
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0
+DC: 0
+size:0
+DC: -1
+size:1
+Code:0
+DC: 1
+size:1
+Code:1
+DC: -1
+size:1
+Code:0
+DC: 2
+size:2
+Code:10
+DC: -1
+size:1
+Code:0

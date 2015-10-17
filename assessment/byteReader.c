@@ -32,11 +32,11 @@ void byteToBitConverter(char * fileName,char *target)
 		{
 			if(byte & runMask)
 			{
-				fprintf(bitFile,"1");
+				fprintf(bitFile,"1 ");
 			}
 			else
 			{
-				fprintf(bitFile,"0");
+				fprintf(bitFile,"0 ");
 			}
 			runMask >>= 1;
 		}

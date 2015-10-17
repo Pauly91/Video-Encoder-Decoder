@@ -541,12 +541,20 @@ int bitCount(int value)
 {
 	int count = 0;
 	value = abs(value);
-	while(value)
+	if(value == 0)
 	{
-		value >>= 1;
-		count++;
+		return 0;
 	}
-	return count;
+	else
+	{
+		while(value)
+		{
+			value >>= 1;
+			count++;
+		}
+		return count;	
+	}
+
 }
 void binaryDisplay(int *code,int size)
 {
@@ -563,6 +571,11 @@ void getBinary(int number,int* code, int size)
 
 	number = abs(number);
 	size--;
+	if(number == 0)
+	{
+		code[0] = 0;
+		return;
+	}
 	while(number)
 	{
 		if(number%2 == 0)
@@ -609,20 +622,21 @@ void dpcm(char DC, struct HuffmanDCTable *huffmanDCTable, FILE *encodedData)
 	int *code;
 	int size;
 	int j;
+	int temp = DC;
 
-	if(firstFlag == 1)
-	{
-		previousDC = DC;
-		firstFlag = 0;
-	}
-	else
-		DC -= previousDC;
 
+	DC -= previousDC;
+	printf("DC: %d\n",DC);
 	size = bitCount(DC);
-
-	code = (int *) malloc(size*sizeof(int));
-	getBinary(DC,code,size);
-
+	printf("size:%d\n",size);
+	if(size)
+	{
+		code = (int *) malloc(size*sizeof(int));
+		getBinary(DC,code,size);
+		printf("Code:");
+		binaryDisplay(code,size);
+		printf("\n");
+	}
 	for (j = 0; j < DCtableSize; ++j)
 	{
 		if(huffmanDCTable[j].size == size)
@@ -631,9 +645,44 @@ void dpcm(char DC, struct HuffmanDCTable *huffmanDCTable, FILE *encodedData)
 			break;
 		}
 	}
+	previousDC = temp;
 
 }
 
+
+
+// void dpcm(char DC, struct HuffmanDCTable *huffmanDCTable, FILE *encodedData)
+// {
+// 	int *code;
+// 	int size;
+// 	int j;
+// 	//char *bitpattern;
+// 	if(firstFlag == 1)
+// 	{
+// 		previousDC = DC;
+// 		firstFlag = 0;
+// 	}
+// 	else
+// 		DC -= previousDC;
+// 	size = bitCount(DC);
+// 	// printf("size:%d\n",size);
+// 	code = (int *) malloc(size*sizeof(int));
+// 	getBinary(DC,code,size);
+// 	printf("\nNumber:%d Size:%d Binary:",DC,size);
+// 	binaryDisplay(code,size);
+// 	printf("\n");
+// 	for (j = 0; j < DCtableSize; ++j)
+// 	{
+// 		if(huffmanDCTable[j].size == size)
+// 		{
+// 			// bitpattern = (char *) malloc(huffmanDCTable[j].numberOfBits * sizeof(char));
+// 			// bitpattern = huffmanDCTable[j].bitpattern;
+// 			writeTofile(encodedData,huffmanDCTable[j].bitpattern,huffmanDCTable[j].numberOfBits,code,size);
+// 			break;
+// 		}
+// 	}
+
+// }
 void rlcEncode(int count,int data,struct HuffmanACTable *huffmanACTable,FILE *encodedData)
 {
 	int i;
@@ -674,6 +723,8 @@ void rlc(char *dataVector,struct HuffmanACTable *huffmanACTable,FILE *encodedDat
 			while(dataVector[i] == 0)
 			{
 				i++;
+				if(i > dataSize-1)
+					break;
 				count++;
 			}
 			if(i > dataSize-1)
@@ -700,6 +751,7 @@ void rlc(char *dataVector,struct HuffmanACTable *huffmanACTable,FILE *encodedDat
 void entropyCoding(char *dataVector,struct HuffmanDCTable *huffmanDCTable,struct HuffmanACTable *huffmanACTable,FILE *encodedData)
 {
 
+	// printf("%d\n",dataVector[0]);
 	dpcm(dataVector[0],huffmanDCTable,encodedData);
 	rlc(dataVector,huffmanACTable,encodedData);
 }
@@ -809,9 +861,16 @@ void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
 
 		dataVector[i] = temp;
 		i++;
-		if(i == dataSize - 1)
+		if(i == dataSize)
 		{
+			// printf("i:%d\n",i);
+			// i = 0;
+			// for (i = 0; i < dataSize; ++i)
+			// {
+			// 	printf("%d ",dataVector[i]);
+			// }
 			i = 0;
+			// printf("\n");
 			entropyCoding(dataVector,huffmanDCTable,huffmanACTable,encodedData);
 		}
 	}

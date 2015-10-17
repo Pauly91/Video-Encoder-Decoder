@@ -60,28 +60,6 @@ int main(int argc, char const *argv[])
 	luminanceQuantizationMatrix = (unsigned char **) malloc(blockSize * sizeof(char*) );
 	chrominanceQuantizationMatrix = (unsigned char **) malloc(blockSize * sizeof(char*) );
 
-	// unsigned char luminanceQuantizationMatrixData[8][8] = {
-	// 				{16,11,	10,	16,	24,	40,	51,	 61},
-	// 				{12,12,	14,	19,	26,	58,	60,	 55},
-	// 				{14,13,	16,	24,	40,	57,	69,	 56},
-	// 				{14,17,	22,	29,	51,	87,	80,	 62},
-	// 				{18,22,	37,	56,	68,	109,103,77},
-	// 				{24,35,	55,	64,	81,	104,113, 92},
-	// 				{49,64,	78,	87,	103,121,120,101},
-	// 				{72,92,	95,	98,	112,100,103, 99}
-	// };
-
-	// unsigned char chrominanceQuantizationMatrixData[8][8] = {
-	// 				{17,18,	24,	47,	99,	99,	99,	99},
-	// 				{18,21,	26,	66,	99,	99,	99,	99},
-	// 				{24,26,	56,	99,	99,	99,	99,	99},
-	// 				{47,66,	99,	99,	99,	99,	99,	99},
-	// 				{99,99,	99,	99,	99,	99,	99,	99},
-	// 				{99,99,	99,	99,	99,	99,	99,	99},
-	// 				{99,99,	99,	99,	99,	99,	99,	99},
-	// 				{99,99,	99,	99,	99,	99,	99,	99}
-	// };
-
 	char name[20];
 
 	float **dct_Y = NULL,**dct_U = NULL,**dct_V = NULL;
@@ -375,15 +353,18 @@ Read from the file dct
 
 ////////////////////////////////////////////////////////////////////////
 
-zigzag(image, dct_Y_int, blockSize,"zigzag_DCT_Y");
-zigzag(image, dct_U_int, blockSize,"zigzag_DCT_U");
-zigzag(image, dct_V_int, blockSize,"zigzag_DCT_V");
-
-	
-differentialHuffmanRle("zigzag_DCT_Y","encoded_Y","Y_Byte_data");
-differentialHuffmanRle("zigzag_DCT_U","encoded_U","U_Byte_data");
-differentialHuffmanRle("zigzag_DCT_V","encoded_V","V_Byte_data");
+	zigzag(image, dct_Y_int, blockSize,"zigzag_DCT_Y");
+	// zigzag(image, dct_U_int, blockSize,"zigzag_DCT_U");
+	// zigzag(image, dct_V_int, blockSize,"zigzag_DCT_V");
 
 
+	differentialHuffmanRle("zigzag_DCT_Y","encoded_Y","Y_Byte_data");
+	// differentialHuffmanRle("zigzag_DCT_U","encoded_U","U_Byte_data");
+	// differentialHuffmanRle("zigzag_DCT_V","encoded_V","V_Byte_data");
+
+/*
+DPCM with the huffman code is issue
+
+*/
 	return 0;
 }

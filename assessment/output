@@ -1,8192 +1,2478 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 6
+Data bits:1 1 1 1 1 0 
+code :111110
+DC value Before DPCM: 62
+number: 62
+
+*** New Bit AC ***
+Frame: 0 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 0 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 0 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 0 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 63
+
+*** New Bit AC ***
+Frame: 1 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 1 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 1 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 1 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 4
+Data bits:0 1 1 0 
+code :0110
+DC value Before DPCM: -9
+number: 54
+
+*** New Bit AC ***
+Frame: 2 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 2 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 2 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 2 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:0 1 
+code :01
+DC value Before DPCM: -2
+number: 52
+
+*** New Bit AC ***
+Frame: 3 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 3 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 3 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 3 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 51
+
+*** New Bit AC ***
+Frame: 4 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 4 pixel:1
+bit Read:1 
+1
+size: 2
+1 0 
+code :10
+number: 2
+
+*** New Bit AC ***
+Frame: 4 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 4 pixel:2
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 4 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 4 pixel:2
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 3
+Data bits:0 1 0 
+code :010
+DC value Before DPCM: -5
+number: 46
+
+*** New Bit AC ***
+Frame: 5 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 5 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 5 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 5 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 45
+
+*** New Bit AC ***
+Frame: 6 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 6 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 6 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 6 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 3
+Data bits:1 0 1 
+code :101
+DC value Before DPCM: 5
+number: 50
+
+*** New Bit AC ***
+Frame: 7 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 7 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 7 pixel:1
+bit Read:0 
+0
+size: 3
+0 1 1 
+code :011
+number: -4
+
+*** New Bit AC ***
+Frame: 7 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 7 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 7 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 7 pixel:2
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 7 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 7 pixel:2
+bit Read:0 
+0
+size: 1
+1 
+code :1
+number: 1
+
+*** New Bit AC ***
+Frame: 7 pixel:6
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 7 pixel:6
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 7 pixel:6
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 7 pixel:6
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 4
+Data bits:1 1 0 1 
+code :1101
+DC value Before DPCM: 13
+number: 63
+
+*** New Bit AC ***
+Frame: 8 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 8 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 8 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 8 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:1 0 
+code :10
+DC value Before DPCM: 2
+number: 65
+
+*** New Bit AC ***
+Frame: 9 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 9 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 9 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 9 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 64
+
+*** New Bit AC ***
+Frame: 10 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 10 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 10 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 10 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 63
+
+*** New Bit AC ***
+Frame: 11 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 11 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 11 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 11 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 64
+
+*** New Bit AC ***
+Frame: 12 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 12 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 12 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 12 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 63
+
+*** New Bit AC ***
+Frame: 13 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 13 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 13 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 13 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 64
+
+*** New Bit AC ***
+Frame: 14 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 14 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 14 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 14 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 63
+
+*** New Bit AC ***
+Frame: 15 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 15 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 15 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 15 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 62
+
+*** New Bit AC ***
+Frame: 16 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 16 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 16 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 16 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 61
+
+*** New Bit AC ***
+Frame: 17 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 17 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 17 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 17 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 60
+
+*** New Bit AC ***
+Frame: 18 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 18 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 18 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 18 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 59
+
+*** New Bit AC ***
+Frame: 19 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 19 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 19 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 19 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 60
+
+*** New Bit AC ***
+Frame: 20 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 20 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 20 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 20 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:0 0 
+code :00
+DC value Before DPCM: -3
+number: 57
+
+*** New Bit AC ***
+Frame: 21 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 21 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 21 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 21 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 3
+Data bits:0 0 0 
+code :000
+DC value Before DPCM: -7
+number: 50
+
+*** New Bit AC ***
+Frame: 22 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 22 pixel:1
+bit Read:0 
+0
+size: 1
+1 
+code :1
+number: 1
+
+*** New Bit AC ***
+Frame: 22 pixel:2
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 22 pixel:2
+bit Read:0 
+0
+size: 1
+0 
+code :0
+number: -1
+
+*** New Bit AC ***
+Frame: 22 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 22 pixel:3
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 22 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 22 pixel:3
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 3
+Data bits:0 1 1 
+code :011
+DC value Before DPCM: -4
+number: 46
+
+*** New Bit AC ***
+Frame: 23 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 23 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 23 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 23 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:0 1 
+code :01
+DC value Before DPCM: -2
+number: 44
+
+*** New Bit AC ***
+Frame: 24 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 24 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 24 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 24 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 43
+
+*** New Bit AC ***
+Frame: 25 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 25 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 25 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 25 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 42
+
+*** New Bit AC ***
+Frame: 26 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 26 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 26 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 26 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 41
+
+*** New Bit AC ***
+Frame: 27 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 27 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 27 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 27 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 40
+
+*** New Bit AC ***
+Frame: 28 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 28 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 28 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 28 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 39
+
+*** New Bit AC ***
+Frame: 29 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 29 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 29 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 29 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 38
+
+*** New Bit AC ***
+Frame: 30 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 30 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 30 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 30 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 37
+
+*** New Bit AC ***
+Frame: 31 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 31 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 31 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 31 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 38
+
+*** New Bit AC ***
+Frame: 32 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 32 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 32 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 32 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 37
+
+*** New Bit AC ***
+Frame: 33 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 33 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 33 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 33 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 36
+
+*** New Bit AC ***
+Frame: 34 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 34 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 34 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 34 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 35
+
+*** New Bit AC ***
+Frame: 35 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 35 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 35 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 35 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 34
+
+*** New Bit AC ***
+Frame: 36 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 36 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 36 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 36 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 33
+
+*** New Bit AC ***
+Frame: 37 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 37 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 37 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 37 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 32
+
+*** New Bit AC ***
+Frame: 38 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 38 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 38 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 38 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 33
+
+*** New Bit AC ***
+Frame: 39 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 39 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 39 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 39 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 32
+
+*** New Bit AC ***
+Frame: 40 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 40 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 40 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 40 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 31
+
+*** New Bit AC ***
+Frame: 41 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 41 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 41 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 41 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 32
+
+*** New Bit AC ***
+Frame: 42 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 42 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 42 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 42 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 33
+
+*** New Bit AC ***
+Frame: 43 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 43 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 43 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 43 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 34
+
+*** New Bit AC ***
+Frame: 44 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 44 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 44 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 44 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 35
+
+*** New Bit AC ***
+Frame: 45 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 45 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 45 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 45 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:1 
+code :1
+DC value Before DPCM: 1
+number: 36
+
+*** New Bit AC ***
+Frame: 46 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 46 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 46 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 46 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 35
+
+*** New Bit AC ***
+Frame: 47 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 47 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 47 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 47 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 47 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 47 pixel:1
+bit Read:1 
+1
+size: 1
+1 
+code :1
+number: 1
+
+*** New Bit AC ***
+Frame: 47 pixel:6
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 47 pixel:6
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 47 pixel:6
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 47 pixel:6
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 3
+Data bits:1 1 0 
+code :110
+DC value Before DPCM: 6
+number: 41
+
+*** New Bit AC ***
+Frame: 48 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 48 pixel:1
+bit Read:0 
+0
+size: 1
+1 
+code :1
+number: 1
+
+*** New Bit AC ***
+Frame: 48 pixel:2
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 48 pixel:2
+bit Read:0 
+0
+size: 1
+1 
+code :1
+number: 1
+
+*** New Bit AC ***
+Frame: 48 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 48 pixel:3
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 48 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 48 pixel:3
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:0 0 
+code :00
+DC value Before DPCM: -3
+number: 38
+
+*** New Bit AC ***
+Frame: 49 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 49 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 49 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 49 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:0 1 
+code :01
+DC value Before DPCM: -2
+number: 36
+
+*** New Bit AC ***
+Frame: 50 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 50 pixel:1
+bit Read:0 
+0
+size: 1
+1 
+code :1
+number: 1
+
+*** New Bit AC ***
+Frame: 50 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 50 pixel:2
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 50 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 50 pixel:2
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 3
+Data bits:0 1 1 
+code :011
+DC value Before DPCM: -4
+number: 32
+
+*** New Bit AC ***
+Frame: 51 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 51 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 51 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 51 pixel:1
+bit Read:0 
+0
+size: 1
+0 
+code :0
+number: -1
+
+*** New Bit AC ***
+Frame: 51 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 51 pixel:3
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 51 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 51 pixel:3
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 31
+
+*** New Bit AC ***
+Frame: 52 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 52 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 52 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 52 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 30
+
+*** New Bit AC ***
+Frame: 53 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 53 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 53 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 53 pixel:1
+bit Read:0 
+0
+size: 1
+0 
+code :0
+number: -1
+
+*** New Bit AC ***
+Frame: 53 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 53 pixel:3
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 53 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 53 pixel:3
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:1 0 
+code :10
+DC value Before DPCM: 2
+number: 32
+
+*** New Bit AC ***
+Frame: 54 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 54 pixel:1
+bit Read:1 
+1
+size: 2
+0 1 
+code :01
+number: -2
+
+*** New Bit AC ***
+Frame: 54 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 54 pixel:2
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 54 pixel:2
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 54 pixel:2
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 3
+Data bits:1 1 0 
+code :110
+DC value Before DPCM: 6
+number: 38
+
+*** New Bit AC ***
+Frame: 55 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 55 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 55 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 55 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:1 1 
+code :11
+DC value Before DPCM: 3
+number: 41
+
+*** New Bit AC ***
+Frame: 56 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 56 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 56 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 56 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 40
+
+*** New Bit AC ***
+Frame: 57 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 57 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 57 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 57 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:0 1 
+code :01
+DC value Before DPCM: -2
+number: 38
+
+*** New Bit AC ***
+Frame: 58 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 58 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 58 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 58 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 37
+
+*** New Bit AC ***
+Frame: 59 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 59 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 59 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 59 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:1 0 
+code :10
+DC value Before DPCM: 2
+number: 39
+
+*** New Bit AC ***
+Frame: 60 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 60 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 60 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 60 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+size: 2
+Data bits:1 0 
+code :10
+DC value Before DPCM: 2
+number: 41
+
+*** New Bit AC ***
+Frame: 61 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 61 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 61 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 61 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 1
+Data bits:0 
+code :0
+DC value Before DPCM: -1
+number: 40
+
+*** New Bit AC ***
+Frame: 62 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 62 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 62 pixel:1
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 62 pixel:1
+bit Read:0 
+0
+number: 0
+
+*** New Bit DC ***
+bit Read:1 
+value: 1
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+
+*** New Bit DC ***
+bit Read:0 
+value: 0
+size: 3
+Data bits:0 1 0 
+code :010
+DC value Before DPCM: -5
+number: 35
+
+*** New Bit AC ***
+Frame: 63 pixel:1
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 63 pixel:1
+bit Read:0 
+0
+size: 1
+1 
+code :1
+number: 1
+
+*** New Bit AC ***
+Frame: 63 pixel:2
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 63 pixel:2
+bit Read:0 
+0
+size: 1
+0 
+code :0
+number: -1
+
+*** New Bit AC ***
+Frame: 63 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 63 pixel:3
+bit Read:0 
+0
+*** New Bit AC ***
+Frame: 63 pixel:3
+bit Read:1 
+1
+*** New Bit AC ***
+Frame: 63 pixel:3
+bit Read:0 
+0
+number: 0

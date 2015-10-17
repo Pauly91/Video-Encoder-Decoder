@@ -7,6 +7,8 @@
 
 #define byteSize 8
 int count = 0;
+int previousDC;
+
 struct HuffmanDCTable
 {
 	int size;
@@ -247,6 +249,7 @@ void byteToBitConverter(char * fileName,char *target)
 {
 	char byte;
 	int i;
+	int count = 0;
 	unsigned char mask = 0b10000000;
 	unsigned char runMask;
 	FILE *fp = NULL, *bitFile = NULL;
@@ -266,6 +269,7 @@ void byteToBitConverter(char * fileName,char *target)
 		runMask = mask;
 		for (i = 0; i < byteSize; ++i)
 		{
+			
 			if(byte & runMask)
 			{
 				fprintf(bitFile,"1 ");
@@ -275,8 +279,13 @@ void byteToBitConverter(char * fileName,char *target)
 				fprintf(bitFile,"0 ");
 			}
 			runMask >>= 1;
+			count++;
+			if(count > MaxPixel -1)
+			{
+				count = 0;
+				break;
+			}
 		}
-		printf("\n");
 	}
 	fprintf(bitFile,"\n");
 	fclose(fp);
@@ -300,6 +309,7 @@ int main(int argc, char const *argv[])
 	int endOfBlock = 0;
 	int numberOfPixel = 0;
 	int numberOfZero;
+	int temmp;
 
 	struct HuffmanDCTable *huffmanDCTable;
 	struct HuffmanACTable *huffmanACTable = NULL;
@@ -321,7 +331,7 @@ int main(int argc, char const *argv[])
 	{
 		printf("huffmanDCTable not opened\n");
 		return -1;
-	}
+	}	
 	for (i = 0; i < TableSize; ++i)
 	{
 		fscanf(fp,"%d %d",&huffmanDCTable[i].size,&huffmanDCTable[i].codeLength);
@@ -378,27 +388,38 @@ int main(int argc, char const *argv[])
 		numberOfPixel = 0;		
 		while(!dcFlag) // reset all init values for the loop
 		{
-
+			printf("\n*** New Bit DC ***\n");
 			fscanf(fp,"%c ",&bit);
 			printf("bit Read:%c \n",bit);
 			holder = findCode(holder,bit);
 			printf("value: %c\n",holder->bit);
-			if(holder->size > 0)
+			if(holder->size >= 0)
 			{
 				size = holder->size;
 				printf("size: %d\n",size);
-				patternHolder = (char *) malloc(size * sizeof(char));
-				i = 0;
-				while(i < size )
+				if(size == 0)
 				{
-
-					fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
-					printf("%c ",patternHolder[i]);
-					i++;
+					DCValue = 0;
 				}
-				printf("\n");
-				printf("code :%s\n",patternHolder);
-				DCValue = numberFinder(patternHolder,size); // use of previous DC value
+				else
+				{
+					patternHolder = (char *) malloc(size * sizeof(char));
+					i = 0;
+					printf("Data bits:");
+					while(i < size )
+					{
+
+						fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
+						printf("%c ",patternHolder[i]);
+						i++;
+					}
+					printf("\n");
+					printf("code :%s\n",patternHolder);
+					DCValue = numberFinder(patternHolder,size); // use of previous DC value
+					printf("DC value Before DPCM: %d\n",DCValue);
+				}	
+				DCValue += previousDC;
+				previousDC = DCValue;
 				printf("number: %d\n",DCValue);
 				numberOfPixel++;
 				fprintf(decode, "%d ",DCValue);
@@ -406,7 +427,8 @@ int main(int argc, char const *argv[])
 				while(!endOfBlock)
 				{
 					
-					printf("\n*** New Bit ***\n");
+					printf("\n*** New Bit AC ***\n");
+					printf("Frame: %d pixel:%d\n",endOfFrameCount,numberOfPixel);
 					fscanf(fp,"%c ",&bit);
 					printf("bit Read:%c \n",bit);
 					holder = findCode(holder,bit);
@@ -414,6 +436,18 @@ int main(int argc, char const *argv[])
 					if(holder->size >= 0)
 					{
 						size = holder->size;
+						if(size == 0)
+						{
+							// put the zeros in files correspoding to numberOfPixel Count
+							for (j = numberOfPixel; j < MaxPixel- 1; ++j)
+							{
+								fprintf(decode, "%d ",0);	
+							}
+							printf("\nnumber: %d\n",0);
+							fprintf(decode, "%d \n",0);
+							endOfFrameCount++;	
+							break;
+						}
 						numberOfZero = holder->run;
 						printf("\nsize: %d\n",size);
 						patternHolder = (char *) malloc(size * sizeof(char));
@@ -426,18 +460,7 @@ int main(int argc, char const *argv[])
 							i++;
 						}
 						printf("\n");
-						if(size == 0)
-						{
-							// put the zeros in files correspoding to numberOfPixel Count
-							for (j = numberOfPixel; j < MaxPixel- 1; ++j)
-							{
-								fprintf(decode, "%d ",0);	
-							}
-							printf("number: %d\n",0);
-							fprintf(decode, "%d \n",0);
-							endOfFrameCount++;	
-							break;
-						}
+
 						printf("code :%s\n",patternHolder);
 						ACValue = numberFinder(patternHolder,size); // get the number of Zeros right
 						printf("number: %d\n",ACValue);
@@ -455,7 +478,6 @@ int main(int argc, char const *argv[])
 				break;
 			}
 		}
-		printf("Here\n");
 	} 
 	return 0;
 }
