@@ -380,7 +380,9 @@ zigzag(image, dct_U_int, blockSize,"zigzag_DCT_U");
 zigzag(image, dct_V_int, blockSize,"zigzag_DCT_V");
 
 	
-
+differentialHuffmanRle("zigzag_DCT_Y","encoded_Y","Y_Byte_data");
+differentialHuffmanRle("zigzag_DCT_U","encoded_U","U_Byte_data");
+differentialHuffmanRle("zigzag_DCT_V","encoded_V","V_Byte_data");
 
 
 	return 0;

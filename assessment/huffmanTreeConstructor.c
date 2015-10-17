@@ -3,7 +3,9 @@
 #include <string.h>
 #define TableSize 12
 #define ACtableSize 102
+#define MaxPixel 64
 
+#define byteSize 8
 int count = 0;
 struct HuffmanDCTable
 {
@@ -51,11 +53,11 @@ void printPreOrder(struct nodes *tree)
 void treeCreatorDC(struct nodes *node, struct HuffmanDCTable *huffmanDCTable, int index,int count)
 {
 
-	printf("%d %d %d %s\n",count,huffmanDCTable[count].size, huffmanDCTable[count].codeLength, huffmanDCTable[count].code);
-	printf("index: %d bit: %c \n",index,huffmanDCTable[count].code[index]);
+	// //printf("%d %d %d %s\n",count,huffmanDCTable[count].size, huffmanDCTable[count].codeLength, huffmanDCTable[count].code);
+	// //printf("index: %d bit: %c \n",index,huffmanDCTable[count].code[index]);
 	if(huffmanDCTable[count].code[index] == '0')
 	{
-		printf("Left->bit: %c \n",huffmanDCTable[count].code[index]);	
+		//printf("Left->bit: %c \n",huffmanDCTable[count].code[index]);	
 		if(node->left == NULL)
 		{
 			node->left = (struct nodes *) malloc(sizeof(struct nodes));
@@ -63,16 +65,16 @@ void treeCreatorDC(struct nodes *node, struct HuffmanDCTable *huffmanDCTable, in
 			node->left = NULL;
 			node->right = NULL;
 			node->bit = huffmanDCTable[count].code[index];
-			printf("-->new node\n");
+			//printf("-->new node\n");
 		}
 		else
 			node = node->left;
-		printf("**Left**\nbit: %c bit %c\n",node->bit,huffmanDCTable[count].code[index]);
+		//printf("**Left**\nbit: %c bit %c\n",node->bit,huffmanDCTable[count].code[index]);
 
 	}
 	else
 	{
-		printf("Right->bit: %c \n",huffmanDCTable[count].code[index]);
+		//printf("Right->bit: %c \n",huffmanDCTable[count].code[index]);
 		if(node->right == NULL)
 		{
 			node->right = (struct nodes *) malloc(sizeof(struct nodes));
@@ -80,16 +82,16 @@ void treeCreatorDC(struct nodes *node, struct HuffmanDCTable *huffmanDCTable, in
 			node->left = NULL;
 			node->right = NULL;
 			node->bit = huffmanDCTable[count].code[index];
-			printf("-->new node\n");
+			//printf("-->new node\n");
 		}
 		else
 			node = node->right;
-		printf("**Right**\nbit: %c bit %c\n",node->bit,huffmanDCTable[count].code[index]);
+		//printf("**Right**\nbit: %c bit %c\n",node->bit,huffmanDCTable[count].code[index]);
 	}
 	node->size = -1;
 	node->codeLength = -1;
 	node->code = NULL;
-	printf("index: %d codeLength: %d \n\n\n",index,huffmanDCTable[count].codeLength - 1);
+	//printf("index: %d codeLength: %d \n\n\n",index,huffmanDCTable[count].codeLength - 1);
 	if(index == huffmanDCTable[count].codeLength - 1)
 	{
 		node->size = huffmanDCTable[count].size;
@@ -98,10 +100,10 @@ void treeCreatorDC(struct nodes *node, struct HuffmanDCTable *huffmanDCTable, in
 		strcpy(node->code,huffmanDCTable[count].code);
 		node->left = NULL;
 		node->right = NULL;
-		printf("\n*****Hit Leaf Node*******\n\n\n");
+		//printf("\n*****Hit Leaf Node*******\n\n\n");
 		if(count == TableSize -1)
 			return;
-		printf("DCHead->bit:%c\n",DCHead->bit);
+		//printf("DCHead->bit:%c\n",DCHead->bit);
 		treeCreatorDC(DCHead,huffmanDCTable,0,++count);
 		
 	}
@@ -116,11 +118,11 @@ void treeCreatorDC(struct nodes *node, struct HuffmanDCTable *huffmanDCTable, in
 void treeCreatorAC(struct nodes *node, struct HuffmanACTable *huffmanACTable, int index,int count)
 {
 
-	printf("%d %d %d %s\n",count,huffmanACTable[count].size, huffmanACTable[count].codeLength, huffmanACTable[count].code);
-	printf("index: %d bit: %c \n",index,huffmanACTable[count].code[index]);
+	//printf("%d %d %d %s\n",count,huffmanACTable[count].size, huffmanACTable[count].codeLength, huffmanACTable[count].code);
+	//printf("index: %d bit: %c \n",index,huffmanACTable[count].code[index]);
 	if(huffmanACTable[count].code[index] == '0')
 	{
-		printf("Left->bit: %c \n",huffmanACTable[count].code[index]);	
+		//printf("Left->bit: %c \n",huffmanACTable[count].code[index]);	
 		if(node->left == NULL)
 		{
 			node->left = (struct nodes *) malloc(sizeof(struct nodes));
@@ -128,16 +130,16 @@ void treeCreatorAC(struct nodes *node, struct HuffmanACTable *huffmanACTable, in
 			node->left = NULL;
 			node->right = NULL;
 			node->bit = huffmanACTable[count].code[index];
-			printf("-->new node\n");
+			//printf("-->new node\n");
 		}
 		else
 			node = node->left;
-		printf("**Left**\nbit: %c bit %c\n",node->bit,huffmanACTable[count].code[index]);
+		//printf("**Left**\nbit: %c bit %c\n",node->bit,huffmanACTable[count].code[index]);
 
 	}
 	else
 	{
-		printf("Right->bit: %c \n",huffmanACTable[count].code[index]);
+		//printf("Right->bit: %c \n",huffmanACTable[count].code[index]);
 		if(node->right == NULL)
 		{
 			node->right = (struct nodes *) malloc(sizeof(struct nodes));
@@ -145,16 +147,16 @@ void treeCreatorAC(struct nodes *node, struct HuffmanACTable *huffmanACTable, in
 			node->left = NULL;
 			node->right = NULL;
 			node->bit = huffmanACTable[count].code[index];
-			printf("-->new node\n");
+			//printf("-->new node\n");
 		}
 		else
 			node = node->right;
-		printf("**Right**\nbit: %c bit %c\n",node->bit,huffmanACTable[count].code[index]);
+		//printf("**Right**\nbit: %c bit %c\n",node->bit,huffmanACTable[count].code[index]);
 	}
 	node->size = -1;
 	node->codeLength = -1;
 	node->code = NULL;
-	printf("index: %d codeLength: %d \n\n\n",index,huffmanACTable[count].codeLength - 1);
+	//printf("index: %d codeLength: %d \n\n\n",index,huffmanACTable[count].codeLength - 1);
 	if(index == huffmanACTable[count].codeLength - 1)
 	{
 		node->size = huffmanACTable[count].size;
@@ -164,10 +166,10 @@ void treeCreatorAC(struct nodes *node, struct HuffmanACTable *huffmanACTable, in
 		strcpy(node->code,huffmanACTable[count].code);
 		node->left = NULL;
 		node->right = NULL;
-		printf("\n*****Hit Leaf Node*******\n\n\n");
+		//printf("\n*****Hit Leaf Node*******\n\n\n");
 		if(count == ACtableSize -1)
 			return;
-		printf("ACHead->bit:%c\n",ACHead->bit);
+		//printf("ACHead->bit:%c\n",ACHead->bit);
 		treeCreatorAC(ACHead,huffmanACTable,0,++count);
 		
 	}
@@ -185,12 +187,12 @@ int numberFinder(char * code,int size)
 	int i;
 	int mask = 1;
 	int number = 0;
-	printf("size: %d\n",size);
+	//printf("size: %d\n",size);
 	if(code[0] == '0')
 	{
 		for (i = size-1; i >= 0; --i)
 		{
-			printf("code[%d]: %c\n",i,code[i]);
+			//printf("code[%d]: %c\n",i,code[i]);
 			if(code[i] == '0')
 			{
 				number |= mask;
@@ -203,7 +205,7 @@ int numberFinder(char * code,int size)
 	{
 		for (i = size-1; i >= 0; --i)
 		{
-			printf("code[%d]: %c\n",i,code[i]);
+			//printf("code[%d]: %c\n",i,code[i]);
 			if(code[i] == '1')
 			{
 				number |= mask;
@@ -240,6 +242,47 @@ int compare_function(const void *a,const void *b)
 	// return 0;
 }
 
+
+void byteToBitConverter(char * fileName,char *target)
+{
+	char byte;
+	int i;
+	unsigned char mask = 0b10000000;
+	unsigned char runMask;
+	FILE *fp = NULL, *bitFile = NULL;
+	
+	if (!(fp = fopen(fileName,"r")))
+	{
+		printf("%s not open\n",fileName);
+		return;
+	}
+	if (!(bitFile = fopen(target,"w")))
+	{
+		printf("%s not open\n",target);
+		return;
+	}
+	while(fscanf(fp,"%c",&byte) > 0)
+	{
+		runMask = mask;
+		for (i = 0; i < byteSize; ++i)
+		{
+			if(byte & runMask)
+			{
+				fprintf(bitFile,"1 ");
+			}
+			else
+			{
+				fprintf(bitFile,"0 ");
+			}
+			runMask >>= 1;
+		}
+		printf("\n");
+	}
+	fprintf(bitFile,"\n");
+	fclose(fp);
+	fclose(bitFile);
+}
+
 int main(int argc, char const *argv[])
 {
 	FILE *fp = NULL,*decode = NULL;
@@ -248,14 +291,15 @@ int main(int argc, char const *argv[])
 	char *patternHolder = NULL;
 	char endCode[4] = "0101";
 
-	int i;
+	int i,j;
 	int dcReadFlag = 1;
 	int endOfFrameCount = 0;
 	int dcFlag = 0;
 	int DCValue,ACValue,previousDC;
 	int size;
 	int endOfBlock = 0;
-	int numberOfpixelFound = 0;
+	int numberOfPixel = 0;
+	int numberOfZero;
 
 	struct HuffmanDCTable *huffmanDCTable;
 	struct HuffmanACTable *huffmanACTable = NULL;
@@ -271,7 +315,7 @@ int main(int argc, char const *argv[])
 	ACHead->left = NULL;
 	ACHead->right = NULL;
 	ACHead->bit = 'H';
-
+	byteToBitConverter("Y_Byte_data","data_unpacked");
 	huffmanDCTable = (struct HuffmanDCTable *) malloc(TableSize * sizeof(struct HuffmanDCTable));
 	if (!(fp = fopen("huffmanDCTable","r")))
 	{
@@ -283,12 +327,12 @@ int main(int argc, char const *argv[])
 		fscanf(fp,"%d %d",&huffmanDCTable[i].size,&huffmanDCTable[i].codeLength);
 		huffmanDCTable[i].code = (char *) malloc(huffmanDCTable[i].codeLength * sizeof(char));
 		fscanf(fp,"%s",huffmanDCTable[i].code);
-		//printf("%d %d %s\n",huffmanDCTable[i].size, huffmanDCTable[i].codeLength, huffmanDCTable[i].code);
+		////printf("%d %d %s\n",huffmanDCTable[i].size, huffmanDCTable[i].codeLength, huffmanDCTable[i].code);
 	}
 	fclose(fp);
 	treeCreatorDC(DCHead,huffmanDCTable,0,0);
-	printf("\n**PreOrder**\n");
-	printPreOrder(DCHead);	
+	//printf("\n**PreOrder**\n");
+	//printPreOrder(DCHead);	
 	if(!(fp = fopen("huffmanACTable","r")))
 	{
 		printf("huffmanACTable not read \n");
@@ -305,19 +349,19 @@ int main(int argc, char const *argv[])
 
 	qsort(huffmanACTable,ACtableSize,sizeof(struct HuffmanACTable),compare_function);	
 
-	for (i = 0; i < ACtableSize; ++i)
-	{
-		//fscanf(fp,"%d %s",&huffmanDCTable[i].size,huffmanDCTable[i].code);
-		printf("%d %d %d %s\n",huffmanACTable[i].run,huffmanACTable[i].size,huffmanACTable[i].codeLength,huffmanACTable[i].code);
-	}
+	// for (i = 0; i < ACtableSize; ++i)
+	// {
+	// 	//fscanf(fp,"%d %s",&huffmanDCTable[i].size,huffmanDCTable[i].code);
+	// 	//printf("%d %d %d %s\n",huffmanACTable[i].run,huffmanACTable[i].size,huffmanACTable[i].codeLength,huffmanACTable[i].code);
+	// }
 
 	treeCreatorAC(ACHead,huffmanACTable,0,0);
-	printf("\n**PreOrder**\n");
-	printPreOrder(ACHead);	
+	//printf("\n**PreOrder**\n");
+	//printPreOrder(ACHead);	
 
-	if(!(fp = fopen("encodedData","r")))
+	if(!(fp = fopen("data_unpacked","r")))
 	{
-		printf("encodedData not read \n");
+		printf("data_unpacked not read \n");
 		return -1;
 	}
 	if(!(decode = fopen("decode","w")))
@@ -325,13 +369,16 @@ int main(int argc, char const *argv[])
 		printf("decode not read \n");
 		return -1;
 	}
-	holder = DCHead;
+	
 
-	while(endOfFrameCount < 1) // should be 64
+	while(endOfFrameCount < 64) // should be 64
 	{
 
+		holder = DCHead;
+		numberOfPixel = 0;		
 		while(!dcFlag) // reset all init values for the loop
 		{
+
 			fscanf(fp,"%c ",&bit);
 			printf("bit Read:%c \n",bit);
 			holder = findCode(holder,bit);
@@ -344,6 +391,7 @@ int main(int argc, char const *argv[])
 				i = 0;
 				while(i < size )
 				{
+
 					fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
 					printf("%c ",patternHolder[i]);
 					i++;
@@ -352,6 +400,7 @@ int main(int argc, char const *argv[])
 				printf("code :%s\n",patternHolder);
 				DCValue = numberFinder(patternHolder,size); // use of previous DC value
 				printf("number: %d\n",DCValue);
+				numberOfPixel++;
 				fprintf(decode, "%d ",DCValue);
 				holder = ACHead;
 				while(!endOfBlock)
@@ -359,17 +408,19 @@ int main(int argc, char const *argv[])
 					
 					printf("\n*** New Bit ***\n");
 					fscanf(fp,"%c ",&bit);
-					//printf("bit Read:%c \n",bit);
+					printf("bit Read:%c \n",bit);
 					holder = findCode(holder,bit);
 					printf("%c",holder->bit);
 					if(holder->size >= 0)
 					{
 						size = holder->size;
+						numberOfZero = holder->run;
 						printf("\nsize: %d\n",size);
 						patternHolder = (char *) malloc(size * sizeof(char));
 						i = 0;
 						while(i < size )
 						{
+							
 							fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
 							printf("%c ",patternHolder[i]);
 							i++;
@@ -378,40 +429,41 @@ int main(int argc, char const *argv[])
 						if(size == 0)
 						{
 							// put the zeros in files correspoding to numberOfPixel Count
+							for (j = numberOfPixel; j < MaxPixel- 1; ++j)
+							{
+								fprintf(decode, "%d ",0);	
+							}
 							printf("number: %d\n",0);
-							fprintf(decode, "%d ",0);	
+							fprintf(decode, "%d \n",0);
+							endOfFrameCount++;	
 							break;
 						}
 						printf("code :%s\n",patternHolder);
 						ACValue = numberFinder(patternHolder,size); // get the number of Zeros right
 						printf("number: %d\n",ACValue);
+						for (j = 0; j < numberOfZero; ++j)
+						{
+							numberOfPixel++;
+							fprintf(decode, "%d ",0);	
+						}
+						numberOfPixel++;
 						fprintf(decode, "%d ",ACValue);	
 						holder = ACHead;
 					}
 				}
 
-				 // ac code comes here
-
 				break;
 			}
 		}
-		break;
+		printf("Here\n");
 	} 
 	return 0;
 }
 
 
-/*
-
-
-Read the byte data and get as 1s and 0s read and write it to 
-a file as x x ie leaving spaces so that reading is easy
-*/
-
 
 /*
 
-
-create a tree for rle ??
+check encoding
 
 */
