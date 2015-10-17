@@ -7,7 +7,7 @@ unsigned char luminanceQuantizationMatrixData[8][8] = {
 				{12,12,	14,	19,	26,	58,	60,	 55},
 				{14,13,	16,	24,	40,	57,	69,	 56},
 				{14,17,	22,	29,	51,	87,	80,	 62},
-				{18,22,	37,	56,	68,	109,103,77},
+				{18,22,	37,	56,	68,	109,103, 77},
 				{24,35,	55,	64,	81,	104,113, 92},
 				{49,64,	78,	87,	103,121,120,101},
 				{72,92,	95,	98,	112,100,103, 99}
@@ -223,6 +223,7 @@ int main(int argc, char const *argv[])
 				fprintf(fp, "\n");
 			}
 			fclose(fp);
+			x++;	 
 		}
 	}
 
@@ -313,15 +314,16 @@ Read from the file Dct
 
 	quantize(image,dct_Y, dct_U, dct_V, luminanceQuantizationMatrix, chrominanceQuantizationMatrix, blockSize);
 
-	for (i = 0; i < image->infoHeader.height; ++i) // block of 2 * 2 
-	{
-		for (j = 0; j < image->infoHeader.width; ++j) // block of 2 * 2 
-		{
-			dct_V_int[i][j] = dct_V[i][j];
-			dct_U_int[i][j] = dct_U[i][j];
-			dct_Y_int[i][j] = dct_U[i][j];
-		}
-	}
+	// for (i = 0; i < image->infoHeader.height; ++i) // block of 2 * 2 
+	// {
+	// 	for (j = 0; j < image->infoHeader.width; ++j) // block of 2 * 2 
+	// 	{
+	// 		dct_V_int[i][j] = (int) dct_V[i][j];
+	// 		dct_U_int[i][j] = (int) dct_U[i][j];
+	// 		dct_Y_int[i][j] = (int) dct_U[i][j];
+	// 		printf("%d %d %d\n", dct_Y_int[i][j], dct_U_int[i][j], dct_V_int[i][j]);
+	// 	}
+	// }
 ////////////////////////////////////////////////////////////////////////
 
 	if((fp = fopen("Dct_quantized","w")) == NULL)
@@ -334,7 +336,7 @@ Read from the file Dct
 	{
 		for (j = 0; j < image->infoHeader.width; ++j) // block of 2 * 2 
 		{
-			fprintf(fp, "%f %f %f\n",dct_Y[i][j],dct_U[i][j],dct_V[i][j]);
+			fprintf(fp, "%d %d %d\n",(int) dct_Y[i][j],(int) dct_U[i][j],(int) dct_V[i][j]);
 		}
 	}
 	fclose(fp);
@@ -353,7 +355,7 @@ Read from the file dct
 
 ////////////////////////////////////////////////////////////////////////
 
-	zigzag(image, dct_Y_int, blockSize,"zigzag_DCT_Y");
+	zigzag(image, dct_Y, blockSize,"zigzag_DCT_Y");
 	// zigzag(image, dct_U_int, blockSize,"zigzag_DCT_U");
 	// zigzag(image, dct_V_int, blockSize,"zigzag_DCT_V");
 

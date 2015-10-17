@@ -370,7 +370,9 @@ void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsig
 			{
 				for (v = 0; v < blockSize; ++v)
 				{
+					printf("%f/%u = ",dct_Y[u + i][v + j],luminanceQuantizationMatrix[u][v]);
 					dct_Y[u + i][v + j] /= luminanceQuantizationMatrix[u][v];
+					printf("%f\n",dct_Y[u + i][v + j]);
 				}
 			}
 
@@ -385,7 +387,9 @@ void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsig
 			{
 				for (v = 0; v < blockSize; ++v)
 				{
+					printf("%f/%u = ",dct_U[u + i][v + j],chrominanceQuantizationMatrix[u][v]);
 					dct_U[u + i][v + j] /= chrominanceQuantizationMatrix[u][v];
+					printf("%f\n",dct_U[u + i][v + j]);
 				}
 			}
 
@@ -400,7 +404,9 @@ void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsig
 			{
 				for (v = 0; v < blockSize; ++v)
 				{
+					printf("%f/%u = ",dct_V[u + i][v + j],chrominanceQuantizationMatrix[u][v]);
 					dct_V[u + i][v + j] /= chrominanceQuantizationMatrix[u][v];
+					printf("%f\n",dct_V[u + i][v + j]);
 				}
 			}
 
@@ -410,7 +416,7 @@ void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsig
 
 }
 
-void zigzag(BMPData *image, int **dct,int blockSize, char *filename)
+void zigzag(BMPData *image, float **dct,int blockSize, char *filename)
 {
 	int i,j,m,n;
 	int holder;
@@ -433,14 +439,14 @@ void zigzag(BMPData *image, int **dct,int blockSize, char *filename)
 
 				if(j%2 == 0 && i == 0)
 				{
-					fprintf(fp,"%d ",dct[m + i][n + j]);
+					fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 					j++;
 				}
 				else if(j%2 == 1 && i == 0)
 				{
 					while(j != 0)
 					{
-						fprintf(fp,"%d ",dct[m + i][n + j]);
+						fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 						j -= 1;
 						i += 1;
 					}
@@ -449,7 +455,7 @@ void zigzag(BMPData *image, int **dct,int blockSize, char *filename)
 				{
 					while(i != 0)
 					{
-						fprintf(fp,"%d ",dct[m + i][n + j]);
+						fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 						j += 1;
 						i -= 1;
 					}			
@@ -459,13 +465,13 @@ void zigzag(BMPData *image, int **dct,int blockSize, char *filename)
 					if(i == blockSize - 1)
 					{
 						
-						fprintf(fp,"%d ",dct[m + i][n + j]);
+						fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 						j++;
 					}
 
 					else
 					{
-						fprintf(fp,"%d ",dct[m + i][n + j]);
+						fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 						i++;
 					}
 
@@ -475,19 +481,19 @@ void zigzag(BMPData *image, int **dct,int blockSize, char *filename)
 					holder = j;
 					while(i != holder)
 					{
-						fprintf(fp,"%d ",dct[m + i][n + j]);
+						fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 						j += 1;
 						i -= 1;				
 					}
 				}
 				else if(i == blockSize - 1 && j%2 == 0)
 				{
-						fprintf(fp,"%d ",dct[m + i][n + j]);
+						fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 						j++;
 				}		
 				else if(j == blockSize - 1 && i%2 == 1)
 				{
-					fprintf(fp,"%d ",dct[m + i][n + j]);
+					fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 					i++;
 				}
 				else if(j == blockSize - 1 && i%2 == 0)
@@ -495,14 +501,14 @@ void zigzag(BMPData *image, int **dct,int blockSize, char *filename)
 					holder = i;
 					while(j != holder)
 					{
-						fprintf(fp,"%d ",dct[m + i][n + j]);
+						fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 						j -= 1;
 						i += 1;				
 					}
 				}
 				if(i == blockSize -1 && j == blockSize - 1)
 				{
-						fprintf(fp,"%d ",dct[m + i][n + j]);
+						fprintf(fp,"%d ",(int) dct[m + i][n + j]);
 						i++;
 						j++;
 						break;

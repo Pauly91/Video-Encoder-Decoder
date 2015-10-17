@@ -80,5 +80,5 @@ void yuv2rgb(unsigned char ** red,unsigned char ** green,unsigned char ** blue,u
 void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize);
 void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int dSampleU, int dSampleV);
 void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize);
-void zigzag(BMPData *image, int **dct,int blocksize, char *filename);
+void zigzag(BMPData *image, float **dct,int blocksize, char *filename);
 void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData);
