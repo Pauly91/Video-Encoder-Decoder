@@ -19,6 +19,8 @@ int main(int argc, char const *argv[])
 	int DsampleType = 0	;
 	unsigned char **red = NULL,**green = NULL,**blue = NULL;
 	unsigned char **Y = NULL,**U = NULL,**V = NULL;
+
+	
 	if((image1 = readBMPfile(argv[1])) == NULL)
 	{
 		printf("Error in File 1\n");
@@ -58,64 +60,48 @@ int main(int argc, char const *argv[])
 			dSampleV = 4;	
 		if(dSampleU == dSampleV)
 		{
-			for (i = 0; i < image1->infoHeader.height; ++i)
+			for (i = 0; i < image->infoHeader.height; ++i) // check loop
 			{
-				for (j = 0; j < image1->infoHeader.width; j += dSampleU)
+				for (j = 0; j < image->infoHeader.width; j += dSampleU) // check loop
 				{
 					for (k = 1; k < dSampleU; ++k)
-						 {
-						 	U[i][j+k] = U[i][j];
-						 	V[i][j+k] = V[i][j];
+					{
+					 	U[i][j+k] = U[i][j];
+					 	V[i][j+k] = V[i][j];
 
-						 }	 
+					}	 
 				}
 			}
 		}
 		else
 		{
-			for (i = 0; i < image1->infoHeader.height; i += dSampleU)
+			if(dSampleU == 4)
 			{
-				for (j = 0; j < image1->infoHeader.width; j += dSampleU)
-				{
-					for (k = 1; k < dSampleU; ++k)
-					{
-						 	U[i][j+k] = U[i][j];
-						 	V[i][j+k] = V[i][j];
-					}
-					for (k = 1; k < dSampleU; ++k)
-					{
-						 	U[i+k][j] = U[i][j];
-						 	V[i+k][j] = V[i][j];
-					}
-				}
+				dSampleU = 2;
+				dSampleV = 0;
 			}
-			// for (i = 0; i < image1->infoHeader.height; ++i)
-			// {
-			// 	for (j = 0; j < image1->infoHeader.width; j += dSampleV)
-			// 	{
-			// 		for (k = 1; k < dSampleV; ++k)
-			// 			 	V[i][j+k] = V[i][j];
-			// 	}
-			// }
-			// for (i = 0; i < image1->infoHeader.height; ++i)
-			// {
-			// 	for (j = 0; j < image1->infoHeader.width; j += dSampleU)
-			// 	{
-			// 		for (k = 1; k < dSampleU; ++k)
-			// 			 	U[i][j+k] = U[i][j];
-			// 	}
-			// }
-			// for (i = 0; i < image1->infoHeader.height; ++i)
-			// {
-			// 	for (j = 0; j < image1->infoHeader.width; j += dSampleV)
-			// 	{
-			// 		for (k = 1; k < dSampleV; ++k)
-			// 			 	V[i][j+k] = V[i][j];
-			// 	}
-			// }			
+			else if(dSampleU == 2)
+			{
+				dSampleV = 2;
+			}
+			for (i = 0; i < image->infoHeader.height; i += dSampleU) // check loop
+			{
+				for (j = 0; j < image->infoHeader.width; j += dSampleU) // check loop
+				{
+					for (k = 0; k < dSampleU; ++k)
+					{
+					 	for (l = 0; l < dSampleV; ++l)
+					 	{
+						 	U[i + k][j + l] = U[i][j];
+						 	V[i + k][j + l] = V[i][j];
+					 	}
+					}
+
+				}
+			}		
 		}
 
-	}	
+	}
 
 	yuv2rgb(red,green,blue,Y,U,V,image1->infoHeader.height,image1->infoHeader.width);
 	colourMatrix2VectorConverter(red,green,blue,image1->bitMapImage,image1->infoHeader.height,image1->infoHeader.width);

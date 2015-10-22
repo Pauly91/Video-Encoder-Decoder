@@ -19,15 +19,13 @@ returns a structure
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>	
+
 #define numColor 3
 #define pi 3.145
-
 #define DCtableSize 12
-#define ACtableSize 102
-
-
-
-
+#define ACtableSize 162
+#define MaxPixel 64
+#define byteSize 8
 #define dataSize 64
 
 #pragma pack(push, 1)	
@@ -77,8 +75,13 @@ void colourMatrix2VectorConverter(unsigned char ** red,unsigned char ** green,un
 void rgb2yuv(unsigned char ** red,unsigned char ** green,unsigned char ** blue,unsigned char ** Y,unsigned char ** U,unsigned char ** V,int height, int width);
 void yuv2rgb(unsigned char ** red,unsigned char ** green,unsigned char ** blue,unsigned char ** Y,unsigned char ** U,unsigned char ** V,int height, int width);
 
-void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize);
-void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int dSampleU, int dSampleV);
-void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize);
-void zigzag(BMPData *image, float **dct,int blocksize, char *filename);
+void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize, int dSampleHeight, int dSampleWidth);
+void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, unsigned char **downSampledU, unsigned char ** downSampledV, int dSampleU, int dSampleV);
+void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize, int dSampleHeight, int dSampleWidth);
+void zigzag(BMPData *image, float **dct,int blockSize, char *filename,int dSampleHeight, int dSampleWidth);
 void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData);
+void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeight, int numberOfBlockWidth);
+void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight, int numberOfBlockWidth, int blockSize);
+void deQuantize(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize, int dSampleHeight, int dSampleWidth);
+void IDCT(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize, int dSampleHeight, int dSampleWidth);
+void upSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, unsigned char **downSampledU, unsigned char ** downSampledV, int dSampleU, int dSampleV, int dSampleHeight, int dSampleWidth);

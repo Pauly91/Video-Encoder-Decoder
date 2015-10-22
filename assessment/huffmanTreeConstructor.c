@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #define TableSize 12
-#define ACtableSize 102
+#define ACtableSize 162
 #define MaxPixel 64
 
 #define byteSize 8
 int count = 0;
-int previousDC;
+int previousDC = 0;
 
 struct HuffmanDCTable
 {
@@ -325,7 +325,7 @@ int main(int argc, char const *argv[])
 	ACHead->left = NULL;
 	ACHead->right = NULL;
 	ACHead->bit = 'H';
-	byteToBitConverter("Y_Byte_data","data_unpacked");
+	byteToBitConverter("U_Byte_data","data_unpacked");
 	huffmanDCTable = (struct HuffmanDCTable *) malloc(TableSize * sizeof(struct HuffmanDCTable));
 	if (!(fp = fopen("huffmanDCTable","r")))
 	{
@@ -343,7 +343,7 @@ int main(int argc, char const *argv[])
 	treeCreatorDC(DCHead,huffmanDCTable,0,0);
 	//printf("\n**PreOrder**\n");
 	//printPreOrder(DCHead);	
-	if(!(fp = fopen("huffmanACTable","r")))
+	if(!(fp = fopen("newHuffmanACtable","r")))
 	{
 		printf("huffmanACTable not read \n");
 		return -1;
@@ -381,7 +381,7 @@ int main(int argc, char const *argv[])
 	}
 	
 
-	while(endOfFrameCount < 64) // should be 64
+	while(endOfFrameCount < 32 * 32) // should be 64
 	{
 
 		holder = DCHead;

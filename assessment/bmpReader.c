@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>	
+#include <string.h>
 
 #include "bmpReader.h"
 
@@ -212,11 +213,11 @@ void colourMatrix2VectorConverter(unsigned char ** red,unsigned char ** green,un
 }
 
 
-void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize)
+void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize, int dSampleHeight, int dSampleWidth)
 {
 
 	int i,j,u,v,x,y;
-	float value = 0;
+	float value = 0, value1 = 0, value2 = 0;
 	for (i = 0; i < image->infoHeader.height; i += blockSize)
 	{
 		for (j = 0; j < image->infoHeader.width; j += blockSize)
@@ -244,9 +245,9 @@ void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned c
 		}
 	}
 
-	for (i = 0; i < image->infoHeader.height; i += blockSize)
+	for (i = 0; i < dSampleHeight; i += blockSize)
 	{
-		for (j = 0; j < image->infoHeader.width; j += blockSize)
+		for (j = 0; j < dSampleWidth; j += blockSize)
 		{
 			for (u = 0; u < blockSize; ++u)
 			{
@@ -257,72 +258,51 @@ void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned c
 					{
 						for (y = 0; y < blockSize; ++y)
 						{
-							value += U[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16)/4;
+							value1 += U[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16)/4;
+							value2 += V[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16)/4;
 						}
 					}
 					if (u == 0)
-						value *= 1/sqrt(2);
-					if(v == 0)
-						value *= 1/sqrt(2);
-					dct_U[u + i][v + j] = value;// / chrominanceQuantizationMatrix[u][v];
-				}
-			}
-
-		}
-	}
-
-	for (i = 0; i < image->infoHeader.height; i += blockSize)
-	{
-		for (j = 0; j < image->infoHeader.width; j += blockSize)
-		{
-			for (u = 0; u < blockSize; ++u)
-			{
-				for (v = 0; v < blockSize; ++v)
-				{
-					value = 0;	
-					for (x = 0; x < blockSize; ++x)
 					{
-						for (y = 0; y < blockSize; ++y)
-						{
-							value += V[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16)/4;
-						}
+						value1 *= 1/sqrt(2);
+						value2 *= 1/sqrt(2);
 					}
-					if (u == 0)
-						value *= 1/sqrt(2);
 					if(v == 0)
-						value *= 1/sqrt(2);
-					dct_V[u + i][v + j] = value;// / chrominanceQuantizationMatrix[u][v];
+					{
+						value1 *= 1/sqrt(2);
+						value2 *= 1/sqrt(2);
+					}
+					dct_U[u + i][v + j] = value1;// / chrominanceQuantizationMatrix[u][v];
+					dct_V[u + i][v + j] = value2;
 				}
 			}
 
 		}
 	}
-
 }
 
 
-void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int dSampleU, int dSampleV)
+void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, unsigned char **downSampledU, unsigned char ** downSampledV, int dSampleU, int dSampleV)
 {
 
 	int i,j,k,l;
 	if(dSampleU != 4 && dSampleV  != 4)
 	{
-		if(dSampleU == 1)
-			dSampleU = 4;
-		if(dSampleV == 1)
-			dSampleV = 4;	
+
 		if(dSampleU == dSampleV)
 		{
-			for (i = 0; i < image->infoHeader.height; ++i) // check loop
-			{
-				for (j = 0; j < image->infoHeader.width; j += dSampleU) // check loop
-				{
-					for (k = 1; k < dSampleU; ++k)
-					{
-					 	U[i][j+k] = U[i][j];
-					 	V[i][j+k] = V[i][j];
+			if(dSampleV == 1)
+				dSampleU = 4;
+			if(dSampleV == 2)
+				dSampleV = 1;
 
-					}	 
+			for (i = 0, l =0; i < image->infoHeader.height; i += dSampleV, l++) // check loop
+			{
+				for (j = 0,k = 0; j < image->infoHeader.width; j += dSampleU, k++) // check loop
+				{
+					 	downSampledU[l][k] = U[i][j];
+					 	downSampledV[l][k] = V[i][j];
+
 				}
 			}
 		}
@@ -330,35 +310,28 @@ void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned
 		{
 			if(dSampleU == 4)
 			{
-				dSampleU = 0;
+				dSampleU = 1;
 				dSampleV = 2;
 			}
 			else if(dSampleU == 2)
 			{
 				dSampleV = 2;
 			}
-			for (i = 0; i < image->infoHeader.height; i += dSampleU) // check loop
+			for (i = 0, l = 0; i < image->infoHeader.height; i += dSampleV, ++l) // check loop
 			{
-				for (j = 0; j < image->infoHeader.width; j += dSampleU) // check loop
+				for (j = 0, k = 0; j < image->infoHeader.width; j += dSampleU, ++k) // check loop
 				{
-					for (k = 0; k < dSampleU; ++k)
-					{
-					 	for (l = 0; l < dSampleV; ++l)
-					 	{
-						 	U[i + l][j + k] = U[i][j];
-						 	V[i + l][j + k] = V[i][j];
-					 	}
-					}
-
+				 	downSampledU[l][k] = U[i][j];
+				 	downSampledV[l][k] = V[i][j];
 				}
 			}		
 		}
 
-	}	
+	}
 }
 
 
-void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize)
+void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize, int dSampleHeight, int dSampleWidth)
 {
 
 	int i,j,u,v;
@@ -370,55 +343,39 @@ void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsig
 			{
 				for (v = 0; v < blockSize; ++v)
 				{
-					printf("%f/%u = ",dct_Y[u + i][v + j],luminanceQuantizationMatrix[u][v]);
+					//printf("%f/%u = ",dct_Y[u + i][v + j],luminanceQuantizationMatrix[u][v]);
 					dct_Y[u + i][v + j] /= luminanceQuantizationMatrix[u][v];
-					printf("%f\n",dct_Y[u + i][v + j]);
+					//printf("%f\n",dct_Y[u + i][v + j]);
 				}
 			}
 
 		}
 	}
 
-	for (i = 0; i < image->infoHeader.height; i += blockSize)
+	for (i = 0; i < dSampleHeight; i += blockSize)
 	{
-		for (j = 0; j < image->infoHeader.width; j += blockSize)
+		for (j = 0; j < dSampleWidth; j += blockSize)
 		{
 			for (u = 0; u < blockSize; ++u)
 			{
 				for (v = 0; v < blockSize; ++v)
 				{
-					printf("%f/%u = ",dct_U[u + i][v + j],chrominanceQuantizationMatrix[u][v]);
+					//printf("%f/%u = ",dct_U[u + i][v + j],chrominanceQuantizationMatrix[u][v]);
 					dct_U[u + i][v + j] /= chrominanceQuantizationMatrix[u][v];
-					printf("%f\n",dct_U[u + i][v + j]);
+					dct_V[u + i][v + j] /= chrominanceQuantizationMatrix[u][v];
+					//printf("%f\n",dct_U[u + i][v + j]);
 				}
 			}
 
 		}
 	}
-
-	for (i = 0; i < image->infoHeader.height; i += blockSize)
-	{
-		for (j = 0; j < image->infoHeader.width; j += blockSize)
-		{
-			for (u = 0; u < blockSize; ++u)
-			{
-				for (v = 0; v < blockSize; ++v)
-				{
-					printf("%f/%u = ",dct_V[u + i][v + j],chrominanceQuantizationMatrix[u][v]);
-					dct_V[u + i][v + j] /= chrominanceQuantizationMatrix[u][v];
-					printf("%f\n",dct_V[u + i][v + j]);
-				}
-			}
-
-		}
-	}	
-
 
 }
 
-void zigzag(BMPData *image, float **dct,int blockSize, char *filename)
+void zigzag(BMPData *image, float **dct,int blockSize, char *filename,int dSampleHeight, int dSampleWidth)
 {
 	int i,j,m,n;
+	int height,width;
 	int holder;
 	FILE *fp;
 	printf("%s\n",filename);
@@ -427,10 +384,22 @@ void zigzag(BMPData *image, float **dct,int blockSize, char *filename)
 		printf("%s not open\n",filename);
 		return ;
 	}
-
-	for (m = 0; m < image->infoHeader.height; m += blockSize)
+	if(dSampleHeight != 0 )
 	{
-		for (n = 0; n < image->infoHeader.width; n += blockSize)
+		height = dSampleHeight;
+		width = dSampleWidth;
+	}
+	else
+	{
+		height = image->infoHeader.height;
+		width = image->infoHeader.width;
+
+	}
+	printf("height: %d width:%d\n",height,width);
+
+	for (m = 0; m < height; m += blockSize)
+	{
+		for (n = 0; n < width; n += blockSize)
 		{
 			i = 0;
 			j = 0;
@@ -643,6 +612,10 @@ void dpcm(char DC, struct HuffmanDCTable *huffmanDCTable, FILE *encodedData)
 		binaryDisplay(code,size);
 		printf("\n");
 	}
+	else
+	{
+		printf("Else case of DPCM encoutered\n");
+	}
 	for (j = 0; j < DCtableSize; ++j)
 	{
 		if(huffmanDCTable[j].size == size)
@@ -722,7 +695,7 @@ void rlc(char *dataVector,struct HuffmanACTable *huffmanACTable,FILE *encodedDat
 		return;
 	}
 
-	for (i = 1; i < dataSize; ++i)
+	for (i = 1; i < dataSize; ++i) // dataSize = blocksize * blockSize
 	{
 		if(dataVector[i] == 0)
 		{
@@ -837,7 +810,7 @@ void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
 	}
 	fclose(fp);
 
-	if(!(fp = fopen("huffmanACTable","r")))
+	if(!(fp = fopen("newHuffmanACtable","r")))
 	{
 		printf("huffmanACTable not read \n");
 		return ;
@@ -862,6 +835,7 @@ void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
 		return ;
 	}
 	i = 0;
+	previousDC = 0;
 	while((fscanf(fp, "%d ", &temp)) > 0) 
 	{       
 
@@ -883,4 +857,762 @@ void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
 	fclose(encodedData);
 	bitPacking(targetFile,byteData);
 	fclose(fp);
+}
+
+struct HuffmanDCTableDecode
+{
+	int size;
+	int codeLength;
+	char * code;
+};
+
+struct nodes
+{
+	char bit;
+	int size;
+	int codeLength;
+	int run;
+	char *code;
+	struct nodes *left,*right;
+};
+
+struct HuffmanACTableDecode
+{
+	int run;
+	int size;
+	int codeLength;
+	char *code;
+}; 
+
+struct nodes *DCHead = NULL;
+struct nodes *ACHead = NULL;
+
+void createNode(struct nodes *node)
+{
+	node = (struct nodes *) malloc(sizeof(struct nodes));
+}
+
+void printPreOrder(struct nodes *tree)
+{
+	if(tree)
+	{
+		printf("bit: %c size: %d codeLength: %d code: %s \n",tree->bit,tree->size,tree->codeLength,tree->code);
+		printPreOrder(tree->left);
+		printPreOrder(tree->right);
+	}
+}
+// Over creating things
+void treeCreatorDC(struct nodes *node, struct HuffmanDCTableDecode *huffmanDCTable, int index,int count)
+{
+
+	// //printf("%d %d %d %s\n",count,huffmanDCTable[count].size, huffmanDCTable[count].codeLength, huffmanDCTable[count].code);
+	// //printf("index: %d bit: %c \n",index,huffmanDCTable[count].code[index]);
+	if(huffmanDCTable[count].code[index] == '0')
+	{
+		//printf("Left->bit: %c \n",huffmanDCTable[count].code[index]);	
+		if(node->left == NULL)
+		{
+			node->left = (struct nodes *) malloc(sizeof(struct nodes));
+			node = node->left;
+			node->left = NULL;
+			node->right = NULL;
+			node->bit = huffmanDCTable[count].code[index];
+			//printf("-->new node\n");
+		}
+		else
+			node = node->left;
+		//printf("**Left**\nbit: %c bit %c\n",node->bit,huffmanDCTable[count].code[index]);
+
+	}
+	else
+	{
+		//printf("Right->bit: %c \n",huffmanDCTable[count].code[index]);
+		if(node->right == NULL)
+		{
+			node->right = (struct nodes *) malloc(sizeof(struct nodes));
+			node = node->right;
+			node->left = NULL;
+			node->right = NULL;
+			node->bit = huffmanDCTable[count].code[index];
+			//printf("-->new node\n");
+		}
+		else
+			node = node->right;
+		//printf("**Right**\nbit: %c bit %c\n",node->bit,huffmanDCTable[count].code[index]);
+	}
+	node->size = -1;
+	node->codeLength = -1;
+	node->code = NULL;
+	//printf("index: %d codeLength: %d \n\n\n",index,huffmanDCTable[count].codeLength - 1);
+	if(index == huffmanDCTable[count].codeLength - 1)
+	{
+		node->size = huffmanDCTable[count].size;
+		node->codeLength = huffmanDCTable[count].codeLength;
+		node->code = (char *) malloc(node->codeLength * sizeof(char));
+		strcpy(node->code,huffmanDCTable[count].code);
+		node->left = NULL;
+		node->right = NULL;
+		//printf("\n*****Hit Leaf Node*******\n\n\n");
+		if(count == DCtableSize -1)
+			return;
+		//printf("DCHead->bit:%c\n",DCHead->bit);
+		treeCreatorDC(DCHead,huffmanDCTable,0,++count);
+		
+	}
+	else
+	{
+		treeCreatorDC(node,huffmanDCTable,++index,count);
+	}
+	return;
+
+}
+
+void treeCreatorAC(struct nodes *node, struct HuffmanACTableDecode *huffmanACTable, int index,int count)
+{
+
+	//printf("%d %d %d %s\n",count,huffmanACTable[count].size, huffmanACTable[count].codeLength, huffmanACTable[count].code);
+	//printf("index: %d bit: %c \n",index,huffmanACTable[count].code[index]);
+	if(huffmanACTable[count].code[index] == '0')
+	{
+		//printf("Left->bit: %c \n",huffmanACTable[count].code[index]);	
+		if(node->left == NULL)
+		{
+			node->left = (struct nodes *) malloc(sizeof(struct nodes));
+			node = node->left;
+			node->left = NULL;
+			node->right = NULL;
+			node->bit = huffmanACTable[count].code[index];
+			//printf("-->new node\n");
+		}
+		else
+			node = node->left;
+		//printf("**Left**\nbit: %c bit %c\n",node->bit,huffmanACTable[count].code[index]);
+
+	}
+	else
+	{
+		//printf("Right->bit: %c \n",huffmanACTable[count].code[index]);
+		if(node->right == NULL)
+		{
+			node->right = (struct nodes *) malloc(sizeof(struct nodes));
+			node = node->right;
+			node->left = NULL;
+			node->right = NULL;
+			node->bit = huffmanACTable[count].code[index];
+			//printf("-->new node\n");
+		}
+		else
+			node = node->right;
+		//printf("**Right**\nbit: %c bit %c\n",node->bit,huffmanACTable[count].code[index]);
+	}
+	node->size = -1;
+	node->codeLength = -1;
+	node->code = NULL;
+	//printf("index: %d codeLength: %d \n\n\n",index,huffmanACTable[count].codeLength - 1);
+	if(index == huffmanACTable[count].codeLength - 1)
+	{
+		node->size = huffmanACTable[count].size;
+		node->codeLength = huffmanACTable[count].codeLength;
+		node->run = huffmanACTable[count].run;
+		node->code = (char *) malloc(node->codeLength * sizeof(char));
+		strcpy(node->code,huffmanACTable[count].code);
+		node->left = NULL;
+		node->right = NULL;
+		//printf("\n*****Hit Leaf Node*******\n\n\n");
+		if(count == ACtableSize -1)
+			return;
+		//printf("ACHead->bit:%c\n",ACHead->bit);
+		treeCreatorAC(ACHead,huffmanACTable,0,++count);
+		
+	}
+	else
+	{
+		treeCreatorAC(node,huffmanACTable,++index,count);
+	}
+	return;
+
+}
+
+
+int numberFinder(char * code,int size)
+{
+	int i;
+	int mask = 1;
+	int number = 0;
+	//printf("size: %d\n",size);
+	if(code[0] == '0')
+	{
+		for (i = size-1; i >= 0; --i)
+		{
+			//printf("code[%d]: %c\n",i,code[i]);
+			if(code[i] == '0')
+			{
+				number |= mask;
+			}
+			mask <<= 1;
+		}
+			return -1*number;
+	}
+	else
+	{
+		for (i = size-1; i >= 0; --i)
+		{
+			//printf("code[%d]: %c\n",i,code[i]);
+			if(code[i] == '1')
+			{
+				number |= mask;
+			}
+			mask <<= 1;
+		}
+		return number;	
+	}
+
+
+
+
+}
+
+struct nodes * findCode(struct nodes *node, char bit)
+{
+	if(bit == '0')
+		return node->left;
+	else
+		return node->right;
+}
+
+
+
+int compare_function(const void *a,const void *b) 
+{
+	struct HuffmanACTableDecode *x = (struct HuffmanACTableDecode *) a;
+	struct HuffmanACTableDecode *y = (struct HuffmanACTableDecode *) b;
+	return strcmp(x->code,y->code);
+	// if (x->probabilty < y->probabilty) 
+	// 	return 1;
+	// else if (x->probabilty > y->probabilty) 
+	// 	return -1; 
+	// return 0;
+}
+
+
+void byteToBitConverter(char * fileName,char *target)
+{
+	char byte;
+	int i;
+	int count = 0;
+	unsigned char mask = 0b10000000;
+	unsigned char runMask;
+	FILE *fp = NULL, *bitFile = NULL;
+	
+	if (!(fp = fopen(fileName,"r")))
+	{
+		printf("%s not open\n",fileName);
+		return;
+	}
+	if (!(bitFile = fopen(target,"w")))
+	{
+		printf("%s not open\n",target);
+		return;
+	}
+	while(fscanf(fp,"%c",&byte) > 0)
+	{
+		runMask = mask;
+		for (i = 0; i < byteSize; ++i)
+		{
+			
+			if(byte & runMask)
+			{
+				fprintf(bitFile,"1 ");
+			}
+			else
+			{
+				fprintf(bitFile,"0 ");
+			}
+			runMask >>= 1;
+			count++;
+			if(count > MaxPixel -1)
+			{
+				count = 0;
+				break;
+			}
+		}
+	}
+	fprintf(bitFile,"\n");
+	fclose(fp);
+	fclose(bitFile);
+}
+
+void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeight, int numberOfBlockWidth)
+{
+	FILE *fp = NULL,*decode = NULL;
+	
+	char bit;
+	char *patternHolder = NULL;
+	char endCode[4] = "0101";
+
+	int i,j;
+	int endOfFrameCount = 0;
+	int dcFlag = 0;
+	int DCValue,ACValue;
+	int size;
+	int endOfBlock = 0;
+	int numberOfPixel = 0;
+	int numberOfZero;
+
+	struct HuffmanDCTableDecode *huffmanDCTable;
+	struct HuffmanACTableDecode *huffmanACTable = NULL;
+	struct nodes *holder = NULL;
+	//holder = (struct nodes *) malloc(sizeof(struct nodes));
+	huffmanACTable = (struct HuffmanACTableDecode *) malloc(sizeof(struct HuffmanACTableDecode) * ACtableSize);	
+	DCHead = (struct nodes *) malloc(sizeof(struct nodes));
+	DCHead->left = NULL;
+	DCHead->right = NULL;
+	DCHead->bit = 'H';
+
+	ACHead = (struct nodes *) malloc(sizeof(struct nodes));
+	ACHead->left = NULL;
+	ACHead->right = NULL;
+	ACHead->bit = 'H';
+	byteToBitConverter(byteFile,"data_unpacked");
+	huffmanDCTable = (struct HuffmanDCTableDecode *) malloc(DCtableSize * sizeof(struct HuffmanDCTableDecode));
+	if (!(fp = fopen("huffmanDCTable","r")))
+	{
+		printf("huffmanDCTable not opened\n");
+		return;
+	}	
+	for (i = 0; i < DCtableSize; ++i)
+	{
+		fscanf(fp,"%d %d",&huffmanDCTable[i].size,&huffmanDCTable[i].codeLength);
+		huffmanDCTable[i].code = (char *) malloc(huffmanDCTable[i].codeLength * sizeof(char));
+		fscanf(fp,"%s",huffmanDCTable[i].code);
+		////printf("%d %d %s\n",huffmanDCTable[i].size, huffmanDCTable[i].codeLength, huffmanDCTable[i].code);
+	}
+	fclose(fp);
+	treeCreatorDC(DCHead,huffmanDCTable,0,0);
+	//printf("\n**PreOrder**\n");
+	//printPreOrder(DCHead);	
+	if(!(fp = fopen("newHuffmanACtable","r")))
+	{
+		printf("huffmanACTable not read \n");
+		return;
+	}
+	for (i = 0; i < ACtableSize; ++i)
+	{
+		//fscanf(fp,"%d %s",&huffmanDCTable[i].size,huffmanDCTable[i].code);
+		fscanf(fp,"%d %d %d",&huffmanACTable[i].run,&huffmanACTable[i].size,&huffmanACTable[i].codeLength);
+		huffmanACTable[i].code = (char *) malloc(sizeof(char) * huffmanACTable[i].codeLength);
+		fscanf(fp,"%s",huffmanACTable[i].code);
+	}
+	fclose(fp);
+
+	qsort(huffmanACTable,ACtableSize,sizeof(struct HuffmanACTableDecode),compare_function);	
+
+	treeCreatorAC(ACHead,huffmanACTable,0,0);
+	//printf("\n**PreOrder**\n");
+	//printPreOrder(ACHead);	
+
+	if(!(fp = fopen("data_unpacked","r")))
+	{
+		printf("data_unpacked not read \n");
+		return;
+	}
+	if(!(decode = fopen(decodeZigZag,"w")))
+	{
+		printf("decode not read \n");
+		return;
+	}
+	
+	previousDC = 0;
+	while(endOfFrameCount < numberOfBlockHeight * numberOfBlockWidth) // should be 64
+	{
+
+		holder = DCHead;
+		numberOfPixel = 0;		
+		while(!dcFlag) // reset all init values for the loop
+		{
+			printf("\n*** New Bit DC ***\n");
+			fscanf(fp,"%c ",&bit);
+			printf("bit Read:%c \n",bit);
+			holder = findCode(holder,bit);
+			printf("value: %c\n",holder->bit);
+			if(holder->size >= 0)
+			{
+				size = holder->size;
+				printf("size: %d\n",size);
+				if(size == 0)
+				{
+					DCValue = 0;
+				}
+				else
+				{
+					patternHolder = (char *) malloc(size * sizeof(char));
+					i = 0;
+					printf("Data bits:");
+					while(i < size )
+					{
+
+						fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
+						printf("%c ",patternHolder[i]);
+						i++;
+					}
+					printf("\n");
+					printf("code :%s\n",patternHolder);
+					DCValue = numberFinder(patternHolder,size); // use of previous DC value
+					printf("DC value Before DPCM: %d\n",DCValue);
+				}	
+				DCValue += previousDC;
+				previousDC = DCValue;
+				printf("number: %d\n",DCValue);
+				numberOfPixel++;
+				fprintf(decode, "%d ",DCValue);
+				holder = ACHead;
+				while(!endOfBlock)
+				{
+					
+					printf("\n*** New Bit AC ***\n");
+					printf("Frame: %d pixel:%d\n",endOfFrameCount,numberOfPixel);
+					fscanf(fp,"%c ",&bit);
+					printf("bit Read:%c \n",bit);
+					holder = findCode(holder,bit);
+					printf("%c",holder->bit);
+					if(holder->size >= 0)
+					{
+						size = holder->size;
+						if(size == 0)
+						{
+							// put the zeros in files correspoding to numberOfPixel Count
+							for (j = numberOfPixel; j < MaxPixel- 1; ++j)
+							{
+								fprintf(decode, "%d ",0);	
+							}
+							printf("\nnumber: %d\n",0);
+							fprintf(decode, "%d \n",0);
+							endOfFrameCount++;	
+							break;
+						}
+						numberOfZero = holder->run;
+						printf("\nsize: %d\n",size);
+						patternHolder = (char *) malloc(size * sizeof(char));
+						i = 0;
+						while(i < size )
+						{
+							
+							fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
+							printf("%c ",patternHolder[i]);
+							i++;
+						}
+						printf("\n");
+
+						printf("code :%s\n",patternHolder);
+						ACValue = numberFinder(patternHolder,size); // get the number of Zeros right
+						printf("number: %d\n",ACValue);
+						for (j = 0; j < numberOfZero; ++j)
+						{
+							numberOfPixel++;
+							fprintf(decode, "%d ",0);	
+						}
+						numberOfPixel++;
+						fprintf(decode, "%d ",ACValue);	
+						holder = ACHead;
+					}
+				}
+
+				break;
+			}
+		}
+	} 
+}
+
+void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight, int numberOfBlockWidth, int blockSize)
+{
+
+	int i = 0,j = 0, x = 0, y = 0;
+	int holder;
+	FILE *fp;
+	if(!(fp = fopen(zigZagFile,"w")))
+	{
+		printf("%s not opened \n",zigZagFile);
+		return;
+	}
+	for (x = 0; x < numberOfBlockHeight; x += blockSize)
+	{
+		for (y = 0; y < numberOfBlockWidth; y += blockSize)
+		{
+			i = j = 0;
+			while( i != 8 && j != 8)
+			{
+				if(j%2 == 0 && i == 0)
+				{
+					fscanf(fp,"%u",&reblock[x + i][y + j]);
+					j++;
+				}
+				else if(j%2 == 1 && i == 0)
+				{
+					while(j != 0)
+					{
+						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						j -= 1;
+						i += 1;
+					}
+				}
+				else if(i%2 == 0 && j == 0)
+				{
+					while(i != 0)
+					{
+						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						j += 1;
+						i -= 1;
+					}			
+				}
+				else if(i%2 == 1 && j == 0)
+				{
+					if(i == blockSize - 1)
+					{
+						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						j++;
+					}
+
+					else
+					{
+						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						i++;
+					}
+
+				}
+				else if(i == blockSize - 1 && j%2 == 1)
+				{
+					holder = j;
+					while(i != holder)
+					{
+						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						j += 1;
+						i -= 1;				
+					}
+				}
+				else if(i == blockSize - 1 && j%2 == 0)
+				{
+					fscanf(fp,"%u",&reblock[x + i][y + j]);
+					j++;
+				}		
+				else if(j == blockSize - 1 && i%2 == 1)
+				{
+					fscanf(fp,"%u",&reblock[x + i][y + j]);
+					i++;
+				}
+				else if(j == blockSize - 1 && i%2 == 0)
+				{
+					holder = i;
+					while(j != holder)
+					{
+						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						j -= 1;
+						i += 1;				
+					}
+				}
+
+				if((i == blockSize -1) && (j == blockSize - 1))
+				{
+					fscanf(fp,"%u",&reblock[x + i][y + j]);
+					i++;
+					j++;
+					break;
+				}
+
+			}
+		}
+	}	
+}
+
+
+void deQuantize(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize, int dSampleHeight, int dSampleWidth)
+{
+
+	int i,j,u,v;
+	for (i = 0; i < image->infoHeader.height; i += blockSize)
+	{
+		for (j = 0; j < image->infoHeader.width; j += blockSize)
+		{
+			for (u = 0; u < blockSize; ++u)
+			{
+				for (v = 0; v < blockSize; ++v)
+				{
+					//printf("%f/%u = ",dct_Y[u + i][v + j],luminanceQuantizationMatrix[u][v]);
+					dct_Y[u + i][v + j] *= luminanceQuantizationMatrix[u][v];
+					//printf("%f\n",dct_Y[u + i][v + j]);
+				}
+			}
+
+		}
+	}
+
+	for (i = 0; i < dSampleHeight; i += blockSize)
+	{
+		for (j = 0; j < dSampleWidth; j += blockSize)
+		{
+			for (u = 0; u < blockSize; ++u)
+			{
+				for (v = 0; v < blockSize; ++v)
+				{
+					//printf("%f/%u = ",dct_U[u + i][v + j],chrominanceQuantizationMatrix[u][v]);
+					dct_U[u + i][v + j] *= chrominanceQuantizationMatrix[u][v];
+					dct_V[u + i][v + j] *= chrominanceQuantizationMatrix[u][v];
+					//printf("%f\n",dct_U[u + i][v + j]);
+				}
+			}
+
+		}
+	}
+
+}
+
+void IDCT(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize, int dSampleHeight, int dSampleWidth)
+{
+	int i,j,u,v,x,y;
+	float value,value1,value2;
+	for (i = 0; i < image->infoHeader.height; i += blockSize)
+	{
+		for (j = 0; j < image->infoHeader.width; j += blockSize)
+		{
+			for (u = 0; u < blockSize; ++u)
+			{
+				for (v = 0; v < blockSize; ++v)
+				{
+					value = 0;	
+					for (x = 0; x < blockSize; ++x)
+					{
+						for (y = 0; y < blockSize; ++y)
+						{
+							value += dct_Y[x + i][y + j] * cos(pi *(2*u + 1)*x/16) * cos(pi *(2*v + 1)*y/16)/4;
+							if(x == 0)
+								value *= 1/sqrt(2);
+							if(y == 0)
+								value *= 1/sqrt(2);							
+						}
+					}
+					// if (u == 0)
+					// 	value *= 1/sqrt(2);
+					// if(v == 0)
+					// 	value *= 1/sqrt(2);
+					if(value > 255)
+						Y[i][j] = 255;
+					else if(value < 0)
+						Y[i][j] = 0;
+					else
+						Y[i][j] = (unsigned char) value; 
+
+				}
+			}
+
+		}
+	}
+
+	for (i = 0; i < dSampleHeight; i += blockSize)
+	{
+		for (j = 0; j < dSampleWidth; j += blockSize)
+		{
+			for (u = 0; u < blockSize; ++u)
+			{
+				for (v = 0; v < blockSize; ++v)
+				{
+					value1 = 0;	
+					value2 = 0;	
+					for (x = 0; x < blockSize; ++x)
+					{
+						for (y = 0; y < blockSize; ++y)
+						{
+							value1 += dct_U[x + i][y + j] * cos(pi *(2*u + 1)*x/16) * cos(pi *(2*v + 1)*y/16)/4;
+							value2 += dct_V[x + i][y + j] * cos(pi *(2*u + 1)*x/16) * cos(pi *(2*v + 1)*y/16)/4;
+							if(x == 0)
+							{
+								value1 *= 1/sqrt(2);
+								value2 *= 1/sqrt(2);
+							}
+							if(y == 0)
+							{
+								value1 *= 1/sqrt(2);
+								value2 *= 1/sqrt(2);								
+							}
+						}
+					}
+					// if (u == 0)
+					// 	value *= 1/sqrt(2);
+					// if(v == 0)
+					// 	value *= 1/sqrt(2);
+					if(value1 > 255)
+						U[i][j] = 255;
+					else if(value1 < 0)
+						U[i][j] = 0;
+					else
+						U[i][j] = (unsigned char) value1; 
+					
+					if(value2 > 255)
+						U[i][j] = 255;
+					else if(value2 < 0)
+						U[i][j] = 0;
+					else
+						U[i][j] = (unsigned char) value2; 
+				}
+			}
+
+		}
+	}
+}
+
+void upSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, unsigned char **downSampledU, unsigned char ** downSampledV, int dSampleU, int dSampleV, int dSampleHeight, int dSampleWidth)
+{
+
+	int i,j,k,l;
+	if(dSampleU != 4 && dSampleV  != 4)
+	{
+
+		if(dSampleU == dSampleV)
+		{
+			if(dSampleV == 1)
+				dSampleU = 4;
+			if(dSampleV == 2)
+				dSampleV = 1;
+
+			for (i = 0; i < dSampleHeight; ++i) // check loop
+			{
+				for (j = 0; j < dSampleWidth; ++j) // check loop
+				{
+					 for (l = 0; l < dSampleV; ++l)
+					 {
+					 	for (k = 0; k < dSampleU; ++k)
+					 	{
+						 	U[i + l][j + k] = downSampledU[i][j];
+						 	V[i + l][j + k] = downSampledV[i][j];
+					 	}
+					 }
+				}
+			}
+		}
+		else
+		{
+			if(dSampleU == 4)
+			{
+				dSampleU = 1;
+				dSampleV = 2;
+			}
+			else if(dSampleU == 2)
+			{
+				dSampleV = 2;
+			}
+			for (i = 0; i < dSampleHeight; ++i) // check loop
+			{
+				for (j = 0; j < dSampleWidth; ++j) // check loop
+				{
+					 for (l = 0; l < dSampleV; ++l)
+					 {
+					 	for (k = 0; k < dSampleU; ++k)
+					 	{
+						 	U[i + l][j + k] = downSampledU[i][j];
+						 	V[i + l][j + k] = downSampledV[i][j];
+					 	}
+					 }
+				}
+			}	
+		}
+
+	}
 }

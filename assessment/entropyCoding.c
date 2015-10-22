@@ -195,10 +195,9 @@ void rlc(char *dataVector,struct HuffmanACTable *huffmanACTable,FILE *encodedDat
 			{
 				printf("dataVector[%d]: %d\n",i,dataVector[i]);
 				i++;
-				count++;
 				if(i > dataSize-1)
 					break;
-				
+				count++;
 			}
 			if(i > dataSize-1)
 			{

@@ -1,10 +1,11 @@
 
-fo = open("rleData", "r")
-f1 = open("huffmanACtable","w")
+fo = open("newHuffmanData", "r")
+f1 = open("newHuffmanACtable","w")
 var = True
 for line in fo:
 	if line.split() :
 		if var:
+			#print line.split()
 			a,b = line.split()
 			print a,b
 		else:
