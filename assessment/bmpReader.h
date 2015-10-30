@@ -24,9 +24,9 @@ returns a structure
 #define pi 3.145
 #define DCtableSize 12
 #define ACtableSize 162
-#define MaxPixel 64
+//#define MaxPixel 64
 #define byteSize 8
-#define dataSize 64
+//#define dataSize 64
 
 #pragma pack(push, 1)	
 
@@ -79,8 +79,8 @@ void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned c
 void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, unsigned char **downSampledU, unsigned char ** downSampledV, int dSampleU, int dSampleV);
 void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize, int dSampleHeight, int dSampleWidth);
 void zigzag(BMPData *image, float **dct,int blockSize, char *filename,int dSampleHeight, int dSampleWidth);
-void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData);
-void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeight, int numberOfBlockWidth);
+void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData, int dataSize);
+void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeight, int numberOfBlockWidth,int MaxPixel);
 void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight, int numberOfBlockWidth, int blockSize);
 void deQuantize(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char ** luminanceQuantizationMatrix, unsigned char ** chrominanceQuantizationMatrix, int blockSize, int dSampleHeight, int dSampleWidth);
 void IDCT(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize, int dSampleHeight, int dSampleWidth);

@@ -5,6 +5,7 @@
 
 #include "bmpReader.h"
 
+int returnScanf;
 
 BMPData* readBMPfile(const char *filename)
 {
@@ -213,73 +214,7 @@ void colourMatrix2VectorConverter(unsigned char ** red,unsigned char ** green,un
 }
 
 
-void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize, int dSampleHeight, int dSampleWidth)
-{
 
-	int i,j,u,v,x,y;
-	float value = 0, value1 = 0, value2 = 0;
-	for (i = 0; i < image->infoHeader.height; i += blockSize)
-	{
-		for (j = 0; j < image->infoHeader.width; j += blockSize)
-		{
-			for (u = 0; u < blockSize; ++u)
-			{
-				for (v = 0; v < blockSize; ++v)
-				{
-					value = 0;	
-					for (x = 0; x < blockSize; ++x)
-					{
-						for (y = 0; y < blockSize; ++y)
-						{
-							value += Y[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16)/4;
-						}
-					}
-					if (u == 0)
-						value *= 1/sqrt(2);
-					if(v == 0)
-						value *= 1/sqrt(2);
-					dct_Y[u + i][v + j] = value;// / luminanceQuantizationMatrix[u][v];
-				}
-			}
-
-		}
-	}
-
-	for (i = 0; i < dSampleHeight; i += blockSize)
-	{
-		for (j = 0; j < dSampleWidth; j += blockSize)
-		{
-			for (u = 0; u < blockSize; ++u)
-			{
-				for (v = 0; v < blockSize; ++v)
-				{
-					value = 0;	
-					for (x = 0; x < blockSize; ++x)
-					{
-						for (y = 0; y < blockSize; ++y)
-						{
-							value1 += U[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16)/4;
-							value2 += V[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16)/4;
-						}
-					}
-					if (u == 0)
-					{
-						value1 *= 1/sqrt(2);
-						value2 *= 1/sqrt(2);
-					}
-					if(v == 0)
-					{
-						value1 *= 1/sqrt(2);
-						value2 *= 1/sqrt(2);
-					}
-					dct_U[u + i][v + j] = value1;// / chrominanceQuantizationMatrix[u][v];
-					dct_V[u + i][v + j] = value2;
-				}
-			}
-
-		}
-	}
-}
 
 
 void downSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, unsigned char **downSampledU, unsigned char ** downSampledV, int dSampleU, int dSampleV)
@@ -363,11 +298,13 @@ void quantize(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsig
 					//printf("%f/%u = ",dct_U[u + i][v + j],chrominanceQuantizationMatrix[u][v]);
 					dct_U[u + i][v + j] /= chrominanceQuantizationMatrix[u][v];
 					dct_V[u + i][v + j] /= chrominanceQuantizationMatrix[u][v];
-					//printf("%f\n",dct_U[u + i][v + j]);
+					printf("%f %f ",dct_U[u + i][v + j],dct_V[u + i][v + j]);
 				}
 			}
 
+		printf("\n");
 		}
+
 	}
 
 }
@@ -599,7 +536,7 @@ void dpcm(char DC, struct HuffmanDCTable *huffmanDCTable, FILE *encodedData)
 	int j;
 	int temp = DC;
 
-
+	printf("before -> DC: %d\n",DC);
 	DC -= previousDC;
 	printf("DC: %d\n",DC);
 	size = bitCount(DC);
@@ -614,7 +551,16 @@ void dpcm(char DC, struct HuffmanDCTable *huffmanDCTable, FILE *encodedData)
 	}
 	else
 	{
-		printf("Else case of DPCM encoutered\n");
+		size = 0;
+		code = (int *) malloc(sizeof(int));
+		code = 0;
+		// size = 2;
+		// code = (int *) malloc(size*sizeof(int));
+		// code[0] = 0;
+		// code[1] = 0;
+		// printf("Code:");
+		// binaryDisplay(code,size);
+		// printf("\n");
 	}
 	for (j = 0; j < DCtableSize; ++j)
 	{
@@ -682,7 +628,7 @@ void rlcEncode(int count,int data,struct HuffmanACTable *huffmanACTable,FILE *en
 }
 
 
-void rlc(char *dataVector,struct HuffmanACTable *huffmanACTable,FILE *encodedData)
+void rlc(char *dataVector,struct HuffmanACTable *huffmanACTable,FILE *encodedData, int dataSize)
 {
 
 	int i,count = 0;
@@ -695,6 +641,7 @@ void rlc(char *dataVector,struct HuffmanACTable *huffmanACTable,FILE *encodedDat
 		return;
 	}
 
+
 	for (i = 1; i < dataSize; ++i) // dataSize = blocksize * blockSize
 	{
 		if(dataVector[i] == 0)
@@ -702,37 +649,42 @@ void rlc(char *dataVector,struct HuffmanACTable *huffmanACTable,FILE *encodedDat
 			while(dataVector[i] == 0)
 			{
 				i++;
-				if(i > dataSize-1)
+				if(i > dataSize - 1)
 					break;
 				count++;
 			}
-			if(i > dataSize-1)
+			if(i > dataSize - 1)
 			{
-				fprintf(fp,"%d %d\n",count,0);
+				fprintf(fp,"%d %d %d <--------- \n",count,0,i);
 				fprintf(encodedData,"1010");
 			}
 			else
 			{
-				fprintf(fp,"%d %d\n",count,dataVector[i]);
+				fprintf(fp,"%d %d %d\n",count,dataVector[i],i);
 				rlcEncode(count,dataVector[i],huffmanACTable,encodedData);
+			}
+			if(i == dataSize - 1)
+			{
+				fprintf(encodedData,"1010");
 			}
 			count = 0;
 		}
+
 		else
 		{
-			fprintf(fp,"%d %d\n",count,dataVector[i]);
+			fprintf(fp,"%d %d %d\n",count,dataVector[i],i);
 			rlcEncode(count,dataVector[i],huffmanACTable,encodedData);
 		}
 	}
 	fclose(fp);
 }
 
-void entropyCoding(char *dataVector,struct HuffmanDCTable *huffmanDCTable,struct HuffmanACTable *huffmanACTable,FILE *encodedData)
+void entropyCoding(char *dataVector,struct HuffmanDCTable *huffmanDCTable,struct HuffmanACTable *huffmanACTable,FILE *encodedData, int dataSize)
 {
 
 	// printf("%d\n",dataVector[0]);
 	dpcm(dataVector[0],huffmanDCTable,encodedData);
-	rlc(dataVector,huffmanACTable,encodedData);
+	rlc(dataVector,huffmanACTable,encodedData, dataSize);
 }
 
 
@@ -781,7 +733,7 @@ void bitPacking(char * fileNameSource, char * fileNameTarget)
 }
 
 
-void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
+void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData, int dataSize)
 {
 	
 	struct HuffmanDCTable *huffmanDCTable = NULL;
@@ -790,7 +742,7 @@ void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
 	struct HuffmanACTable *huffmanACTable = NULL;
 	huffmanACTable = (struct HuffmanACTable *) malloc(sizeof(struct HuffmanACTable) * ACtableSize);	
 
-	char dataVector[dataSize] = {0};
+	char dataVector[dataSize];
 	int temp,i;
 
 	FILE *fp = NULL;
@@ -804,9 +756,9 @@ void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
 
 	for (i = 0; i < DCtableSize; ++i)
 	{
-		fscanf(fp,"%d %d",&huffmanDCTable[i].size,&huffmanDCTable[i].numberOfBits);
+		returnScanf = fscanf(fp,"%d %d",&huffmanDCTable[i].size,&huffmanDCTable[i].numberOfBits);
 		huffmanDCTable[i].bitpattern = (char *) malloc(sizeof(char) * huffmanDCTable[i].numberOfBits);
-		fscanf(fp,"%s",huffmanDCTable[i].bitpattern);
+		returnScanf = fscanf(fp,"%s",huffmanDCTable[i].bitpattern);
 	}
 	fclose(fp);
 
@@ -818,9 +770,9 @@ void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
 
 	for (i = 0; i < ACtableSize; ++i)
 	{
-		fscanf(fp,"%d %d %d",&huffmanACTable[i].run,&huffmanACTable[i].size,&huffmanACTable[i].numberOfBits);
+		returnScanf = fscanf(fp,"%d %d %d",&huffmanACTable[i].run,&huffmanACTable[i].size,&huffmanACTable[i].numberOfBits);
 		huffmanACTable[i].bitpattern = (char *) malloc(sizeof(char) * huffmanACTable[i].numberOfBits);
-		fscanf(fp,"%s",huffmanACTable[i].bitpattern);
+		returnScanf = fscanf(fp,"%s",huffmanACTable[i].bitpattern);
 	}
 	fclose(fp);
 	
@@ -836,7 +788,7 @@ void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
 	}
 	i = 0;
 	previousDC = 0;
-	while((fscanf(fp, "%d ", &temp)) > 0) 
+	while((returnScanf = fscanf(fp, "%d ", &temp)) > 0) 
 	{       
 
 		dataVector[i] = temp;
@@ -851,7 +803,7 @@ void differentialHuffmanRle(char *zigZagData, char * targetFile,char *byteData)
 			// }
 			i = 0;
 			// printf("\n");
-			entropyCoding(dataVector,huffmanDCTable,huffmanACTable,encodedData);
+			entropyCoding(dataVector,huffmanDCTable,huffmanACTable,encodedData,dataSize);
 		}
 	}
 	fclose(encodedData);
@@ -1095,7 +1047,7 @@ int compare_function(const void *a,const void *b)
 }
 
 
-void byteToBitConverter(char * fileName,char *target)
+void byteToBitConverter(char * fileName,char *target, int MaxPixel)
 {
 	char byte;
 	int i;
@@ -1114,7 +1066,7 @@ void byteToBitConverter(char * fileName,char *target)
 		printf("%s not open\n",target);
 		return;
 	}
-	while(fscanf(fp,"%c",&byte) > 0)
+	while(returnScanf = fscanf(fp,"%c",&byte) > 0)
 	{
 		runMask = mask;
 		for (i = 0; i < byteSize; ++i)
@@ -1142,13 +1094,12 @@ void byteToBitConverter(char * fileName,char *target)
 	fclose(bitFile);
 }
 
-void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeight, int numberOfBlockWidth)
+void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeight, int numberOfBlockWidth, int MaxPixel)
 {
 	FILE *fp = NULL,*decode = NULL;
 	
 	char bit;
 	char *patternHolder = NULL;
-	char endCode[4] = "0101";
 
 	int i,j;
 	int endOfFrameCount = 0;
@@ -1158,6 +1109,7 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 	int endOfBlock = 0;
 	int numberOfPixel = 0;
 	int numberOfZero;
+	int value = 0;
 
 	struct HuffmanDCTableDecode *huffmanDCTable;
 	struct HuffmanACTableDecode *huffmanACTable = NULL;
@@ -1173,7 +1125,7 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 	ACHead->left = NULL;
 	ACHead->right = NULL;
 	ACHead->bit = 'H';
-	byteToBitConverter(byteFile,"data_unpacked");
+	byteToBitConverter(byteFile,"data_unpacked", MaxPixel);
 	huffmanDCTable = (struct HuffmanDCTableDecode *) malloc(DCtableSize * sizeof(struct HuffmanDCTableDecode));
 	if (!(fp = fopen("huffmanDCTable","r")))
 	{
@@ -1182,9 +1134,9 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 	}	
 	for (i = 0; i < DCtableSize; ++i)
 	{
-		fscanf(fp,"%d %d",&huffmanDCTable[i].size,&huffmanDCTable[i].codeLength);
+		returnScanf = fscanf(fp,"%d %d",&huffmanDCTable[i].size,&huffmanDCTable[i].codeLength);
 		huffmanDCTable[i].code = (char *) malloc(huffmanDCTable[i].codeLength * sizeof(char));
-		fscanf(fp,"%s",huffmanDCTable[i].code);
+		returnScanf = fscanf(fp,"%s",huffmanDCTable[i].code);
 		////printf("%d %d %s\n",huffmanDCTable[i].size, huffmanDCTable[i].codeLength, huffmanDCTable[i].code);
 	}
 	fclose(fp);
@@ -1198,10 +1150,10 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 	}
 	for (i = 0; i < ACtableSize; ++i)
 	{
-		//fscanf(fp,"%d %s",&huffmanDCTable[i].size,huffmanDCTable[i].code);
-		fscanf(fp,"%d %d %d",&huffmanACTable[i].run,&huffmanACTable[i].size,&huffmanACTable[i].codeLength);
+		//returnScanf = fscanf(fp,"%d %s",&huffmanDCTable[i].size,huffmanDCTable[i].code);
+		returnScanf = fscanf(fp,"%d %d %d",&huffmanACTable[i].run,&huffmanACTable[i].size,&huffmanACTable[i].codeLength);
 		huffmanACTable[i].code = (char *) malloc(sizeof(char) * huffmanACTable[i].codeLength);
-		fscanf(fp,"%s",huffmanACTable[i].code);
+		returnScanf = fscanf(fp,"%s",huffmanACTable[i].code);
 	}
 	fclose(fp);
 
@@ -1230,11 +1182,12 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 		numberOfPixel = 0;		
 		while(!dcFlag) // reset all init values for the loop
 		{
-			printf("\n*** New Bit DC ***\n");
-			fscanf(fp,"%c ",&bit);
+			printf("\n*** New Bit DC -- %s***\n",decodeZigZag);
+			returnScanf = fscanf(fp,"%c ",&bit);
 			printf("bit Read:%c \n",bit);
 			holder = findCode(holder,bit);
-			printf("value: %c\n",holder->bit);
+			printf("value: %c\n",holder->bit); 
+			printf("code: %s\n",holder->code);
 			if(holder->size >= 0)
 			{
 				size = holder->size;
@@ -1251,7 +1204,7 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 					while(i < size )
 					{
 
-						fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
+						returnScanf = fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
 						printf("%c ",patternHolder[i]);
 						i++;
 					}
@@ -1269,9 +1222,9 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 				while(!endOfBlock)
 				{
 					
-					printf("\n*** New Bit AC ***\n");
+					printf("\n*** New Bit AC %s***\n",decodeZigZag);
 					printf("Frame: %d pixel:%d\n",endOfFrameCount,numberOfPixel);
-					fscanf(fp,"%c ",&bit);
+					returnScanf = fscanf(fp,"%c ",&bit);
 					printf("bit Read:%c \n",bit);
 					holder = findCode(holder,bit);
 					printf("%c",holder->bit);
@@ -1283,10 +1236,10 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 							// put the zeros in files correspoding to numberOfPixel Count
 							for (j = numberOfPixel; j < MaxPixel- 1; ++j)
 							{
-								fprintf(decode, "%d ",0);	
+								fprintf(decode, "%d ",value);	
 							}
 							printf("\nnumber: %d\n",0);
-							fprintf(decode, "%d \n",0);
+							fprintf(decode,"%d\n",value);
 							endOfFrameCount++;	
 							break;
 						}
@@ -1297,7 +1250,7 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 						while(i < size )
 						{
 							
-							fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
+							returnScanf = fscanf(fp,"%c ",&patternHolder[i]); // 0 has the msb
 							printf("%c ",patternHolder[i]);
 							i++;
 						}
@@ -1309,7 +1262,7 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 						for (j = 0; j < numberOfZero; ++j)
 						{
 							numberOfPixel++;
-							fprintf(decode, "%d ",0);	
+							fprintf(decode, "%d ",value);	
 						}
 						numberOfPixel++;
 						fprintf(decode, "%d ",ACValue);	
@@ -1320,7 +1273,9 @@ void decodeRleHuffman(char * byteFile, char *decodeZigZag, int numberOfBlockHeig
 				break;
 			}
 		}
-	} 
+	}
+	fclose(fp);
+	fclose(decode); 
 }
 
 void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight, int numberOfBlockWidth, int blockSize)
@@ -1328,8 +1283,10 @@ void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight,
 
 	int i = 0,j = 0, x = 0, y = 0;
 	int holder;
+	int value;
+
 	FILE *fp;
-	if(!(fp = fopen(zigZagFile,"w")))
+	if(!(fp = fopen(zigZagFile,"r")))
 	{
 		printf("%s not opened \n",zigZagFile);
 		return;
@@ -1339,18 +1296,30 @@ void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight,
 		for (y = 0; y < numberOfBlockWidth; y += blockSize)
 		{
 			i = j = 0;
-			while( i != 8 && j != 8)
+			while( i != blockSize && j != blockSize)
 			{
 				if(j%2 == 0 && i == 0)
 				{
-					fscanf(fp,"%u",&reblock[x + i][y + j]);
+					//sscanf(line,"%d",&reblock[x + i][y + j]);
+					returnScanf = fscanf(fp,"%d ",&value);
+					if(returnScanf < 0)
+						printf("Error-------> %c %d \n",value,value);
+					reblock[x + i][y + j] = value;
+
+					printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 					j++;
 				}
 				else if(j%2 == 1 && i == 0)
 				{
 					while(j != 0)
 					{
-						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						//sscanf(line,"%d",&reblock[x + i][y + j]);
+						returnScanf = fscanf(fp,"%d ",&value);
+						if(returnScanf < 0)
+							printf("Error-------> %c %d \n",value,value);
+						reblock[x + i][y + j] = value;
+
+						printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 						j -= 1;
 						i += 1;
 					}
@@ -1359,7 +1328,13 @@ void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight,
 				{
 					while(i != 0)
 					{
-						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						//sscanf(line,"%d",&reblock[x + i][y + j]);
+						returnScanf = fscanf(fp,"%d ",&value);
+						if(returnScanf < 0)
+							printf("Error-------> %c %d \n",value,value);
+						reblock[x + i][y + j] = value;
+
+						printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 						j += 1;
 						i -= 1;
 					}			
@@ -1368,13 +1343,25 @@ void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight,
 				{
 					if(i == blockSize - 1)
 					{
-						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						//sscanf(line,"%d",&reblock[x + i][y + j]);
+						returnScanf = fscanf(fp,"%d ",&value);
+						if(returnScanf < 0)
+							printf("Error-------> %c %d \n",value,value);
+						reblock[x + i][y + j] = value;
+
+						printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 						j++;
 					}
 
 					else
 					{
-						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						//sscanf(line,"%d",&reblock[x + i][y + j]);
+						returnScanf = fscanf(fp,"%d ",&value);
+						if(returnScanf < 0)
+							printf("Error-------> %c %d \n",value,value);
+						reblock[x + i][y + j] = value;
+
+						printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 						i++;
 					}
 
@@ -1384,19 +1371,37 @@ void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight,
 					holder = j;
 					while(i != holder)
 					{
-						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						//sscanf(line,"%d",&reblock[x + i][y + j]);
+						returnScanf = fscanf(fp,"%d ",&value);
+						if(returnScanf < 0)
+							printf("Error-------> %c %d \n",value,value);
+						reblock[x + i][y + j] = value;
+
+						printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 						j += 1;
 						i -= 1;				
 					}
 				}
 				else if(i == blockSize - 1 && j%2 == 0)
 				{
-					fscanf(fp,"%u",&reblock[x + i][y + j]);
+					//sscanf(line,"%d",&reblock[x + i][y + j]);
+					returnScanf = fscanf(fp,"%d ",&value);
+					if(returnScanf < 0)
+						printf("Error-------> %c %d \n",value,value);
+					reblock[x + i][y + j] = value;
+
+					printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 					j++;
 				}		
 				else if(j == blockSize - 1 && i%2 == 1)
 				{
-					fscanf(fp,"%u",&reblock[x + i][y + j]);
+					//sscanf(line,"%d",&reblock[x + i][y + j]);
+					returnScanf = fscanf(fp,"%d ",&value);
+					if(returnScanf < 0)
+						printf("Error-------> %c %d \n",value,value);
+					reblock[x + i][y + j] = value;
+
+					printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 					i++;
 				}
 				else if(j == blockSize - 1 && i%2 == 0)
@@ -1404,7 +1409,13 @@ void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight,
 					holder = i;
 					while(j != holder)
 					{
-						fscanf(fp,"%u",&reblock[x + i][y + j]);
+						//sscanf(line,"%d",&reblock[x + i][y + j]);
+						returnScanf = fscanf(fp,"%d ",&value);
+						if(returnScanf < 0)
+							printf("Error-------> %c %d \n",value,value);
+						reblock[x + i][y + j] = value;
+
+						printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 						j -= 1;
 						i += 1;				
 					}
@@ -1412,15 +1423,33 @@ void reAssembleZigZag(char * zigZagFile, int **reblock, int numberOfBlockHeight,
 
 				if((i == blockSize -1) && (j == blockSize - 1))
 				{
-					fscanf(fp,"%u",&reblock[x + i][y + j]);
+					//sscanf(line,"%d",&reblock[x + i][y + j]);
+					returnScanf = fscanf(fp,"%d ",&value);
+					if(returnScanf < 0)
+						printf("Error-------> %c %d \n",value,value);
+					reblock[x + i][y + j] = value;
+
+					printf("reblock[%d][%d]:%d i:%d j:%d return: %d value:%c %d\n",i + x,y + j,reblock[i + x][y + j],i,j,returnScanf,value,value);
 					i++;
 					j++;
 					break;
 				}
 
 			}
+			// for (p = 0; p < 8; ++p)
+			// {
+			// 	for (q = 0; q < 8; ++q)
+			// 	{
+			// 		printf("%d ",reblock[p + x][y + q]);
+			// 	}
+			// }
+			printf("\n");
+			fflush(fp); 
 		}
-	}	
+	}
+	printf("\nx:%d y:%d\n",x,y);
+	printf("\n\n** end ** \n\n");	
+	fclose(fp);
 }
 
 
@@ -1434,13 +1463,15 @@ void deQuantize(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned 
 		{
 			for (u = 0; u < blockSize; ++u)
 			{
+				
 				for (v = 0; v < blockSize; ++v)
 				{
-					//printf("%f/%u = ",dct_Y[u + i][v + j],luminanceQuantizationMatrix[u][v]);
+					printf("dct_Y[%d][%d]:%d*%u = ",u + i,v + j,dct_Y[u + i][v + j],luminanceQuantizationMatrix[u][v]);
 					dct_Y[u + i][v + j] *= luminanceQuantizationMatrix[u][v];
-					//printf("%f\n",dct_Y[u + i][v + j]);
+					printf("%d\n",dct_Y[u + i][v + j]);
 				}
 			}
+			printf("\n");
 
 		}
 	}
@@ -1453,54 +1484,53 @@ void deQuantize(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned 
 			{
 				for (v = 0; v < blockSize; ++v)
 				{
-					//printf("%f/%u = ",dct_U[u + i][v + j],chrominanceQuantizationMatrix[u][v]);
+					printf("dct_V[%d][%d]:%d*%u = ",u + i,v + j,dct_V[u + i][v + j],chrominanceQuantizationMatrix[u][v]);
 					dct_U[u + i][v + j] *= chrominanceQuantizationMatrix[u][v];
 					dct_V[u + i][v + j] *= chrominanceQuantizationMatrix[u][v];
-					//printf("%f\n",dct_U[u + i][v + j]);
+					printf("%d \n",dct_V[u + i][v + j]);
 				}
 			}
-
+			printf("\n");
 		}
 	}
 
 }
 
-void IDCT(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize, int dSampleHeight, int dSampleWidth)
+
+
+void DCT(BMPData *image, float **dct_Y, float **dct_U, float **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize, int dSampleHeight, int dSampleWidth)
 {
+
 	int i,j,u,v,x,y;
-	float value,value1,value2;
+	float value = 0, value1 = 0, value2 = 0;
+	float cu,cv;
 	for (i = 0; i < image->infoHeader.height; i += blockSize)
 	{
 		for (j = 0; j < image->infoHeader.width; j += blockSize)
 		{
 			for (u = 0; u < blockSize; ++u)
 			{
+				if (u == 0)
+					 cu = 1/sqrt(2);
+				else
+					cu = 1;			
 				for (v = 0; v < blockSize; ++v)
 				{
+					if(v == 0)
+						cv = 1/sqrt(2);
+					else
+						cv = 1;						
 					value = 0;	
 					for (x = 0; x < blockSize; ++x)
 					{
 						for (y = 0; y < blockSize; ++y)
 						{
-							value += dct_Y[x + i][y + j] * cos(pi *(2*u + 1)*x/16) * cos(pi *(2*v + 1)*y/16)/4;
-							if(x == 0)
-								value *= 1/sqrt(2);
-							if(y == 0)
-								value *= 1/sqrt(2);							
+							value += Y[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16);
 						}
 					}
-					// if (u == 0)
-					// 	value *= 1/sqrt(2);
-					// if(v == 0)
-					// 	value *= 1/sqrt(2);
-					if(value > 255)
-						Y[i][j] = 255;
-					else if(value < 0)
-						Y[i][j] = 0;
-					else
-						Y[i][j] = (unsigned char) value; 
-
+					dct_Y[u + i][v + j] = cu * cv * value * 0.25;// / luminanceQuantizationMatrix[u][v];
 				}
+
 			}
 
 		}
@@ -1512,45 +1542,108 @@ void IDCT(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char *
 		{
 			for (u = 0; u < blockSize; ++u)
 			{
+				if (u == 0)
+					 cu = 1/sqrt(2);
+				else
+					cu = 1;					
 				for (v = 0; v < blockSize; ++v)
 				{
-					value1 = 0;	
+					if(v == 0)
+						cv = 1/sqrt(2);
+					else
+						cv = 1;					
+					value1 = 0;
 					value2 = 0;	
 					for (x = 0; x < blockSize; ++x)
 					{
 						for (y = 0; y < blockSize; ++y)
 						{
-							value1 += dct_U[x + i][y + j] * cos(pi *(2*u + 1)*x/16) * cos(pi *(2*v + 1)*y/16)/4;
-							value2 += dct_V[x + i][y + j] * cos(pi *(2*u + 1)*x/16) * cos(pi *(2*v + 1)*y/16)/4;
-							if(x == 0)
-							{
-								value1 *= 1/sqrt(2);
-								value2 *= 1/sqrt(2);
-							}
-							if(y == 0)
-							{
-								value1 *= 1/sqrt(2);
-								value2 *= 1/sqrt(2);								
-							}
+							value1 += U[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16);
+							value2 += V[x + i][y + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16);
 						}
 					}
-					// if (u == 0)
-					// 	value *= 1/sqrt(2);
-					// if(v == 0)
-					// 	value *= 1/sqrt(2);
-					if(value1 > 255)
-						U[i][j] = 255;
-					else if(value1 < 0)
-						U[i][j] = 0;
-					else
-						U[i][j] = (unsigned char) value1; 
+
+					dct_U[u + i][v + j] = cu * cv * value1 * 0.25;// / chrominanceQuantizationMatrix[u][v];
+					dct_V[u + i][v + j] = cu * cv * value2 * 0.25;
+				}
+			}
+
+		}
+	}
+}
+
+void IDCT(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char ** Y, unsigned char ** U, unsigned char ** V, int blockSize, int dSampleHeight, int dSampleWidth)
+{
+	int i,j,u,v,x,y;
+	float value = 0, value1 = 0, value2 = 0;
+	float cu,cv;
+	for (i = 0; i < image->infoHeader.height; i += blockSize)
+	{
+		for (j = 0; j < image->infoHeader.width; j += blockSize)
+		{
+			for (x = 0; x < blockSize; ++x)
+			{
+				for (y = 0; y < blockSize; ++y)
+				{
+					value = 0;	
+					for (u = 0; u < blockSize; ++u)
+					{
+						if (u == 0)
+							 cu = 1/sqrt(2);
+						else
+							cu = 1;
+						for (v = 0; v < blockSize; ++v)
+						{
+							if(v == 0)
+								cv = 1/sqrt(2);
+							else
+								cv = 1;
+							// if(i*j > 504 * 480)
+							// 	printf("-- value:%f dct_Y[%d][%d]:%u \n",value,u + i,v + j,dct_Y[u + i][v + j]);
+							value += cu * cv * dct_Y[u + i][v + j] * cos(pi * ((2*x + 1)*u) /16) * cos(pi *( (2*y + 1)*v)/16);
+							//printf("value:%f\n",value);
+						}
+					}
+					// printf("x:%d y:%d value:%f \n",x+i,y+j,round(0.25*value));
+					Y[x + i][y + j] = round(0.25*value);// / luminanceQuantizationMatrix[u][v];	
 					
-					if(value2 > 255)
-						U[i][j] = 255;
-					else if(value2 < 0)
-						U[i][j] = 0;
-					else
-						U[i][j] = (unsigned char) value2; 
+				}
+
+			}
+
+		}
+	}
+
+	for (i = 0; i < dSampleHeight; i += blockSize)
+	{
+		for (j = 0; j < dSampleWidth; j += blockSize)
+		{
+			for (x = 0; x < blockSize; ++x)
+			{
+				for (y = 0; y < blockSize; ++y)
+				{
+					value1 = 0;
+					value2 = 0;	
+					for (u = 0; u < blockSize; ++u)
+					{
+						if (u == 0)
+							cu = 1/sqrt(2);
+						else
+							cu = 1;						
+						for (v = 0; v < blockSize; ++v)
+						{
+							if(v == 0)
+								cv = 1/sqrt(2);
+							else
+								cv = 1;
+
+							value1 += cu * cv * dct_U[u + i][v + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16);
+							value2 += cu * cv * dct_V[u + i][v + j] * cos(pi *(2*x + 1)*u/16) * cos(pi *(2*y + 1)*v/16);
+						}
+					}
+
+					U[x + i][y + j] = round(0.25*value1);// / chrominanceQuantizationMatrix[u][v];
+					V[x + i][y + j] = round(0.25*value2);
 				}
 			}
 
@@ -1561,7 +1654,7 @@ void IDCT(BMPData *image, int **dct_Y, int **dct_U, int **dct_V, unsigned char *
 void upSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned char ** V, unsigned char **downSampledU, unsigned char ** downSampledV, int dSampleU, int dSampleV, int dSampleHeight, int dSampleWidth)
 {
 
-	int i,j,k,l;
+	int i,j,k,l,x,y;
 	if(dSampleU != 4 && dSampleV  != 4)
 	{
 
@@ -1598,18 +1691,20 @@ void upSample(BMPData *image, unsigned char ** Y, unsigned char ** U, unsigned c
 			{
 				dSampleV = 2;
 			}
-			for (i = 0; i < dSampleHeight; ++i) // check loop
+			printf("qwerty---> dSampleU:%d dSampleV:%d \n",dSampleU,dSampleV);
+			for (i = 0, x = 0; i < image->infoHeader.height; i += dSampleV, x++) // check loop
 			{
-				for (j = 0; j < dSampleWidth; ++j) // check loop
+				for (j = 0, y = 0; j < image->infoHeader.width; j += dSampleU, y++) // check loop
 				{
 					 for (l = 0; l < dSampleV; ++l)
 					 {
 					 	for (k = 0; k < dSampleU; ++k)
 					 	{
-						 	U[i + l][j + k] = downSampledU[i][j];
-						 	V[i + l][j + k] = downSampledV[i][j];
+						 	U[i + l][j + k] = downSampledU[x][y];
+						 	V[i + l][j + k] = downSampledV[x][y];
 					 	}
 					 }
+
 				}
 			}	
 		}
